@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>cyclebuity</title>
+    <title>洛谷1587 [NOI2016]循环之美 题解</title>
     <url>/2020/09/06/cyclebuity/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P1587">题面</a></p>
 <h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定$n,m,k$,求对于$1\le x \le n,1\le y\le m$，$\frac{x}{y}$满足数值上互不相等且在$k$进制下为纯循环小数的个数。</p>
@@ -29,5 +29,8 @@
 
 <p><del>注意n和m不要交换，我就是因为这个调了一上午</del></p>
 ]]></content>
+      <tags>
+        <tag>题解,数论,莫比乌斯反演</tag>
+      </tags>
   </entry>
 </search>
