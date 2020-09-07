@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>柳苏明的博客</title>
-  <icon>https://www.gravatar.com/avatar/62139996125d28bfdaff04bf92571601</icon>
-  <subtitle>我明白我必须到达那个重点，即使友人一个个远去</subtitle>
-  <link href="http://ignotusjee.github.io/atom.xml" rel="self"/>
+  <title>Hexo</title>
   
-  <link href="http://ignotusjee.github.io/"/>
+  
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
   <updated>2020-09-07T01:29:40.087Z</updated>
-  <id>http://ignotusjee.github.io/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
-    <name>柳苏明</name>
-    <email>ignotusjee@qq.com</email>
+    <name>John Doe</name>
+    
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>洛谷1587 [NOI2016]循环之美 题解</title>
-    <link href="http://ignotusjee.github.io/2020/09/06/cyclebuity/"/>
-    <id>http://ignotusjee.github.io/2020/09/06/cyclebuity/</id>
+    <link href="http://yoursite.com/2020/09/06/cyclebuity/"/>
+    <id>http://yoursite.com/2020/09/06/cyclebuity/</id>
     <published>2020-09-06T12:43:33.000Z</published>
     <updated>2020-09-07T01:29:40.087Z</updated>
     
@@ -35,11 +35,11 @@
     
     
     
-    <category term="题解" scheme="http://ignotusjee.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
     
-    <category term="数论" scheme="http://ignotusjee.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
+    <category term="数论" scheme="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/"/>
     
-    <category term="莫比乌斯反演" scheme="http://ignotusjee.github.io/tags/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94/"/>
+    <category term="莫比乌斯反演" scheme="http://yoursite.com/tags/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94/"/>
     
   </entry>
   
