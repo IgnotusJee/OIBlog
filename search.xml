@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>洛谷1587 [NOI2016]循环之美 题解</title>
-    <url>/2020/09/06/cyclebuity/</url>
+    <url>/index/2020/09/06/cyclebuity/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P1587">题面</a></p>
 <h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定$n,m,k$,求对于$1\le x \le n,1\le y\le m$，$\frac{x}{y}$满足数值上互不相等且在$k$进制下为纯循环小数的个数。</p>
 <p>从小数部分第一位开始的循环小数，称为纯循环小数。特别地，整数为纯循环小数。</p>
@@ -17,9 +17,18 @@
 <h3 id="转化"><a href="#转化" class="headerlink" title="转化"></a>转化</h3><p>于是，问题转化为了求$\sum_{x=1}^n\sum_{y=1}^m\left[x\perp y\right]\left[y\perp k\right]$。</p>
 <p>反演并改变枚举顺序可得<br>$$<br>\sum_{x=1}^n\sum_{y=1}^m\left[x\perp y\right]\left[y\perp k\right]\<br>=\sum_{x=1}^n\sum_{y=1}^m\left[y\perp k\right]\sum_{d|x,d|y}\mu(d)\<br>=\sum_{d=1}^{min(n,m)}\mu(d)\left[d\perp k\right]\lfloor\frac{n}{d}\rfloor\sum_{y=1}^{\lfloor\frac{m}{d}\rfloor}\left[y\perp k\right]\<br>$$</p>
 <p>设$f\left(n,k\right)=\sum_{i=1}^n\left[i\perp k\right],g\left(n,k\right)=\sum_{i-1}^n\mu(i)\left[i\perp k\right]$，则$\sum_{x=1}^n\sum_{y=1}^m\left[x\perp y\right]\left[y\perp k\right]=\sum_{d=1}^{min(n,m)}\mu(d)\left[d\perp k\right]\lfloor\frac{n}{d}\rfloor f\left(\lfloor\frac{m}{d}\rfloor,k\right)$</p>
-<p>因为平方因子与其他数与它是否互质无关,不妨设$k$无完全平方因子（若有将其除掉）。设$p$为$k$的一个质因子，则对于$f$有<br>$$<br>f(n,1)=\sum_{i=1}^n1=n,\<br>f(n,k)=\sum_{i=1}^n\left[i\perp k\right]=\sum_{i=1}^n\left[i\perp \frac{k}{p}\right]-\sum_{i=1}^n\left[i\perp \frac{k}{p}\right]\left[p|i\right]\<br>=f\left(i,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\left[ip\perp \frac{k}{p}\right]=f\left(i,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\left[i\perp \frac{k}{p}\right]\=f\left(i,\frac{k}{p}\right)-f\left(\lfloor\frac{n}{p}\rfloor,\frac{k}{p}\right),\qquad \left(p|k,p\in P\right)<br>$$</p>
+<p>因为平方因子与其他数与它是否互质无关,不妨设$k$无完全平方因子（若有将其除掉）。设$p$为$k$的一个质因子，则对于$f$有<br>$$<br>f(n,1)=\sum_{i=1}^n1=n,\</p>
+<p>f(n,k)= \sum_{i=1}^n\left[i\perp k\right]= \sum_{i=1}^n\left[i\perp \frac{k}{p}\right]-\sum_{i=1}^n\left[i\perp \frac{k}{p}\right]\left[p|i\right]\</p>
+<p>=f\left(i,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\left[ip\perp \frac{k}{p}\right]=f\left(i,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\left[i\perp \frac{k}{p}\right]\</p>
+<p>=f\left(i,\frac{k}{p}\right)-f\left(\lfloor\frac{n}{p}\rfloor,\frac{k}{p}\right),\qquad \left(p|k,p\in P\right)<br>$$</p>
 <p>对于$g$有：</p>
-<p>$$<br>g\left(n,1\right)=\sum_{i=1}^n\mu(i),\<br>g\left(n,k\right)=\sum_{i=1}^n\mu(i)\left[i\perp k\right]=\sum_{i=1}^n\mu(i)\left[i\perp \frac{k}{p}\right]-\sum_{i=1}^n\mu(i)\left[i\perp \frac{k}{p}\right]\left[p|i\right]\<br>=g\left(n,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\mu(ip)\left[ip\perp \frac{k}{p}\right]\<br>=g\left(n,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\mu(i)\mu(p)\left[i\perp p\right]\left[i\perp \frac{k}{p}\right]\<br>=g\left(n,\frac{k}{p}\right)-\mu(p)\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\mu(i)\left[i\perp k\right]\<br>=g\left(n,\frac{k}{p}\right)+g\left(\lfloor\frac{n}{p}\rfloor,k\right)\qquad \left(p|k,p\in P\right)\<br>\left(\quad \mu(p)=-1 \quad \right)<br>$$</p>
+<p>$$<br>g\left(n,1\right)=\sum_{i=1}^n\mu(i),\</p>
+<p>g\left(n,k\right)=\sum_{i=1}^n\mu(i)\left[i\perp k\right]=\sum_{i=1}^n\mu(i)\left[i\perp \frac{k}{p}\right]-\sum_{i=1}^n\mu(i)\left[i\perp \frac{k}{p}\right]\left[p|i\right]\</p>
+<p>=g\left(n,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\mu(ip)\left[ip\perp \frac{k}{p}\right]\</p>
+<p>=g\left(n,\frac{k}{p}\right)-\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\mu(i)\mu(p)\left[i\perp p\right]\left[i\perp \frac{k}{p}\right]\</p>
+<p>=g\left(n,\frac{k}{p}\right)-\mu(p)\sum_{i=1}^{\lfloor\frac{n}{p}\rfloor}\mu(i)\left[i\perp k\right]\</p>
+<p>=g\left(n,\frac{k}{p}\right)+g\left(\lfloor\frac{n}{p}\rfloor,k\right)\qquad \left(p|k,p\in P\right)\</p>
+<p>\left(\quad \mu(p)=-1 \quad \right)<br>$$</p>
 <p>以上$P$为质数集，利用了莫比乌斯函数的性质$\mu(ab)=\mu(a)\mu(b)\left[a\perp b\right]$</p>
 <p>于是，对于$k=1$的情况，$f$可$O(1)$求解，$g$使用杜教筛即可。</p>
 <p>对于$k&gt;1$的情况，递归求解即可。</p>
