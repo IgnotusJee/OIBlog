@@ -103,7 +103,32 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4782">洛谷4782</a><br>题意：给定m个约束条件，形式为$x_i,x_j$，表示$x_i$为真/假或$x_j$为真/假，给每个变量赋值使得所有条件得到满足。</p>
-<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>将问题转化为图论问题。设$x$表示变量$x$取<code>false</code>，¬$x$表示变量$x$取<code>true</code>。建立$2 \times n$个点，设$x_i$对应点$i$，¬$x_i$对应点$i+n$，则连有向边的意义为若前者成立则后者必成立。利用给出条件连边建图：<br>| 约束条件         | 连边                                    |<br>| —————- | ————————————— |<br>| $x_i$ or $x_j$   | $i+n \rightarrow j , j+n \rightarrow i$ |<br>| ¬$x_i$ or $x_j$  | $i \rightarrow j , j+n \rightarrow i+n$ |<br>| $x_i$ or ¬$x_j$  | $i+n \rightarrow j+n , j \rightarrow i$ |<br>| ¬$x_i$ or ¬$x_j$ | $i \rightarrow j+n , j \rightarrow i+n$ |<br><strong>以一言以蔽之：对于每个约束，若其中一个变量不满足条件，则另一个必须满足。</strong><br>连边代码如下<del>位运算毒瘤</del>：</p>
+<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>将问题转化为图论问题。设$x$表示变量$x$取<code>false</code>，¬$x$表示变量$x$取<code>true</code>。建立$2 \times n$个点，设$x_i$对应点$i$，¬$x_i$对应点$i+n$，则连有向边的意义为若前者成立则后者必成立。利用给出条件连边建图：</p>
+<table>
+<thead>
+<tr>
+<th align="center">约束条件</th>
+<th align="center">连边</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$x_i$ or $x_j$</td>
+<td align="center">$i+n \rightarrow j , j+n \rightarrow i$</td>
+</tr>
+<tr>
+<td align="center">¬$x_i$ or $x_j$</td>
+<td align="center">$i \rightarrow j , j+n \rightarrow i+n$</td>
+</tr>
+<tr>
+<td align="center">$x_i$ or ¬$x_j$</td>
+<td align="center">$i+n \rightarrow j+n , j \rightarrow i$</td>
+</tr>
+<tr>
+<td align="center">¬$x_i$ or ¬$x_j$</td>
+<td align="center">$i \rightarrow j+n , j \rightarrow i+n$</td>
+</tr>
+</tbody></table>
+<p><strong>以一言以蔽之：对于每个约束，若其中一个变量不满足条件，则另一个必须满足。</strong><br>连边代码如下<del>位运算毒瘤</del>：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AddEdge(u+n*(a^<span class="number">1</span>),v+n*(b&amp;<span class="number">1</span>));</span><br><span class="line">AddEdge(v+n*(b^<span class="number">1</span>),u+n*(a&amp;<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
 <p>接下来需要找出是否有可行解。可以发现，$i$是$j$的前驱当且仅当$i$点的取值条件成立时$j$点的取值条件成立（此处取值条件指点所指的变量为<code>true</code>或<code>false</code>），并且有$i$点的取值条件不成立时$j$点的取值条件不一定成立。显然，当$x_i$和¬$x_i$属于同一个强连通分量时，不存在可行解（存在互相矛盾）。因此，只要使用$tarjan$缩点，在每个强连通分量中看有没有$i$和$i+n$的点对即可实现。</p>
 <p>代码如下：</p>
