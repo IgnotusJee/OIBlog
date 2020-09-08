@@ -6,7 +6,7 @@
   <link href="http://ignotusjee.github.io/atom.xml" rel="self"/>
   
   <link href="http://ignotusjee.github.io/"/>
-  <updated>2020-09-07T01:29:40.087Z</updated>
+  <updated>2020-09-08T02:52:27.120Z</updated>
   <id>http://ignotusjee.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2-SAT</title>
+    <link href="http://ignotusjee.github.io/2020/09/08/2-SAT/"/>
+    <id>http://ignotusjee.github.io/2020/09/08/2-SAT/</id>
+    <published>2020-09-08T02:50:39.000Z</published>
+    <updated>2020-09-08T02:52:27.120Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P4782&quot;&gt;洛谷4782&lt;/a&gt;&lt;br&gt;题意：给定m个约束条件，形式为$x_i,x_j$，表示$x_i$为真/假或$x_j$为真/假，给每个变量赋值使得所有条件得到满足。&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="题解" scheme="http://ignotusjee.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+    <category term="图论" scheme="http://ignotusjee.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>洛谷1587 [NOI2016]循环之美 题解</title>
