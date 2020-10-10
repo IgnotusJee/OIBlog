@@ -1,686 +1,822 @@
+
+
 <!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
 
-
-<html lang="zh-Hans">
 
 
 <head>
-  <meta charset="utf-8" />
-   
-  <meta name="keywords" content="算法,代码" />
-   
-  <meta name="description" content="算法混子的学习笔记" />
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    卡常技巧-快速IO |  算法混子的学习笔记
-  </title>
-  <meta name="generator" content="hexo-theme-ayer">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
-<link rel="stylesheet" href="/dist/main.css">
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="算法混子的学习笔记">
+  <meta name="author" content="柳苏明">
+  <meta name="keywords" content="算法,代码">
+  <title>卡常技巧-快速IO - 柳苏明的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
-
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-  
-  
-<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-
-  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
   
 
   
 
-<link rel="alternate" href="/atom.xml" title="柳苏明的博客" type="application/atom+xml">
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="柳苏明的博客" type="application/atom+xml">
 </head>
 
-</html>
 
 <body>
-  <div id="app">
-    
-      
-      <canvas width="1777" height="841"
-        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
-      
-    <main class="content on">
-      <section class="outer">
-  <article
-  id="post-卡常技巧-快速IO"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  卡常技巧-快速IO
-</h1>
- 
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>柳苏明的博客</strong>&nbsp;</a>
 
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/09/10/%E5%8D%A1%E5%B8%B8%E6%8A%80%E5%B7%A7-%E5%BF%AB%E9%80%9FIO/" class="article-date">
-  <time datetime="2020-09-10T02:37:20.000Z" itemprop="datePublished">2020-09-10</time>
-</a>   
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.3k</span>
-        </span>
-    </span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">11 min</span>
-        </span>
-    </span>
-</div>
- 
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-      
-    <div class="tocbot"></div>
+  </div>
+</nav>
 
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-09-10 10:37" pubdate>
+        2020年9月10日 上午
+      </time>
+    </span>
+  
+</div>
 
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k 字
+    </span>
+  
 
   
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>在$OI$中，卡常是一门奇怪又必备的技巧，在某些毒瘤题<del>如Ynoi</del>中需要用到许多卡常技巧才能卡入时限。这里给出我自己的快速$IO$卡常代码。</p>
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      37
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">卡常技巧-快速IO</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>在$OI$中，卡常是一门奇怪又必备的技巧，在某些毒瘤题<del>如Ynoi</del>中需要用到许多卡常技巧才能卡入时限。这里给出我自己的快速$IO$卡常代码。</p>
 <h1 id="一、快速读入"><a href="#一、快速读入" class="headerlink" title="一、快速读入"></a>一、快速读入</h1><h2 id="1、带符号整形"><a href="#1、带符号整形" class="headerlink" title="1、带符号整形"></a>1、带符号整形</h2><p>最简单基础的快读。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;x)</span> </span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="keyword">bool</span> k=<span class="literal">false</span>;<span class="keyword">char</span> c=getc();</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c)) &#123;k|=(c==<span class="string">&#x27;-&#x27;</span>);c=getc();<span class="keyword">if</span>(c==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);c=getc();&#125;</span><br><span class="line">    x*=(k?<span class="number">-1</span>:<span class="number">1</span>); <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+    x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
+    <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);c=getc();&#125;
+    x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+&#125;</code></pre>
 <p>或换个写法</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;x)</span> </span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="keyword">bool</span> k=<span class="literal">false</span>;<span class="keyword">char</span> c=getc();</span><br><span class="line">    <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="string">&#x27;-&#x27;</span>);<span class="keyword">if</span>(c==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);c=getc()) &#123;x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);&#125;</span><br><span class="line">    x*=(k?<span class="number">-1</span>:<span class="number">1</span>); <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+    x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
+    <span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+    <span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);&#125;
+    x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+&#125;</code></pre>
 <p>其中<code>getc</code>为读入一个字符的函数，函数返回值为是否读到数。在对$x$的位运算处，不排除有更优秀的写法。</p>
 <h2 id="2、单个字符"><a href="#2、单个字符" class="headerlink" title="2、单个字符"></a>2、单个字符</h2><p>如果只是要求读入字符，可以直接</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> &amp;c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (c=getc())!=EOF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+    <span class="hljs-keyword">return</span> (c=getc())!=EOF;
+&#125;</code></pre>
 <p>如果对读入的字符有要求，如必须是字母或数字等，可以使用<code>cctype</code>库中函数来判断读入。以读入非空字符为例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> &amp;c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(c=getc(),<span class="built_in">isspace</span>(c));</span><br><span class="line">    <span class="keyword">return</span> c!=EOF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+    <span class="hljs-keyword">while</span>(c=getc(),<span class="hljs-built_in">isspace</span>(c));
+    <span class="hljs-keyword">return</span> c!=EOF;
+&#125;</code></pre>
 <p>注意<code>EOF</code>标识符在<code>isspace</code>中返回真。</p>
 <h2 id="3、字符串"><a href="#3、字符串" class="headerlink" title="3、字符串"></a>3、字符串</h2><p>采用和<code>scanf</code>一样的读入方式，即在读入空字符时停止。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">    *s=getc();</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isspace</span>(*s)) &#123;*s=getc();<span class="keyword">if</span>(*s==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;</span><br><span class="line">    *s=<span class="string">&#x27;\0&#x27;</span>; <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+    *s=getc();
+    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isspace</span>(*s)) &#123;*s=getc();<span class="hljs-keyword">if</span>(*s==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+    <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;
+    *s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+&#125;</code></pre>
 <h2 id="4、浮点数"><a href="#4、浮点数" class="headerlink" title="4、浮点数"></a>4、浮点数</h2><p>因为浮点数精度问题，它的手动读入并不好写，并且出错率或误差率远远大于用<code>scanf</code>或<code>std::cin</code>读入。</p>
 <p>这里给出我的一个浮点数读入实现，仅供参考。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">double</span> &amp;x)</span> </span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="keyword">bool</span> k=<span class="literal">false</span>;<span class="keyword">double</span> d=<span class="number">1</span>;<span class="keyword">char</span> c=getc();</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c)) &#123;k|=(c==<span class="string">&#x27;-&#x27;</span>);c=getc();<span class="keyword">if</span>(c==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(c)) &#123;x=x*<span class="number">10</span>+(c^<span class="number">48</span>);c=getc();&#125;</span><br><span class="line">    <span class="keyword">if</span>(c!=<span class="string">&#x27;.&#x27;</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    c=getc();</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(c)) &#123;d/=<span class="number">10.0</span>;x+=d*(c^<span class="number">48</span>);c=getc();&#125;</span><br><span class="line">    x*=(k?<span class="number">-1.0</span>:<span class="number">1.0</span>); <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;x)</span> </span>&#123;
+    x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">double</span> d=<span class="hljs-number">1</span>;<span class="hljs-keyword">char</span> c=getc();
+    <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=x*<span class="hljs-number">10</span>+(c^<span class="hljs-number">48</span>);c=getc();&#125;
+    <span class="hljs-keyword">if</span>(c!=<span class="hljs-string">&#x27;.&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    c=getc();
+    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;d/=<span class="hljs-number">10.0</span>;x+=d*(c^<span class="hljs-number">48</span>);c=getc();&#125;
+    x*=(k?<span class="hljs-number">-1.0</span>:<span class="hljs-number">1.0</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+&#125;</code></pre>
 <p>在读入小数部分时<code>d</code>临时保存当前位。</p>
 <h1 id="二、快速输出"><a href="#二、快速输出" class="headerlink" title="二、快速输出"></a>二、快速输出</h1><h2 id="1、带符号整形-1"><a href="#1、带符号整形-1" class="headerlink" title="1、带符号整形"></a>1、带符号整形</h2><p>一般有递归和非递归两种写法。这里采用非递归写法，因为时间效率较高。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">30</span>];<span class="keyword">int</span> p=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span>) &#123;putc(<span class="string">&#x27;-&#x27;</span>);x=-x;&#125;</span><br><span class="line">    <span class="keyword">if</span>(x==<span class="number">0</span>) putc(<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">for</span>(;x;x/=<span class="number">10</span>) buf[++p]=x%<span class="number">10</span>+<span class="number">48</span>;</span><br><span class="line">    <span class="keyword">for</span>(;p!=<span class="number">-1</span>;p--) putc(buf[p]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">30</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;putc(<span class="hljs-string">&#x27;-&#x27;</span>);x=-x;&#125;
+    <span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(;x;x/=<span class="hljs-number">10</span>) buf[++p]=x%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
+    <span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
+&#125;</code></pre>
 <p><code>putc</code>为输出单个字符函数，<code>buf</code>为缓存区，一般开到<code>20</code>即可。</p>
 <h2 id="2、单个字符-1"><a href="#2、单个字符-1" class="headerlink" title="2、单个字符"></a>2、单个字符</h2><p>没什么说的，就直接输出。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;</code></pre>
 <h2 id="3、字符串-1"><a href="#3、字符串-1" class="headerlink" title="3、字符串"></a>3、字符串</h2><p>因为传参的最佳匹配原因，字符串要分两种重载方式。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(*s!=<span class="string">&#x27;\0&#x27;</span>) putc(*s),s++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(*s!=<span class="string">&#x27;\0&#x27;</span>) putc(*s),s++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+    <span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
+&#125;</code></pre>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+    <span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
+&#125;</code></pre>
 <p>当传入<code>char *s</code>时，最佳匹配是<code>template&lt;tyename Type&gt; write(Type x)</code>，而不是<code>write(const char *s)</code>。更佳的匹配是<code>write(char *s)</code>。所以要写两个重载。</p>
 <h2 id="4、浮点数-1"><a href="#4、浮点数-1" class="headerlink" title="4、浮点数"></a>4、浮点数</h2><p>浮点数的快输由于精度以及四舍五入的问题，比快读更加难写并且容易出锅。</p>
 <p>这里给出一种实现。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pre</span><span class="params">(<span class="number">6</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">double</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">35</span>];<span class="keyword">int</span> p=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0.0</span>) putc(<span class="string">&#x27;-&#x27;</span>),x*=<span class="number">-1.0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i(<span class="number">1</span>);i&lt;=pre;i++) x*=<span class="number">10.0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">y</span><span class="params">(round(x))</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(;y;y/=<span class="number">10</span>) buf[++p]=y%<span class="number">10</span>+<span class="number">48</span>;</span><br><span class="line">    <span class="keyword">if</span>(p&lt;pre) &#123;</span><br><span class="line">        putc(<span class="string">&#x27;0&#x27;</span>);putc(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i(<span class="number">1</span>);i&lt;=pre-p<span class="number">-1</span>;i++) putc(<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">while</span>(p+<span class="number">1</span>&gt;pre) putc(buf[p--]);</span><br><span class="line">        putc(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(;p!=<span class="number">-1</span>;p--) putc(buf[p]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">pre</span><span class="hljs-params">(<span class="hljs-number">6</span>)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>&#123;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">35</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0.0</span>) putc(<span class="hljs-string">&#x27;-&#x27;</span>),x*=<span class="hljs-number">-1.0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=pre;i++) x*=<span class="hljs-number">10.0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">y</span><span class="hljs-params">(round(x))</span></span>;
+    <span class="hljs-keyword">for</span>(;y;y/=<span class="hljs-number">10</span>) buf[++p]=y%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
+    <span class="hljs-keyword">if</span>(p&lt;pre) &#123;
+        putc(<span class="hljs-string">&#x27;0&#x27;</span>);putc(<span class="hljs-string">&#x27;.&#x27;</span>);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=pre-p<span class="hljs-number">-1</span>;i++) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
+    &#125;
+    <span class="hljs-keyword">else</span> &#123;
+        <span class="hljs-keyword">while</span>(p+<span class="hljs-number">1</span>&gt;pre) putc(buf[p--]);
+        putc(<span class="hljs-string">&#x27;.&#x27;</span>);
+    &#125;
+    <span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
+&#125;</code></pre>
 <p><code>pre</code>为保留小数点后几位，<code>round</code>为<code>cmath</code>库里的四舍五入到整数的函数。</p>
 <h1 id="三、块读写优化"><a href="#三、块读写优化" class="headerlink" title="三、块读写优化"></a>三、块读写优化</h1><p>有了上述对具体数据类型的处理优化之后，速度瓶颈变为了输入输出字符的<code>getc()</code>，<code>putc()</code>函数。调用<code>cstdio</code>库中的<code>getchar()</code>和<code>putchar()</code>函数过于慢，解决方法有使用<code>streambuf</code>或<code>fread</code>和<code>fwrite</code>。这里采用的后者。因为其提速原理为整块的输入输出操作，所以称为块读写。</p>
 <h2 id="１、fread"><a href="#１、fread" class="headerlink" title="１、ｆｒｅａｄ"></a>１、ｆｒｅａｄ</h2><p>直接给出<code>getc()</code>函数</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">getc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">1</span>&lt;&lt;<span class="number">21</span>],*p1=buf,*p2=buf;</span><br><span class="line">    <span class="keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="number">1</span>,<span class="number">1</span>&lt;&lt;<span class="number">21</span>,<span class="built_in">stdin</span>),p1==p2)?EOF:*p1++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1=buf,*p2=buf;
+    <span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>,<span class="hljs-built_in">stdin</span>),p1==p2)?EOF:*p1++;
+&#125;</code></pre>
 <p><code>static</code>修饰符保证了缓存数组在函数每次返回后不变，以及外部函数无法访问。</p>
 <p>此处三元运算符应用逻辑运算符的短路原理等，简介而精炼。建议仔细品读以理解其意思。</p>
 <h2 id="２、fwrite"><a href="#２、fwrite" class="headerlink" title="２、ｆｗｒｉｔｅ"></a>２、ｆｗｒｉｔｅ</h2><p><code>putc()</code>函数为了在适当时期调用稍微繁琐一些。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> buf[<span class="number">1</span>&lt;&lt;<span class="number">21</span>];<span class="keyword">int</span> p1=<span class="number">-1</span>;<span class="keyword">const</span> <span class="keyword">int</span> p2=(<span class="number">1</span>&lt;&lt;<span class="number">21</span>)<span class="number">-1</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">flush</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    fwrite(buf,<span class="number">1</span>,p1+<span class="number">1</span>,<span class="built_in">stdout</span>);</span><br><span class="line">    p1=<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">putc</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> &amp;c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p1==p2) flush();</span><br><span class="line">    buf[++p1]=c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1=<span class="hljs-number">-1</span>;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>)<span class="hljs-number">-1</span>;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;
+    fwrite(buf,<span class="hljs-number">1</span>,p1+<span class="hljs-number">1</span>,<span class="hljs-built_in">stdout</span>);
+    p1=<span class="hljs-number">-1</span>;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+    <span class="hljs-keyword">if</span>(p1==p2) flush();
+    buf[++p1]=c;
+&#125;</code></pre>
 <p>在主函数末尾调用<code>flush()</code>以输出。在缓存区满时也会自动调用。</p>
 <h1 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h1><p>我写出了快速读写的函数版本和类版本，可以适当时候选用用起来爽的版本。此处附带了库函数的部分替代函数。</p>
 <p>函数版本：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> quick &#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> tp template<span class="meta-string">&lt;typename Type&gt;</span></span></span><br><span class="line">    <span class="keyword">namespace</span> in &#123;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">getc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">1</span>&lt;&lt;<span class="number">21</span>],*p1=buf,*p2=buf;</span><br><span class="line">            <span class="keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="number">1</span>,<span class="number">1</span>&lt;&lt;<span class="number">21</span>,<span class="built_in">stdin</span>),p1==p2)?EOF:*p1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">            *s=getc();</span><br><span class="line">            <span class="keyword">while</span>(<span class="built_in">isspace</span>(*s)) &#123;*s=getc();<span class="keyword">if</span>(*s==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">            <span class="keyword">while</span>(!<span class="built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;</span><br><span class="line">            *s=<span class="string">&#x27;\0&#x27;</span>; <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">tp <span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(Type &amp;x)</span> </span>&#123;</span><br><span class="line">            x=<span class="number">0</span>;<span class="keyword">bool</span> k=<span class="literal">false</span>;<span class="keyword">char</span> c=getc();</span><br><span class="line">            <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c)) &#123;k|=(c==<span class="string">&#x27;-&#x27;</span>);c=getc();<span class="keyword">if</span>(c==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">            <span class="keyword">while</span>(<span class="built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);c=getc();&#125;</span><br><span class="line">            x*=(k?<span class="number">-1</span>:<span class="number">1</span>); <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type,<span class="keyword">typename</span>... Args&gt;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(Type &amp;t,Args &amp;...args)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">            res+=read(t);res+=read(args...);</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">using</span> in::read;</span><br><span class="line">    <span class="keyword">namespace</span> out &#123;</span><br><span class="line">        <span class="keyword">char</span> buf[<span class="number">1</span>&lt;&lt;<span class="number">21</span>];<span class="keyword">int</span> p1=<span class="number">-1</span>;<span class="keyword">const</span> <span class="keyword">int</span> p2=(<span class="number">1</span>&lt;&lt;<span class="number">21</span>)<span class="number">-1</span>;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">flush</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            fwrite(buf,<span class="number">1</span>,p1+<span class="number">1</span>,<span class="built_in">stdout</span>);</span><br><span class="line">            p1=<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">putc</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> &amp;c)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(p1==p2) flush();</span><br><span class="line">            buf[++p1]=c;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span>(*s!=<span class="string">&#x27;\0&#x27;</span>) putc(*s),s++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">tp <span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(Type x)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">30</span>];<span class="keyword">int</span> p=<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">if</span>(x&lt;<span class="number">0</span>) &#123;putc(<span class="string">&#x27;-&#x27;</span>);x=-x;&#125;</span><br><span class="line">            <span class="keyword">if</span>(x==<span class="number">0</span>) putc(<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">for</span>(;x;x/=<span class="number">10</span>) buf[++p]=x%<span class="number">10</span>+<span class="number">48</span>;</span><br><span class="line">            <span class="keyword">for</span>(;p!=<span class="number">-1</span>;p--) putc(buf[p]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;putc(c);&#125;</span><br><span class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type,<span class="keyword">typename</span>... Args&gt;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(Type t,Args ...args)</span> </span>&#123;</span><br><span class="line">            write(t);write(args...);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">using</span> out::write;</span><br><span class="line">    <span class="keyword">using</span> out::flush;</span><br><span class="line">    <span class="function">tp <span class="keyword">inline</span> Type <span class="title">max</span><span class="params">(<span class="keyword">const</span> Type a,<span class="keyword">const</span> Type b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(a&lt;b) <span class="keyword">return</span> b;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">tp <span class="keyword">inline</span> Type <span class="title">min</span><span class="params">(<span class="keyword">const</span> Type a,<span class="keyword">const</span> Type b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(a&lt;b) <span class="keyword">return</span> a;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">tp <span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(Type &amp;a,Type &amp;b)</span> </span>&#123;</span><br><span class="line">        a^=b^=a^=b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">tp <span class="keyword">inline</span> Type <span class="title">abs</span><span class="params">(<span class="keyword">const</span> Type a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a&gt;=<span class="number">0</span>?a:-a;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> tp</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> quick &#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> tp template<span class="hljs-meta-string">&lt;typename Type&gt;</span></span>
+    <span class="hljs-keyword">namespace</span> in &#123;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
+            <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1=buf,*p2=buf;
+            <span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>,<span class="hljs-built_in">stdin</span>),p1==p2)?EOF:*p1++;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+            *s=getc();
+            <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isspace</span>(*s)) &#123;*s=getc();<span class="hljs-keyword">if</span>(*s==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+            <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;
+            *s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        &#125;
+        <span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;x)</span> </span>&#123;
+            x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
+            <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+            <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);c=getc();&#125;
+            x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        &#125;
+        <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Type,<span class="hljs-keyword">typename</span>... Args&gt;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;t,Args &amp;...args)</span> </span>&#123;
+            <span class="hljs-keyword">int</span> res=<span class="hljs-number">0</span>;
+            res+=read(t);res+=read(args...);
+            <span class="hljs-keyword">return</span> res;
+        &#125;
+    &#125;
+    <span class="hljs-keyword">using</span> in::read;
+    <span class="hljs-keyword">namespace</span> out &#123;
+        <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1=<span class="hljs-number">-1</span>;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>)<span class="hljs-number">-1</span>;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;
+            fwrite(buf,<span class="hljs-number">1</span>,p1+<span class="hljs-number">1</span>,<span class="hljs-built_in">stdout</span>);
+            p1=<span class="hljs-number">-1</span>;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+            <span class="hljs-keyword">if</span>(p1==p2) flush();
+            buf[++p1]=c;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+            <span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
+        &#125;
+        <span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type x)</span> </span>&#123;
+            <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">30</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
+            <span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;putc(<span class="hljs-string">&#x27;-&#x27;</span>);x=-x;&#125;
+            <span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(;x;x/=<span class="hljs-number">10</span>) buf[++p]=x%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
+            <span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> c)</span> </span>&#123;putc(c);&#125;
+        <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Type,<span class="hljs-keyword">typename</span>... Args&gt;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type t,Args ...args)</span> </span>&#123;
+            write(t);write(args...);
+        &#125;
+    &#125;
+    <span class="hljs-keyword">using</span> out::write;
+    <span class="hljs-keyword">using</span> out::flush;
+    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type a,<span class="hljs-keyword">const</span> Type b)</span> </span>&#123;
+        <span class="hljs-keyword">if</span>(a&lt;b) <span class="hljs-keyword">return</span> b;
+        <span class="hljs-keyword">return</span> a;
+    &#125;
+    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">min</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type a,<span class="hljs-keyword">const</span> Type b)</span> </span>&#123;
+        <span class="hljs-keyword">if</span>(a&lt;b) <span class="hljs-keyword">return</span> a;
+        <span class="hljs-keyword">return</span> b;
+    &#125;
+    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(Type &amp;a,Type &amp;b)</span> </span>&#123;
+        a^=b^=a^=b;
+    &#125;
+    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">abs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type a)</span> </span>&#123;
+        <span class="hljs-keyword">return</span> a&gt;=<span class="hljs-number">0</span>?a:-a;
+    &#125;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> tp</span>
+&#125;</code></pre>
 <p>因为是不定参，调用时可以使用像<code>read(a,b,c,d)</code>这样的写法。</p>
 <p>类版本：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Quick &#123;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">InStream</span> &#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="keyword">char</span> buf[<span class="number">1</span>&lt;&lt;<span class="number">21</span>],*p1,*p2,failed;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">getc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="number">1</span>,<span class="number">1</span>&lt;&lt;<span class="number">21</span>,<span class="built_in">stdin</span>),p1==p2)?EOF:*p1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">template</span>&lt;class Type&gt; <span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(Type &amp;x)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">bool</span> k=<span class="literal">false</span>;<span class="keyword">char</span> c=getc();</span><br><span class="line">            <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="string">&#x27;-&#x27;</span>);<span class="keyword">if</span>(c==EOF) <span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">            x=<span class="number">0</span>;<span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);c=getc()) x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">            *s=getc();</span><br><span class="line">            <span class="keyword">for</span>(;<span class="built_in">isspace</span>(*s)||*s==EOF;*s=getc()) <span class="keyword">if</span>(*s==EOF) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(;!<span class="built_in">isspace</span>(*s)&amp;&amp;*s!=EOF;*s=getc()) s++;</span><br><span class="line">            *s=<span class="string">&#x27;\0&#x27;</span>; <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">operator</span> <span class="title">int</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> ~failed;</span><br><span class="line">        &#125;</span><br><span class="line">        InStream() &#123;p1=p2=buf;failed=<span class="number">0x00</span>;&#125;</span><br><span class="line">        ~InStream() &#123;&#125;</span><br><span class="line">        <span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">Type</span>&gt; <span class="title">InStream</span>&amp; <span class="title">operator</span> &gt;&gt; (<span class="title">Type</span> &amp;&amp;<span class="title">x</span>) &#123;</span></span><br><span class="line">            <span class="keyword">if</span>(read(x)) failed=<span class="number">0x00</span>;</span><br><span class="line">            <span class="keyword">else</span> failed=<span class="number">0xff</span>;</span><br><span class="line">            <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="built_in">cin</span>;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">OutStream</span> &#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="keyword">char</span> buf[<span class="number">1</span>&lt;&lt;<span class="number">21</span>];<span class="keyword">int</span> p1;<span class="keyword">const</span> <span class="keyword">int</span> p2=<span class="number">1</span>&lt;&lt;<span class="number">21</span>;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">flush</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            fwrite(buf,<span class="number">1</span>,p1,<span class="built_in">stdout</span>);</span><br><span class="line">            p1=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">putc</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> &amp;c)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(p1==p2) flush();</span><br><span class="line">            buf[p1++]=c;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">template</span>&lt;class Type&gt; <span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(Type x)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">25</span>];<span class="keyword">int</span> p=<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">if</span>(x&lt;<span class="number">0</span>) &#123;x*=<span class="number">-1</span>;putc(<span class="string">&#x27;-&#x27;</span>);&#125;</span><br><span class="line">            <span class="keyword">if</span>(x==<span class="number">0</span>) putc(<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">for</span>(;x;x/=<span class="number">10</span>) buf[++p]=x%<span class="number">10</span>+<span class="number">48</span>;</span><br><span class="line">            <span class="keyword">while</span>(~p) putc(buf[p--]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(;*s;s++) putc(*s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(;*s;s++) putc(*s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        OutStream() &#123;p1=<span class="number">0</span>;&#125;</span><br><span class="line">        ~OutStream() &#123;flush();&#125;</span><br><span class="line">        <span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">Type</span>&gt; <span class="title">OutStream</span>&amp; <span class="title">operator</span> &lt;&lt; (const Type &amp;x) &#123;</span></span><br><span class="line"><span class="class">            write(x);return *this;</span></span><br><span class="line"><span class="class">        &#125;</span></span><br><span class="line"><span class="class">    &#125;cout;</span></span><br><span class="line"><span class="class">    const char endl(&#x27;\n&#x27;);</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    template&lt;class Type&gt; inline Type max(const Type &amp;a,const Type &amp;b) &#123;</span></span><br><span class="line"><span class="class">        if(a&lt;b) return b;</span></span><br><span class="line"><span class="class">        return a;</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">    template&lt;class Type&gt; inline Type min(const Type &amp;a,const Type &amp;b) &#123;</span></span><br><span class="line"><span class="class">        if(a&lt;b) return a;</span></span><br><span class="line"><span class="class">        return b;</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">    template&lt;class Type&gt; inline void swap(Type &amp;a,Type &amp;b) &#123;</span></span><br><span class="line"><span class="class">        static Type tmp;</span></span><br><span class="line"><span class="class">        tmp=a;a=b;b=tmp;</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">    template&lt;class Type&gt; inline Type abs(const Type &amp;a) &#123;</span></span><br><span class="line"><span class="class">        return a&gt;=0?a:-a;</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Quick &#123;
 
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InStream</span> &#123;</span>
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1,*p2,failed;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
+            <span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>,<span class="hljs-built_in">stdin</span>),p1==p2)?EOF:*p1++;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;class Type&gt; <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;x)</span> </span>&#123;
+            <span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
+            <span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
+            x=<span class="hljs-number">0</span>;<span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isdigit</span>(c);c=getc()) x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+            *s=getc();
+            <span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isspace</span>(*s)||*s==EOF;*s=getc()) <span class="hljs-keyword">if</span>(*s==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF;*s=getc()) s++;
+            *s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        &#125;
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">operator</span> <span class="hljs-title">int</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>&#123;
+            <span class="hljs-keyword">return</span> ~failed;
+        &#125;
+        InStream() &#123;p1=p2=buf;failed=<span class="hljs-number">0x00</span>;&#125;
+        ~InStream() &#123;&#125;
+        <span class="hljs-keyword">template</span>&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">InStream</span>&amp; <span class="hljs-title">operator</span> &gt;&gt; (<span class="hljs-title">Type</span> &amp;&amp;<span class="hljs-title">x</span>) &#123;</span>
+            <span class="hljs-keyword">if</span>(read(x)) failed=<span class="hljs-number">0x00</span>;
+            <span class="hljs-keyword">else</span> failed=<span class="hljs-number">0xff</span>;
+            <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;
+        &#125;
+    &#125;<span class="hljs-built_in">cin</span>;
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OutStream</span> &#123;</span>
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;
+            fwrite(buf,<span class="hljs-number">1</span>,p1,<span class="hljs-built_in">stdout</span>);
+            p1=<span class="hljs-number">0</span>;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+            <span class="hljs-keyword">if</span>(p1==p2) flush();
+            buf[p1++]=c;
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;class Type&gt; <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type x)</span> </span>&#123;
+            <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">25</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
+            <span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;x*=<span class="hljs-number">-1</span>;putc(<span class="hljs-string">&#x27;-&#x27;</span>);&#125;
+            <span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(;x;x/=<span class="hljs-number">10</span>) buf[++p]=x%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
+            <span class="hljs-keyword">while</span>(~p) putc(buf[p--]);
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+            <span class="hljs-keyword">for</span>(;*s;s++) putc(*s);
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+            <span class="hljs-keyword">for</span>(;*s;s++) putc(*s);
+        &#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;
+    <span class="hljs-keyword">public</span>:
+        OutStream() &#123;p1=<span class="hljs-number">0</span>;&#125;
+        ~OutStream() &#123;flush();&#125;
+        <span class="hljs-keyword">template</span>&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">OutStream</span>&amp; <span class="hljs-title">operator</span> &lt;&lt; (const Type &amp;x) &#123;</span>
+<span class="hljs-class">            write(x);return *this;</span>
+<span class="hljs-class">        &#125;</span>
+<span class="hljs-class">    &#125;cout;</span>
+<span class="hljs-class">    const char endl(&#x27;\n&#x27;);</span>
+<span class="hljs-class"></span>
+<span class="hljs-class">    template&lt;class Type&gt; inline Type max(const Type &amp;a,const Type &amp;b) &#123;</span>
+<span class="hljs-class">        if(a&lt;b) return b;</span>
+<span class="hljs-class">        return a;</span>
+<span class="hljs-class">    &#125;</span>
+<span class="hljs-class">    template&lt;class Type&gt; inline Type min(const Type &amp;a,const Type &amp;b) &#123;</span>
+<span class="hljs-class">        if(a&lt;b) return a;</span>
+<span class="hljs-class">        return b;</span>
+<span class="hljs-class">    &#125;</span>
+<span class="hljs-class">    template&lt;class Type&gt; inline void swap(Type &amp;a,Type &amp;b) &#123;</span>
+<span class="hljs-class">        static Type tmp;</span>
+<span class="hljs-class">        tmp=a;a=b;b=tmp;</span>
+<span class="hljs-class">    &#125;</span>
+<span class="hljs-class">    template&lt;class Type&gt; inline Type abs(const Type &amp;a) &#123;</span>
+<span class="hljs-class">        return a&gt;=0?a:-a;</span>
+<span class="hljs-class">    &#125;</span>
+<span class="hljs-class"></span>
+<span class="hljs-class">&#125;</span></code></pre>
 <p>类版本可以使用和<code>std::cin</code>和<code>std::cout</code>相同的方法调用。比如，可以<code>while(Quick::cin&gt;&gt;a)</code>。</p>
 <p>注意类版本主函数末尾不需要调用<code>flush()</code>，因为在销毁内存时自动调用了。另外，为了使函数版本也实现这种功能，也可以封装到类里，并不定参重载<code>()</code>运算符。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
 
-    <!-- copyright -->
-    
-    <div class="declare">
-      <ul class="post-copyright">
-        <li>
-          <i class="ri-copyright-line"></i>
-          <strong>Copyright： </strong>
-          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-        </li>
-      </ul>
-    </div>
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%A1%E5%B8%B8/">卡常</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/09/13/SolutionOfHangarHurdles/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">洛谷3684 [CERC2016]机棚障碍 Hangar Hurdles 题解</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/09/08/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%89%EF%BC%89/">
+                        <span class="hidden-mobile">做题记录（三）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ignotusjee.github.io/2020/09/10/%E5%8D%A1%E5%B8%B8%E6%8A%80%E5%B7%A7-%E5%BF%AB%E9%80%9FIO/" alt="微信分享二维码">
     </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
 </div>
 
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%A1%E5%B8%B8/" rel="tag">卡常</a></li></ul>
-
-    </footer>
+      </div>
+    
   </div>
+</div>
 
-   
-  <nav class="article-nav">
+<!-- Custom -->
+
+
     
-      <a href="/2020/09/13/SolutionOfHangarHurdles/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            洛谷3684 [CERC2016]机棚障碍 Hangar Hurdles 题解
-          
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
         </div>
-      </a>
-    
-    
-      <a href="/2020/09/08/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%89%EF%BC%89/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">做题记录（三）</div>
-      </a>
-    
-  </nav>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
   
-   
-<div class="gitalk" id="gitalk-container"></div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
-
-
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
-
-<script type="text/javascript">
-  var gitalk = new Gitalk({
-    clientID: 'a4a767f2300d7076a2d5',
-    clientSecret: 'd7d086ca6b819446aa028a4a717ff1528689265a',
-    repo: 'BlogComments',
-    owner: 'IgnotusJee',
-    admin: ['IgnotusJee'],
-    // id: location.pathname,      // Ensure uniqueness and length less than 50
-    id: md5(location.pathname),
-    distractionFreeMode: false,  // Facebook-like distraction free mode
-    pagerDirection: 'last'
-  })
-
-  gitalk.render('gitalk-container')
-</script>
   
-</article>
 
-</section>
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2020
-        <i class="ri-heart-fill heart_icon"></i> 柳苏明
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-        <span class="division">|</span>
-        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src=''></script>
-        
-      </li>
-    </ul>
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
   </div>
 </footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
 
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
 
-      </div>
-    </main>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
+<!-- Plugins -->
+
+
   
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="柳苏明的博客"></a>
-  </div>
+    <script  src="/js/lazyload.js" ></script>
   
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "卡常技巧-快速IO&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 100,
+      loop: true,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
       
-      <a class="nav-item-link nav-item-search"  title="Search">
-        <i class="ri-search-line"></i>
-      </a>
+      icon: "§"
       
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
     <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
-
-
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto'
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script>
-
-<!-- MathJax -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true
-  }
-</script>
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-
-<script src="/js/clickBoom2.js"></script>
-
-
-<!-- CodeCopy -->
-
-
-<link rel="stylesheet" href="/css/clipboard.css">
-
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
+      };
+    </script>
 
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
 
-<!-- CanvasBackground -->
-
-
-<script src="/js/dz.js"></script>
+  
 
 
 
-    
-  </div>
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
-
 </html>

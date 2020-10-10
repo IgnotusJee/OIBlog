@@ -6,7 +6,7 @@
   <link href="http://ignotusjee.github.io/atom.xml" rel="self"/>
   
   <link href="http://ignotusjee.github.io/"/>
-  <updated>2020-10-10T03:11:52.864Z</updated>
+  <updated>2020-10-10T06:37:20.816Z</updated>
   <id>http://ignotusjee.github.io/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://ignotusjee.github.io/2020/10/10/%E5%88%9D%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://ignotusjee.github.io/2020/10/10/%E5%88%9D%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2020-10-09T23:45:20.000Z</published>
-    <updated>2020-10-10T03:11:52.864Z</updated>
+    <updated>2020-10-10T06:37:20.816Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;主定理：&quot;&gt;&lt;a href=&quot;#主定理：&quot; class=&quot;headerlink&quot; title=&quot;主定理：&quot;&gt;&lt;/a&gt;主定理：&lt;/h1&gt;&lt;p&gt;$$&lt;br&gt;T ( n ) = aT(\frac{n}{b}) + f(n) \&lt;br&gt;\texttt{设 } f(n)</summary>
+    <summary type="html">&lt;h1 id=&quot;主定理：&quot;&gt;&lt;a href=&quot;#主定理：&quot; class=&quot;headerlink&quot; title=&quot;主定理：&quot;&gt;&lt;/a&gt;主定理：&lt;/h1&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+T ( n ) = aT(\frac{n}{b})</summary>
         
       
     
@@ -120,7 +121,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;POI2011-ROT-Tree-Rotations&quot;&gt;&lt;a href=&quot;#POI2011-ROT-Tree-Rotations&quot; class=&quot;headerlink&quot; title=&quot;[POI2011]ROT-Tree Rotations&quot;&gt;&lt;/a&gt;[&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;POI2011-ROT-Tree-Rotations&quot;&gt;&lt;a href=&quot;#POI2011-ROT-Tree-Rotations&quot; class=&quot;headerlink&quot; title=&quot;[POI2011]ROT-Tree Rotations&quot;&gt;&lt;/a&gt;&lt;a</summary>
         
       
     
@@ -145,7 +146,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;一-组合数公式&quot;&gt;&lt;a href=&quot;#一-组合数公式&quot; class=&quot;headerlink&quot; title=&quot;一. 组合数公式&quot;&gt;&lt;/a&gt;一. 组合数公式&lt;/h2&gt;&lt;p&gt;$$ C^n_m = \frac{m!}{n!(m-n)!} , n \geq m</summary>
+    <summary type="html">&lt;h2 id=&quot;一-组合数公式&quot;&gt;&lt;a href=&quot;#一-组合数公式&quot; class=&quot;headerlink&quot; title=&quot;一. 组合数公式&quot;&gt;&lt;/a&gt;一. 组合数公式&lt;/h2&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;C^n_m =</summary>
         
       
     
