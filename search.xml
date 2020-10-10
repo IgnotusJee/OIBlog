@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>算法笔记-莫队二次离线</title>
+    <url>/2020/09/15/CaptainMoTwiceOffine/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>莫队</tag>
+        <tag>lxl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2-SAT</title>
     <url>/2020/09/08/2-SAT/</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P4782">洛谷4782</a><br>题意：给定m个约束条件，形式为$x_i,x_j$，表示$x_i$为真/假或$x_j$为真/假，给每个变量赋值使得所有条件得到满足。</p>
@@ -72,16 +82,6 @@ gcd\left(\frac{a}{d},\frac{m}{d}\right)=gcd\left(\frac{a+x}{d},\frac{m}{d}\right
       <tags>
         <tag>题解</tag>
         <tag>数学，练习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记-莫队二次离线</title>
-    <url>/2020/09/15/CaptainMoTwiceOffine/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>莫队</tag>
-        <tag>lxl</tag>
       </tags>
   </entry>
   <entry>
@@ -549,18 +549,6 @@ g\left(n,k\right)=\sum_{i=1}^n\mu(i)\left[i\perp k\right]=\sum_{i=1}^n\mu(i)\lef
       </tags>
   </entry>
   <entry>
-    <title>做题记录（三）</title>
-    <url>/2020/09/08/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="POI2011-ROT-Tree-Rotations"><a href="#POI2011-ROT-Tree-Rotations" class="headerlink" title="[POI2011]ROT-Tree Rotations"></a><a href="https://www.luogu.com.cn/problem/P3521">[POI2011]ROT-Tree Rotations</a></h1><p>树上线段树合并。考虑在每个叶节点建一颗权值线段树，然后向上合并。</p>
-<p>因为交换子树只会影响到跨越左右子树的逆序对数，所以考虑决策是否交换。</p>
-<p>在合并左右子树的权值线段树时，设左子树当前节点为$a$，右子树的当前节点为$b$，$lc,rc$分别为权值线段树中的左右儿子。则不交换在当前值域产生的逆序对数为$sum[rc[a]]<em>sum[lc[b]]$，交换在当前值域产生的逆序对数为$sum[lc[a]]</em>sum[rc[b]]$。取最大值统计即可。</p>
-]]></content>
-      <tags>
-        <tag>题解</tag>
-        <tag>做题记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学杂项</title>
     <url>/2020/09/08/math1/</url>
     <content><![CDATA[<h2 id="一-组合数公式"><a href="#一-组合数公式" class="headerlink" title="一. 组合数公式"></a>一. 组合数公式</h2><script type="math/tex; mode=display">C^n_m = \frac{m!}{n!(m-n)!} , n \geq m</script><p>那么可以在$O(n^2)$的复杂度上递推出组合数<br><pre><code class="hljs cpp"><span class="hljs-built_in">memset</span>(C,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span> C);
@@ -613,6 +601,18 @@ a^{\left(c \bmod \varphi \left(m\right)\right)+\varphi \left(m\right)} & gcd\lef
 ]]></content>
       <tags>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>做题记录（三）</title>
+    <url>/2020/09/08/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="POI2011-ROT-Tree-Rotations"><a href="#POI2011-ROT-Tree-Rotations" class="headerlink" title="[POI2011]ROT-Tree Rotations"></a><a href="https://www.luogu.com.cn/problem/P3521">[POI2011]ROT-Tree Rotations</a></h1><p>树上线段树合并。考虑在每个叶节点建一颗权值线段树，然后向上合并。</p>
+<p>因为交换子树只会影响到跨越左右子树的逆序对数，所以考虑决策是否交换。</p>
+<p>在合并左右子树的权值线段树时，设左子树当前节点为$a$，右子树的当前节点为$b$，$lc,rc$分别为权值线段树中的左右儿子。则不交换在当前值域产生的逆序对数为$sum[rc[a]]<em>sum[lc[b]]$，交换在当前值域产生的逆序对数为$sum[lc[a]]</em>sum[rc[b]]$。取最大值统计即可。</p>
+]]></content>
+      <tags>
+        <tag>题解</tag>
+        <tag>做题记录</tag>
       </tags>
   </entry>
   <entry>
