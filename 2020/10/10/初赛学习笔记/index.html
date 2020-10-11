@@ -227,12 +227,12 @@ T ( n ) = aT(\frac{n}{b}) + f(n) \\
 \Rightarrow \\
 O(n)=
 \begin{cases}
-n^{log_ba} \quad ,  \quad log_ba > t \\ 
+n^{log_ba} \quad ,  \quad log_ba > t \\
 n^{log_ba}logn \quad ,\quad log_ba=t \\
 f(n) \quad , \quad log_ba < t
-\end{cases}</script><h1 id="特征方程："><a href="#特征方程：" class="headerlink" title="特征方程："></a>特征方程：</h1><p>对于形如 $a \, f<em>{n} = b \, f</em>{n-1} + c \, f_{n-2} \: , \: f_0 = p \: , \: f_1 = q$ 的递推式，试求出 $ f_n$ 的通项公式。</p>
+\end{cases}</script><h1 id="特征方程："><a href="#特征方程：" class="headerlink" title="特征方程："></a>特征方程：</h1><p>对于形如 $a \, f_{n} = b \, f_{n-1} + c \, f_{n-2} \: , \: f_0 = p \: , \: f_1 = q$ 的递推式，试求出 $ f_n$ 的通项公式。</p>
 <p>将递推式中的最低项换成$1$，次低项换成$x$，次次低项换成$x^2$，以此类推。解方程，得到两个根：$x_1,x_2$。</p>
-<p>发现数列 ${h<em>i = {x_1} ^ i}$和$g_i = {x </em> 2} ^ i$ 均能满足原递推式。设 $ f <em> n = \alpha \times {x_1} ^ n + \beta \times {x </em> 2}^ n$  ，将初始条件带入即得解。</p>
+<p>发现数列 ${h_i = {x_1} ^ i}$和$g_i = {x _ 2} ^ i$ 均能满足原递推式。设 $ f _ n = \alpha \times {x_1} ^ n + \beta \times {x _ 2}^ n$  ，将初始条件带入即得解。</p>
 <h1 id="浮点数标准-IEEE-754"><a href="#浮点数标准-IEEE-754" class="headerlink" title="浮点数标准 IEEE 754"></a>浮点数标准 IEEE 754</h1><p>一个浮点数的表示：$Value = sign \times exponent \times fraction$，$sign$为符号位，$exponent$为指数偏移值（即指数大小），$fraction$为分数值（有效数位值）。其存储实质为二进制小数。</p>
 <p>为了表示指数的符号，使用指数偏差，将指数编码制限制在无符号整数范围内，即指数实际值为指数的编码制减去指数偏差值。指数偏差值为一个固定值，若存储指数的比特长度为$e$，则指数偏差值为$2^{e-1}-1$。移码表示的指数部分成为阶码。</p>
 <p>如果浮点数中指数部分的编码值在$0&lt;exponent&lt;2^e-2$之间，且在科学表示法的表示方式下，分数部分最高有效位（即整数字）是1，那么这个浮点数将被称为<strong>规约形式的浮点数</strong>。“规约”是指用唯一确定的浮点形式去表示一个值。</p>
