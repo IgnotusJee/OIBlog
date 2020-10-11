@@ -17,7 +17,7 @@
   <meta name="description" content="算法混子的学习笔记">
   <meta name="author" content="柳苏明">
   <meta name="keywords" content="算法,代码">
-  <title>QT题单数学练习 - 柳苏明的博客</title>
+  <title>CSP2020初赛游记 - 柳苏明的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -166,8 +166,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-09-08 15:43" pubdate>
-        2020年9月8日 下午
+      <time datetime="2020-10-11 15:20" pubdate>
+        2020年10月11日 下午
       </time>
     </span>
   
@@ -178,7 +178,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      185 字
+      285 字
     </span>
   
 
@@ -188,7 +188,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      2
        分钟
     </span>
   
@@ -218,23 +218,19 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">QT题单数学练习</h1>
+            <h1 style="display: none">CSP2020初赛游记</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="GCD等于XOR-GCD-XOR"><a href="#GCD等于XOR-GCD-XOR" class="headerlink" title="GCD等于XOR GCD XOR"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA12716">GCD等于XOR GCD XOR</a></h1><p>求</p>
-<script type="math/tex; mode=display">
-\sum_{i=1}^n\sum_{j=i}^n\left[gcd(i,j)=i \operatorname{xor} j\right]</script><p>设</p>
-<script type="math/tex; mode=display">
-\operatorname{gcd}(a,b)=a \operatorname{xor}b=c\quad (a\ge b)\\\\
-\Rightarrow \operatorname{gcd}(\frac{a}{c},\frac{b}{c})=1,\\</script><p>异或为不借位的减法，所以两数差一定不大于两数异或</p>
-<script type="math/tex; mode=display">
-a-b\le c\quad,\\\\
-\Rightarrow \frac{a}{c}-\frac{b}{c}\le 1</script><p>综上，$a-b=a\operatorname{xor}b$。先枚举$a$的约数，再枚举$a$。预处理前缀和即可。</p>
-<h1 id="Same-GCDs"><a href="#Same-GCDs" class="headerlink" title="Same GCDs"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1295D">Same GCDs</a></h1><p>设$d=gcd(a,m)$，则</p>
-<script type="math/tex; mode=display">
-gcd\left(\frac{a}{d},\frac{m}{d}\right)=gcd\left(\frac{a+x}{d},\frac{m}{d}\right)=1</script><p>得到</p>
-<script type="math/tex; mode=display">
-\frac{a+x}{d} \perp \frac{m}{d} \Leftrightarrow \frac{x}{d} \perp \frac{m}{d}</script><p>所以$a$仅仅是将$[0,m-1]$的数进行了一段平移，答案为$\varphi\left(\frac{m}{d}\right)$</p>
+              <h1 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h1><p>白天都对明天的比赛无感，大多时间都在复习初赛。</p>
+<p>因为<code>markdown</code>的渲染问题花了一个半小时给博客换了主题<del>话说我是有多闲啊</del></p>
+<p>晚上老刘来机房网上报高考，突然有了紧张感。</p>
+<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><p>昨天晚上一两点才睡着，早上起来还挺精神。</p>
+<p>到考场碰到了绵竹中学的竞赛教练。互相诉苦。</p>
+<p>拿到卷子感觉难度海星，十多分钟写完了单选。然后就肚子疼请求上厕所，被告知要等到最后半个小时才能去。<del>话说CCF你不怕憋死人吗</del></p>
+<p>到了阅读程序第三题就卡住了。完全不知道这个程序是干什么的。手撸样例画了半个多小时连蒙带猜填满了空。</p>
+<p>程序补全还是挺简单的。</p>
+<p>下午对着洛谷上大佬的答案对了下，大概85分左右，当场裂开。不知道能不能挂线上。机房大佬一个个都九十几还嚷着要退役，还^tm^给不给活路了。</p>
+<p>等着出成绩了。</p>
 
             </div>
             <hr>
@@ -245,9 +241,9 @@ gcd\left(\frac{a}{d},\frac{m}{d}\right)=gcd\left(\frac{a+x}{d},\frac{m}{d}\right
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+                      <a class="hover-with-bg" href="/tags/CSP/">CSP</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6%EF%BC%8C%E7%BB%83%E4%B9%A0/">数学，练习</a>
+                      <a class="hover-with-bg" href="/tags/%E6%B8%B8%E8%AE%B0/">游记</a>
                     
                   </div>
                 
@@ -260,18 +256,12 @@ gcd\left(\frac{a}{d},\frac{m}{d}\right)=gcd\left(\frac{a+x}{d},\frac{m}{d}\right
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/09/08/math1/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数学杂项</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/09/08/2-SAT/">
-                        <span class="hidden-mobile">2-SAT</span>
+                      <a href="/2020/10/10/%E5%88%9D%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">初赛学习笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -414,7 +404,7 @@ gcd\left(\frac{a}{d},\frac{m}{d}\right)=gcd\left(\frac{a+x}{d},\frac{m}{d}\right
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "QT题单数学练习&nbsp;",
+        "CSP2020初赛游记&nbsp;",
       ],
       cursorChar: "|",
       typeSpeed: 100,
