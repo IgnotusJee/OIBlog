@@ -6,7 +6,7 @@
   <link href="http://ignotusjee.github.io/atom.xml" rel="self"/>
   
   <link href="http://ignotusjee.github.io/"/>
-  <updated>2020-10-11T07:33:02.632Z</updated>
+  <updated>2020-10-12T10:52:47.323Z</updated>
   <id>http://ignotusjee.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>solution_CF570D</title>
+    <link href="http://ignotusjee.github.io/2020/10/12/solution-CF570D/"/>
+    <id>http://ignotusjee.github.io/2020/10/12/solution-CF570D/</id>
+    <published>2020-10-12T09:21:52.000Z</published>
+    <updated>2020-10-12T10:52:47.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h1&gt;
+&lt;p&gt;给定一棵以&lt;span class=&quot;katex&quot;&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="题解" scheme="http://ignotusjee.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+    <category term="线段树合并" scheme="http://ignotusjee.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CF718E Matvey&#39;s Birthday 题解</title>
+    <link href="http://ignotusjee.github.io/2020/10/11/Birthday/"/>
+    <id>http://ignotusjee.github.io/2020/10/11/Birthday/</id>
+    <published>2020-10-11T13:14:28.000Z</published>
+    <updated>2020-10-11T13:18:23.877Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/CF718E&quot;&gt;题面&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="题解" scheme="http://ignotusjee.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+    <category term="DP" scheme="http://ignotusjee.github.io/tags/DP/"/>
+    
+  </entry>
   
   <entry>
     <title>CSP2020初赛游记</title>
@@ -28,7 +80,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Day0&quot;&gt;&lt;a href=&quot;#Day0&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;day0&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#day0&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -53,8 +105,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;主定理：&quot;&gt;&lt;a href=&quot;#主定理：&quot; class=&quot;headerlink&quot; title=&quot;主定理：&quot;&gt;&lt;/a&gt;主定理：&lt;/h1&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-T ( n ) = aT(\frac{n}{b})</summary>
+    <summary type="html">&lt;h1 id=&quot;主定理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#主定理&quot;&gt;&lt;/a&gt; 主定理：&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span</summary>
         
       
     
@@ -96,8 +148,8 @@ T ( n ) = aT(\frac{n}{b})</summary>
       
         
         
-    <summary type="html">&lt;p&gt;并查集写成&lt;code&gt;Merge(e[i].v,e[i].v)&lt;/code&gt;调了三天奥里给都给我调出来了。&lt;del&gt;不过这都70分可见数据有多水&lt;/del&gt;&lt;/p&gt;
-&lt;h1 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;并查集写成&lt;code&gt;Merge(e[i].v,e[i].v)&lt;/code&gt;调了三天奥里给都给我调出来了。&lt;s&gt;不过这都70分可见数据有多水&lt;/s&gt;&lt;/p&gt;
+&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -122,8 +174,7 @@ T ( n ) = aT(\frac{n}{b})</summary>
       
         
         
-    <summary type="html">&lt;p&gt;在$OI$中，卡常是一门奇怪又必备的技巧，在某些毒瘤题&lt;del&gt;如Ynoi&lt;/del&gt;中需要用到许多卡常技巧才能卡入时限。这里给出我自己的快速$IO$卡常代码。&lt;/p&gt;
-&lt;h1 id=&quot;一、快速读入&quot;&gt;&lt;a href=&quot;#一、快速读入&quot;</summary>
+    <summary type="html">&lt;p&gt;在&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation</summary>
         
       
     
@@ -146,7 +197,7 @@ T ( n ) = aT(\frac{n}{b})</summary>
       
         
         
-    <summary type="html">&lt;h1 id=&quot;POI2011-ROT-Tree-Rotations&quot;&gt;&lt;a href=&quot;#POI2011-ROT-Tree-Rotations&quot; class=&quot;headerlink&quot; title=&quot;[POI2011]ROT-Tree Rotations&quot;&gt;&lt;/a&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;poi2011rot-tree-rotations&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#poi2011rot-tree-rotations&quot;&gt;&lt;/a&gt; [&lt;a</summary>
         
       
     
@@ -171,7 +222,8 @@ T ( n ) = aT(\frac{n}{b})</summary>
       
         
         
-    <summary type="html">&lt;h2 id=&quot;一-组合数公式&quot;&gt;&lt;a href=&quot;#一-组合数公式&quot; class=&quot;headerlink&quot; title=&quot;一. 组合数公式&quot;&gt;&lt;/a&gt;一. 组合数公式&lt;/h2&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;C^n_m =</summary>
+    <summary type="html">&lt;h2 id=&quot;一-组合数公式&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#一-组合数公式&quot;&gt;&lt;/a&gt; 一. 组合数公式&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span</summary>
         
       
     
@@ -194,7 +246,7 @@ T ( n ) = aT(\frac{n}{b})</summary>
       
         
         
-    <summary type="html">&lt;h1 id=&quot;GCD等于XOR-GCD-XOR&quot;&gt;&lt;a href=&quot;#GCD等于XOR-GCD-XOR&quot; class=&quot;headerlink&quot; title=&quot;GCD等于XOR GCD XOR&quot;&gt;&lt;/a&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;gcd等于xor-gcd-xor&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#gcd等于xor-gcd-xor&quot;&gt;&lt;/a&gt; &lt;a</summary>
         
       
     
@@ -219,8 +271,8 @@ T ( n ) = aT(\frac{n}{b})</summary>
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P4782&quot;&gt;洛谷4782&lt;/a&gt;&lt;br&gt;题意：给定m个约束条件，形式为$x_i,x_j$，表示$x_i$为真/假或$x_j$为真/假，给每个变量赋值使得所有条件得到满足。&lt;/p&gt;
-&lt;h3</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P4782&quot;&gt;洛谷4782&lt;/a&gt;&lt;br /&gt;
+题意：给定m个约束条件，形式为&lt;span class=&quot;katex&quot;&gt;&lt;span</summary>
         
       
     
@@ -246,7 +298,8 @@ T ( n ) = aT(\frac{n}{b})</summary>
         
         
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P1587&quot;&gt;题面&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;题意：&quot;&gt;&lt;a href=&quot;#题意：&quot; class=&quot;headerlink&quot;</summary>
+&lt;h1 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意：&lt;/h1&gt;
+&lt;p&gt;给定&lt;span</summary>
         
       
     

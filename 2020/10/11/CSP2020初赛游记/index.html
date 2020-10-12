@@ -221,15 +221,17 @@
             <h1 style="display: none">CSP2020初赛游记</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h1><p>白天都对明天的比赛无感，大多时间都在复习初赛。</p>
-<p>因为<code>markdown</code>的渲染问题花了一个半小时给博客换了主题<del>话说我是有多闲啊</del></p>
+              <h1 id="day0"><a class="markdownIt-Anchor" href="#day0"></a> Day0</h1>
+<p>白天都对明天的比赛无感，大多时间都在复习初赛。</p>
+<p>因为<code>markdown</code>的渲染问题花了一个半小时给博客换了主题<s>话说我是有多闲啊</s></p>
 <p>晚上老刘来机房网上报高考，突然有了紧张感。</p>
-<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><p>昨天晚上一两点才睡着，早上起来还挺精神。</p>
+<h1 id="day1"><a class="markdownIt-Anchor" href="#day1"></a> Day1</h1>
+<p>昨天晚上一两点才睡着，早上起来还挺精神。</p>
 <p>到考场碰到了绵竹中学的竞赛教练。互相诉苦。</p>
-<p>拿到卷子感觉难度海星，十多分钟写完了单选。然后就肚子疼请求上厕所，被告知要等到最后半个小时才能去。<del>话说CCF你不怕憋死人吗</del></p>
+<p>拿到卷子感觉难度海星，十多分钟写完了单选。然后就肚子疼请求上厕所，被告知要等到最后半个小时才能去。<s>话说CCF你不怕憋死人吗</s></p>
 <p>到了阅读程序第三题就卡住了。完全不知道这个程序是干什么的。手撸样例画了半个多小时连蒙带猜填满了空。</p>
 <p>程序补全还是挺简单的。</p>
-<p>下午对着洛谷上大佬的答案对了下，大概85分左右，当场裂开。不知道能不能挂线上。机房大佬一个个都九十几还嚷着要退役，还^tm^给不给活路了。</p>
+<p>下午对着洛谷上大佬的答案对了下，大概85分左右，当场裂开。不知道能不能挂线上。机房大佬一个个都九十几还嚷着要退役，还<sup>tm</sup>给不给活路了。</p>
 <p>等着出成绩了。</p>
 
             </div>
@@ -255,6 +257,12 @@
                 <div class="post-prevnext row">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2020/10/11/Birthday/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CF718E Matvey's Birthday 题解</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
@@ -471,40 +479,8 @@
   
 
   
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
-
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 

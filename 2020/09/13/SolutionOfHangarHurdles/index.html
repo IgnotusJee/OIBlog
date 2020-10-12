@@ -178,7 +178,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.3k 字
+      3.2k 字
     </span>
   
 
@@ -188,7 +188,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      36
+      54
        分钟
     </span>
   
@@ -221,9 +221,11 @@
             <h1 style="display: none">洛谷3684 [CERC2016]机棚障碍 Hangar Hurdles 题解</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>并查集写成<code>Merge(e[i].v,e[i].v)</code>调了三天奥里给都给我调出来了。<del>不过这都70分可见数据有多水</del></p>
-<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>给定一个$n\times n$的网格图，其中部分格点有障碍物使得箱子不能置于其上。规定箱子是一个奇数边长的正方形，其坐标为其中心格点的坐标。箱子只能上下左右移动，每次询问从一个格点能移动到另一个格点的最大箱子。</p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>此题看似简单，实则恶心的一匹。</p>
+              <p>并查集写成<code>Merge(e[i].v,e[i].v)</code>调了三天奥里给都给我调出来了。<s>不过这都70分可见数据有多水</s></p>
+<h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
+<p>给定一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>的网格图，其中部分格点有障碍物使得箱子不能置于其上。规定箱子是一个奇数边长的正方形，其坐标为其中心格点的坐标。箱子只能上下左右移动，每次询问从一个格点能移动到另一个格点的最大箱子。</p>
+<h1 id="分析"><a class="markdownIt-Anchor" href="#分析"></a> 分析</h1>
+<p>此题看似简单，实则恶心的一匹。</p>
 <ul>
 <li>我们先考虑将问题转化。如果求出每个格点能放置的最大箱子，设为格点权，那么每次询问就变成了求出两点路径上最小点权最大的路径。每次bfs，复杂度无法承受。</li>
 <li>接着发现联通的点权相同的格点可以缩成一个点，因为在这个联通块内移动是不会改变经过的最小点权的。</li>
@@ -232,253 +234,263 @@
 <li>发现这就是Kruskal求最大生成树的过程，于是只要在生成树上查询路径最小值就可以了。</li>
 </ul>
 <p>经过以上转化，此题解决（指口头）。</p>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>实现才是这道题的重头戏。</p>
-<h2 id="part1-求出MaxSize"><a href="#part1-求出MaxSize" class="headerlink" title="part1 求出MaxSize"></a>part1 求出MaxSize</h2><ul>
-<li><p>首先设图中障碍为1，其余为0，对原图进行前缀和，以快速求出目标矩阵中有没有障碍物。</p>
+<h1 id="实现"><a class="markdownIt-Anchor" href="#实现"></a> 实现</h1>
+<p>实现才是这道题的重头戏。</p>
+<h2 id="part1-求出maxsize"><a class="markdownIt-Anchor" href="#part1-求出maxsize"></a> part1 求出MaxSize</h2>
+<ul>
+<li>
+<p>首先设图中障碍为1，其余为0，对原图进行前缀和，以快速求出目标矩阵中有没有障碍物。</p>
 </li>
-<li><p>对每个格点进行二分，得到每个格点能放置的最大箱子设为MaxSize。其中因为边长只能为奇数，二分时是对中心点到边界的距离进行二分。</p>
+<li>
+<p>对每个格点进行二分，得到每个格点能放置的最大箱子设为MaxSize。其中因为边长只能为奇数，二分时是对中心点到边界的距离进行二分。</p>
 </li>
-<li><p>复杂度$O(n^2logn)$</p>
+<li>
+<p>复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
 <p>代码：</p>
 <pre><code class="hljs cpp"><span class="hljs-comment">//第一部分：预处理出每个点的最大矩形</span>
-<span class="hljs-keyword">namespace</span> DealMatrix &#123;
-  <span class="hljs-keyword">int</span> sum[maxn][maxn];<span class="hljs-comment">//前缀和，障碍为1</span>
-  <span class="hljs-keyword">int</span> maxsize[maxn][maxn];
-
-  <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;s)</span> </span>&#123;
-      <span class="hljs-keyword">if</span>(i-s&lt;<span class="hljs-number">1</span>||j-s&lt;<span class="hljs-number">1</span>||i+s&gt;n||j+s&gt;n) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<span class="hljs-comment">//大了</span>
-      <span class="hljs-keyword">if</span>(sum[i+s][j+s]-sum[i-s<span class="hljs-number">-1</span>][j+s]-sum[i+s][j-s<span class="hljs-number">-1</span>]+sum[i-s<span class="hljs-number">-1</span>][j-s<span class="hljs-number">-1</span>]) <span class="hljs-keyword">return</span> <span class="hljs-number">0x0</span>;
-      <span class="hljs-keyword">return</span> <span class="hljs-number">0xff</span>;
-  &#125;
-  <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getsize</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
-      <span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=n/<span class="hljs-number">2</span>,mid,ans=<span class="hljs-number">0</span>;
-      <span class="hljs-keyword">while</span>(l&lt;=r) &#123;
-          mid=(l+r)&gt;&gt;<span class="hljs-number">1</span>;
-          <span class="hljs-keyword">if</span>(!~check(i,j,mid)) ans=mid,l=mid+<span class="hljs-number">1</span>;
-          <span class="hljs-keyword">else</span> r=mid<span class="hljs-number">-1</span>;
-      &#125;
-      <span class="hljs-keyword">return</span> ans*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>;
-  &#125;
-  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
-          <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++)
-              sum[i][j]=sum[i][j<span class="hljs-number">-1</span>]+sum[i<span class="hljs-number">-1</span>][j]-sum[i<span class="hljs-number">-1</span>][j<span class="hljs-number">-1</span>]+(<span class="hljs-built_in">map</span>[i][j]==<span class="hljs-string">&#x27;#&#x27;</span>);
-      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
-          <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++) &#123;
-              <span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j]==<span class="hljs-string">&#x27;.&#x27;</span>)
-                  maxsize[i][j]=getsize(i,j);
-              <span class="hljs-keyword">else</span> maxsize[i][j]=<span class="hljs-number">-1</span>;
-          &#125;
-  &#125;
-&#125;</code></pre>
-<h2 id="part2-缩点并连边"><a href="#part2-缩点并连边" class="headerlink" title="part2 缩点并连边"></a>part2 缩点并连边</h2></li>
-<li><p>将MaxSize相同的点缩在一起，可以使用bfs或者并查集。我这里使用的是bfs。</p>
 </li>
-<li>连边时设$u&lt;v$，先加入要求生成树的图里。注意要判重，我这里使用的是<code>unordered_map</code>。</li>
-<li>复杂度$O(n^2)$，将<code>unordered_map</code>的每次操作当成常数级别。</li>
+</ul>
+<p><span class="hljs-keyword">namespace</span> DealMatrix &#123;<br />
+<span class="hljs-keyword">int</span> sum[maxn][maxn];<span class="hljs-comment">//前缀和，障碍为1</span><br />
+<span class="hljs-keyword">int</span> maxsize[maxn][maxn];</p>
+<pre><code>&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;inline&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; &amp;amp;i,&lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; &amp;amp;j,&lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; &amp;amp;s)&lt;/span&gt; &lt;/span&gt;&amp;#123;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt;(i-s&amp;lt;&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;||j-s&amp;lt;&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;||i+s&amp;gt;n||j+s&amp;gt;n) &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;hljs-literal&quot;&gt;false&lt;/span&gt;;&lt;span class=&quot;hljs-comment&quot;&gt;//大了&lt;/span&gt;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt;(sum[i+s][j+s]-sum[i-s&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;][j+s]-sum[i+s][j-s&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;]+sum[i-s&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;][j-s&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;]) &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;hljs-number&quot;&gt;0x0&lt;/span&gt;;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;hljs-number&quot;&gt;0xff&lt;/span&gt;;
+&amp;#125;
+&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;inline&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;getsize&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; &amp;amp;i,&lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; &amp;amp;j)&lt;/span&gt; &lt;/span&gt;&amp;#123;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; l=&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,r=n/&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;,mid,ans=&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;while&lt;/span&gt;(l&amp;lt;=r) &amp;#123;
+		mid=(l+r)&amp;gt;&amp;gt;&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;;
+		&lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt;(!~check(i,j,mid)) ans=mid,l=mid+&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;;
+		&lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; r=mid&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;;
+	&amp;#125;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; ans*&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;+&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;;
+&amp;#125;
+&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;
+	&lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; i(&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;);i&amp;lt;=n;i++)
+		&lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; j(&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;);j&amp;lt;=n;j++)
+			sum[i][j]=sum[i][j&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;]+sum[i&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;][j]-sum[i&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;][j&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;]+(&lt;span class=&quot;hljs-built_in&quot;&gt;map&lt;/span&gt;[i][j]==&lt;span class=&quot;hljs-string&quot;&gt;&amp;#x27;#&amp;#x27;&lt;/span&gt;);
+	&lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; i(&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;);i&amp;lt;=n;i++)
+		&lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt; j(&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;);j&amp;lt;=n;j++) &amp;#123;
+			&lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;hljs-built_in&quot;&gt;map&lt;/span&gt;[i][j]==&lt;span class=&quot;hljs-string&quot;&gt;&amp;#x27;.&amp;#x27;&lt;/span&gt;)
+				maxsize[i][j]=getsize(i,j);
+			&lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; maxsize[i][j]=&lt;span class=&quot;hljs-number&quot;&gt;-1&lt;/span&gt;;
+		&amp;#125;
+&amp;#125;
+</code></pre>
+<p>}</code></pre>:hexoPostRenderEscape–&gt;</p>
+<h2 id="part2-缩点并连边"><a class="markdownIt-Anchor" href="#part2-缩点并连边"></a> part2 缩点并连边</h2>
+<ul>
+<li>将MaxSize相同的点缩在一起，可以使用bfs或者并查集。我这里使用的是bfs。</li>
+<li>连边时设<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi><mo>&lt;</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">u&lt;v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">u</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>，先加入要求生成树的图里。注意要判重，我这里使用的是<code>unordered_map</code>。</li>
+<li>复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，将<code>unordered_map</code>的每次操作当成常数级别。</li>
 </ul>
 <p>代码：</p>
 <pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> BuildGraph &#123;
-    <span class="hljs-keyword">int</span> belong[maxn][maxn],cnt;<span class="hljs-comment">//联通块编号</span>
-    <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> dx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;;
-    <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> dy[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>&#125;;
+	<span class="hljs-keyword">int</span> belong[maxn][maxn],cnt;<span class="hljs-comment">//联通块编号</span>
+	<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> dx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;;
+	<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> dy[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>&#125;;
 
-    <span class="hljs-keyword">using</span> DealMatrix::maxsize;
-    <span class="hljs-keyword">char</span> vis[maxn][maxn];
-    <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Search</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;col)</span> </span>&#123;
-        <span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">queue</span>&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">pair</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; &gt; q;
-        vis[i][j]=<span class="hljs-number">0xff</span>;belong[i][j]=col;
-        q.push(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">make_pair</span>(i,j));
-        <span class="hljs-keyword">while</span>(!q.empty()) &#123;
-            <span class="hljs-keyword">int</span> x=q.front().first;
-            <span class="hljs-keyword">int</span> y=q.front().second;
-            q.pop();
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k(<span class="hljs-number">0</span>);k&lt;<span class="hljs-number">4</span>;k++) &#123;
-                <span class="hljs-keyword">int</span> nx=x+dx[k],ny=y+dy[k];
-                <span class="hljs-keyword">if</span>(nx&lt;<span class="hljs-number">1</span>||ny&lt;<span class="hljs-number">1</span>||nx&gt;n||ny&gt;n||maxsize[nx][ny]!=maxsize[i][j]||!~vis[nx][ny])
-                    <span class="hljs-keyword">continue</span>;
-                vis[nx][ny]=<span class="hljs-number">0xff</span>;
-                belong[nx][ny]=col;
-                q.push(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">make_pair</span>(nx,ny));
-            &#125;
-        &#125;
-    &#125;
+	<span class="hljs-keyword">using</span> DealMatrix::maxsize;
+	<span class="hljs-keyword">char</span> vis[maxn][maxn];
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Search</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;col)</span> </span>&#123;
+		<span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">queue</span>&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">pair</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; &gt; q;
+		vis[i][j]=<span class="hljs-number">0xff</span>;belong[i][j]=col;
+		q.push(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">make_pair</span>(i,j));
+		<span class="hljs-keyword">while</span>(!q.empty()) &#123;
+			<span class="hljs-keyword">int</span> x=q.front().first;
+			<span class="hljs-keyword">int</span> y=q.front().second;
+			q.pop();
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k(<span class="hljs-number">0</span>);k&lt;<span class="hljs-number">4</span>;k++) &#123;
+				<span class="hljs-keyword">int</span> nx=x+dx[k],ny=y+dy[k];
+				<span class="hljs-keyword">if</span>(nx&lt;<span class="hljs-number">1</span>||ny&lt;<span class="hljs-number">1</span>||nx&gt;n||ny&gt;n||maxsize[nx][ny]!=maxsize[i][j]||!~vis[nx][ny])
+					<span class="hljs-keyword">continue</span>;
+				vis[nx][ny]=<span class="hljs-number">0xff</span>;
+				belong[nx][ny]=col;
+				q.push(<span class="hljs-built_in">std</span>::<span class="hljs-built_in">make_pair</span>(nx,ny));
+			&#125;
+		&#125;
+	&#125;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-        <span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">unordered_map</span>&lt; <span class="hljs-keyword">int</span>,<span class="hljs-built_in">std</span>::<span class="hljs-built_in">unordered_map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">char</span>&gt; &gt; s;
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++)
-                <span class="hljs-keyword">if</span>(~vis[i][j]&amp;&amp;~maxsize[i][j])
-                    Search(i,j,++cnt);
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++) &#123;
-                <span class="hljs-keyword">if</span>(!~maxsize[i][j]) <span class="hljs-keyword">continue</span>;
-                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k(<span class="hljs-number">0</span>);k&lt;<span class="hljs-number">4</span>;k++) &#123;
-                    <span class="hljs-keyword">int</span> x=i+dx[k],y=j+dy[k];
-                    <span class="hljs-keyword">int</span> p=belong[i][j],q=belong[x][y];
-                    <span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">1</span>||y&lt;<span class="hljs-number">1</span>||x&gt;n||y&gt;n||!q||p==q) <span class="hljs-keyword">continue</span>;
-                    <span class="hljs-keyword">if</span>(p&gt;q) swap(p,q);
-                    <span class="hljs-keyword">if</span>(!~s[p][q]) <span class="hljs-keyword">continue</span>;
-                    s[p][q]=<span class="hljs-number">0xff</span>;
-                    Graph_1::e[++Graph_1::m]=Graph_1::Edge(p,q,min(maxsize[i][j],maxsize[x][y]));
-                &#125;
-            &#125;
-        N=cnt;
-        Graph_1::Kruscal();
-    &#125;
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">unordered_map</span>&lt; <span class="hljs-keyword">int</span>,<span class="hljs-built_in">std</span>::<span class="hljs-built_in">unordered_map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">char</span>&gt; &gt; s;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++)
+				<span class="hljs-keyword">if</span>(~vis[i][j]&amp;&amp;~maxsize[i][j])
+					Search(i,j,++cnt);
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++) &#123;
+				<span class="hljs-keyword">if</span>(!~maxsize[i][j]) <span class="hljs-keyword">continue</span>;
+				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k(<span class="hljs-number">0</span>);k&lt;<span class="hljs-number">4</span>;k++) &#123;
+					<span class="hljs-keyword">int</span> x=i+dx[k],y=j+dy[k];
+					<span class="hljs-keyword">int</span> p=belong[i][j],q=belong[x][y];
+					<span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">1</span>||y&lt;<span class="hljs-number">1</span>||x&gt;n||y&gt;n||!q||p==q) <span class="hljs-keyword">continue</span>;
+					<span class="hljs-keyword">if</span>(p&gt;q) swap(p,q);
+					<span class="hljs-keyword">if</span>(!~s[p][q]) <span class="hljs-keyword">continue</span>;
+					s[p][q]=<span class="hljs-number">0xff</span>;
+					Graph_1::e[++Graph_1::m]=Graph_1::Edge(p,q,min(maxsize[i][j],maxsize[x][y]));
+				&#125;
+			&#125;
+		N=cnt;
+		Graph_1::Kruscal();
+	&#125;
 &#125;</code></pre>
-<h2 id="part3-求出最大生成树"><a href="#part3-求出最大生成树" class="headerlink" title="part3 求出最大生成树"></a>part3 求出最大生成树</h2><p>这个没什么说的。并查集我使用的是路径压缩+按秩合并版本，复杂度最优。复杂度$O(m\alpha(n^2))$，其中$m$为边数。</p>
+<h2 id="part3-求出最大生成树"><a class="markdownIt-Anchor" href="#part3-求出最大生成树"></a> part3 求出最大生成树</h2>
+<p>这个没什么说的。并查集我使用的是路径压缩+按秩合并版本，复杂度最优。复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mi>α</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m\alpha(n^2))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>为边数。</p>
 <p>代码：</p>
 <pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Graph_1 &#123;
-    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
-        <span class="hljs-keyword">int</span> u,v,w;
-        Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)
-            :u(u),v(v),w(w) &#123;&#125;
-        Edge() &#123;&#125;
-    &#125;e[maxm&lt;&lt;<span class="hljs-number">2</span>];
-    <span class="hljs-keyword">int</span> m;<span class="hljs-keyword">char</span> InTree[maxm&lt;&lt;<span class="hljs-number">2</span>];
-    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Compare</span> &#123;</span>
-        <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span> <span class="hljs-params">()</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> Edge &amp;a,<span class="hljs-keyword">const</span> Edge &amp;b)</span> </span>&#123;
-            <span class="hljs-keyword">return</span> a.w&lt;b.w;
-        &#125;
-    &#125;cmp;
+	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
+		<span class="hljs-keyword">int</span> u,v,w;
+		Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)
+			:u(u),v(v),w(w) &#123;&#125;
+		Edge() &#123;&#125;
+	&#125;e[maxm&lt;&lt;<span class="hljs-number">2</span>];
+	<span class="hljs-keyword">int</span> m;<span class="hljs-keyword">char</span> InTree[maxm&lt;&lt;<span class="hljs-number">2</span>];
+	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Compare</span> &#123;</span>
+		<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span> <span class="hljs-params">()</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> Edge &amp;a,<span class="hljs-keyword">const</span> Edge &amp;b)</span> </span>&#123;
+			<span class="hljs-keyword">return</span> a.w&lt;b.w;
+		&#125;
+	&#125;cmp;
 
-    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">UnoinFindSet</span> &#123;</span>
-        <span class="hljs-keyword">int</span> fa[maxm],rank[maxm];
-        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++) fa[i]=i,rank[i]=<span class="hljs-number">1</span>;
-        &#125;
-        <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-            <span class="hljs-keyword">return</span> (x == fa[x]) ? x : (fa[x] = Find( fa[x] ));
-        &#125;
-        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v)</span> </span>&#123;
-            int x(Find(u)),y(Find(v));
-            <span class="hljs-keyword">if</span>(x!=y) &#123;
-                <span class="hljs-keyword">if</span>(rank[x]&lt;rank[y]) fa[x]=y,rank[y]=max(rank[y],rank[x]+<span class="hljs-number">1</span>);
-                <span class="hljs-keyword">else</span> fa[y]=x,rank[x]=max(rank[x],rank[y]+<span class="hljs-number">1</span>);
-            &#125;
-        &#125;
-        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Same</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v)</span> </span>&#123;
-            <span class="hljs-keyword">return</span> Find(u)==Find(v);
-        &#125;
-    &#125;U;
+	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">UnoinFindSet</span> &#123;</span>
+		<span class="hljs-keyword">int</span> fa[maxm],rank[maxm];
+		<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++) fa[i]=i,rank[i]=<span class="hljs-number">1</span>;
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+			<span class="hljs-keyword">return</span> (x == fa[x]) ? x : (fa[x] = Find( fa[x] ));
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v)</span> </span>&#123;
+			int x(Find(u)),y(Find(v));
+			<span class="hljs-keyword">if</span>(x!=y) &#123;
+				<span class="hljs-keyword">if</span>(rank[x]&lt;rank[y]) fa[x]=y,rank[y]=max(rank[y],rank[x]+<span class="hljs-number">1</span>);
+				<span class="hljs-keyword">else</span> fa[y]=x,rank[x]=max(rank[x],rank[y]+<span class="hljs-number">1</span>);
+			&#125;
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Same</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v)</span> </span>&#123;
+			<span class="hljs-keyword">return</span> Find(u)==Find(v);
+		&#125;
+	&#125;U;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Kruscal</span><span class="hljs-params">()</span> </span>&#123;
-        <span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+m,cmp);
-        U.Init();
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
-            <span class="hljs-keyword">if</span>(U.Same(e[i].u,e[i].v)) <span class="hljs-keyword">continue</span>;
-            U.Merge(e[i].u,e[i].v);
-            InTree[i]=<span class="hljs-number">0xff</span>;
-        &#125;
-    &#125;
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Kruscal</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+m,cmp);
+		U.Init();
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+			<span class="hljs-keyword">if</span>(U.Same(e[i].u,e[i].v)) <span class="hljs-keyword">continue</span>;
+			U.Merge(e[i].u,e[i].v);
+			InTree[i]=<span class="hljs-number">0xff</span>;
+		&#125;
+	&#125;
 &#125;</code></pre>
-<h2 id="part4-树上快速查询"><a href="#part4-树上快速查询" class="headerlink" title="part4 树上快速查询"></a>part4 树上快速查询</h2><ul>
-<li>这里方法很多，可以倍增，树剖<del>还有LCT</del>。这里采用的是树剖+ST表。复杂度预处理$n^2logn$，每次查询$logn$。</li>
+<h2 id="part4-树上快速查询"><a class="markdownIt-Anchor" href="#part4-树上快速查询"></a> part4 树上快速查询</h2>
+<ul>
+<li>这里方法很多，可以倍增，树剖<s>还有LCT</s>。这里采用的是树剖+ST表。复杂度预处理<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">n^2logn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span></span></span></span>，每次查询<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">logn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span></span></span></span>。</li>
 <li>注意求出的生成树可能是森林。</li>
 <li>另外，因为前面把点权转化为边权，这里又把边权转化为点权处理，所以树剖询问时不能加上lca的贡献。</li>
 </ul>
 <p>代码：</p>
 <pre><code class="hljs cpp"><span class="hljs-comment">// 第三部分树剖最小值，在最小生成树上查询瓶颈路。注意，可能是一个森林</span>
 <span class="hljs-keyword">namespace</span> Tree &#123;
-    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
-        <span class="hljs-keyword">int</span> v,next,w;
-        Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;next,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)
-            :v(v),next(next),w(w) &#123;&#125;
-        Edge() &#123;&#125;
-    &#125;e[maxm&lt;&lt;<span class="hljs-number">1</span>];
-    <span class="hljs-keyword">int</span> head[maxm],cnt;
-    <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddEdge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)</span> </span>&#123;
-        e[++cnt]=Edge(v,head[u],w);
-        head[u]=cnt;
-    &#125;
+	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
+		<span class="hljs-keyword">int</span> v,next,w;
+		Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;next,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)
+			:v(v),next(next),w(w) &#123;&#125;
+		Edge() &#123;&#125;
+	&#125;e[maxm&lt;&lt;<span class="hljs-number">1</span>];
+	<span class="hljs-keyword">int</span> head[maxm],cnt;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddEdge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)</span> </span>&#123;
+		e[++cnt]=Edge(v,head[u],w);
+		head[u]=cnt;
+	&#125;
 
-    <span class="hljs-keyword">int</span> val[maxm];<span class="hljs-comment">//边权转化为点权</span>
-    <span class="hljs-keyword">namespace</span> STTable &#123;
-        <span class="hljs-keyword">int</span> f[maxm][<span class="hljs-number">21</span>],Log[maxm];
-        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
-            <span class="hljs-built_in">memset</span>(f,<span class="hljs-number">0x3f</span>,<span class="hljs-keyword">sizeof</span> f);
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">0</span>),w(<span class="hljs-number">1</span>);w&lt;=N;i++,w&lt;&lt;=<span class="hljs-number">1</span>) Log[w]=i;
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++) <span class="hljs-keyword">if</span>(!Log[i]) Log[i]=Log[i<span class="hljs-number">-1</span>];
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++)
-                f[i][<span class="hljs-number">0</span>]=val[i];
-            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;<span class="hljs-number">21</span>;j++)
-                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++)
-                    <span class="hljs-keyword">if</span>(<span class="hljs-number">1</span>+(<span class="hljs-number">1</span>&lt;&lt;j)<span class="hljs-number">-1</span>&lt;=N)
-                        f[i][j]=min(f[i][j<span class="hljs-number">-1</span>],f[i+(<span class="hljs-number">1</span>&lt;&lt;(j<span class="hljs-number">-1</span>))][j<span class="hljs-number">-1</span>]);
-        &#125;
-        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">QueryMin</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;l,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;r)</span> </span>&#123;
-            <span class="hljs-keyword">if</span>(l&gt;r) <span class="hljs-keyword">return</span> inf;
-            <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">o</span><span class="hljs-params">(Log[r-l+<span class="hljs-number">1</span>])</span></span>;
-            <span class="hljs-keyword">return</span> min(f[l][o],f[r-(<span class="hljs-number">1</span>&lt;&lt;o)+<span class="hljs-number">1</span>][o]);
-        &#125;
-    &#125;
+	<span class="hljs-keyword">int</span> val[maxm];<span class="hljs-comment">//边权转化为点权</span>
+	<span class="hljs-keyword">namespace</span> STTable &#123;
+		<span class="hljs-keyword">int</span> f[maxm][<span class="hljs-number">21</span>],Log[maxm];
+		<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
+			<span class="hljs-built_in">memset</span>(f,<span class="hljs-number">0x3f</span>,<span class="hljs-keyword">sizeof</span> f);
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">0</span>),w(<span class="hljs-number">1</span>);w&lt;=N;i++,w&lt;&lt;=<span class="hljs-number">1</span>) Log[w]=i;
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++) <span class="hljs-keyword">if</span>(!Log[i]) Log[i]=Log[i<span class="hljs-number">-1</span>];
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++)
+				f[i][<span class="hljs-number">0</span>]=val[i];
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;<span class="hljs-number">21</span>;j++)
+				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++)
+					<span class="hljs-keyword">if</span>(<span class="hljs-number">1</span>+(<span class="hljs-number">1</span>&lt;&lt;j)<span class="hljs-number">-1</span>&lt;=N)
+						f[i][j]=min(f[i][j<span class="hljs-number">-1</span>],f[i+(<span class="hljs-number">1</span>&lt;&lt;(j<span class="hljs-number">-1</span>))][j<span class="hljs-number">-1</span>]);
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">QueryMin</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;l,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;r)</span> </span>&#123;
+			<span class="hljs-keyword">if</span>(l&gt;r) <span class="hljs-keyword">return</span> inf;
+			<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">o</span><span class="hljs-params">(Log[r-l+<span class="hljs-number">1</span>])</span></span>;
+			<span class="hljs-keyword">return</span> min(f[l][o],f[r-(<span class="hljs-number">1</span>&lt;&lt;o)+<span class="hljs-number">1</span>][o]);
+		&#125;
+	&#125;
 
-    <span class="hljs-keyword">int</span> size[maxm],fa[maxm],son[maxm],w[maxm],depth[maxm],belong[maxm],Cnt_Tree;
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs1</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u)</span> </span>&#123;
-        belong[u]=Cnt_Tree;
-        size[u]=<span class="hljs-number">1</span>;depth[u]=depth[fa[u]]+<span class="hljs-number">1</span>;
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(head[u]);i;i=e[i].next) &#123;
-            <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v=e[i].v;
-            <span class="hljs-keyword">if</span>(v==fa[u]) <span class="hljs-keyword">continue</span>;
-            fa[v]=u;
-            dfs1(v);
-            size[u]+=size[v];
-            <span class="hljs-keyword">if</span>(size[v]&gt;size[son[u]]) son[u]=v,w[u]=e[i].w;
-        &#125;
-    &#125;
-    <span class="hljs-keyword">int</span> top[maxm],dfn[maxm],stamp;
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs2</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;anc)</span> </span>&#123;
-        dfn[u]=++stamp;
-        top[u]=anc;
-        <span class="hljs-keyword">if</span>(son[u]) dfs2(son[u],anc),val[dfn[son[u]]]=w[u];
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(head[u]);i;i=e[i].next) &#123;
-            <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v=e[i].v;
-            <span class="hljs-keyword">if</span>(v==fa[u]||v==son[u]) <span class="hljs-keyword">continue</span>;
-            dfs2(v,v);val[dfn[v]]=e[i].w;
-        &#125;
-    &#125;
+	<span class="hljs-keyword">int</span> size[maxm],fa[maxm],son[maxm],w[maxm],depth[maxm],belong[maxm],Cnt_Tree;
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs1</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u)</span> </span>&#123;
+		belong[u]=Cnt_Tree;
+		size[u]=<span class="hljs-number">1</span>;depth[u]=depth[fa[u]]+<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(head[u]);i;i=e[i].next) &#123;
+			<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v=e[i].v;
+			<span class="hljs-keyword">if</span>(v==fa[u]) <span class="hljs-keyword">continue</span>;
+			fa[v]=u;
+			dfs1(v);
+			size[u]+=size[v];
+			<span class="hljs-keyword">if</span>(size[v]&gt;size[son[u]]) son[u]=v,w[u]=e[i].w;
+		&#125;
+	&#125;
+	<span class="hljs-keyword">int</span> top[maxm],dfn[maxm],stamp;
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs2</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;anc)</span> </span>&#123;
+		dfn[u]=++stamp;
+		top[u]=anc;
+		<span class="hljs-keyword">if</span>(son[u]) dfs2(son[u],anc),val[dfn[son[u]]]=w[u];
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(head[u]);i;i=e[i].next) &#123;
+			<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v=e[i].v;
+			<span class="hljs-keyword">if</span>(v==fa[u]||v==son[u]) <span class="hljs-keyword">continue</span>;
+			dfs2(v,v);val[dfn[v]]=e[i].w;
+		&#125;
+	&#125;
 
-    <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">GetMin</span><span class="hljs-params">(<span class="hljs-keyword">int</span> u,<span class="hljs-keyword">int</span> v)</span> </span>&#123;
-        <span class="hljs-keyword">int</span> ans=inf;
-        <span class="hljs-keyword">while</span>(top[u]!=top[v]) &#123;
-            <span class="hljs-keyword">if</span>(depth[top[u]]&lt;depth[top[v]]) swap(u,v);
-            ans=min(ans,STTable::QueryMin(dfn[top[u]],dfn[u]));
-            u=fa[top[u]];
-        &#125;
-        <span class="hljs-keyword">if</span>(depth[u]&gt;depth[v]) swap(u,v);
-        ans=min(ans,STTable::QueryMin(dfn[u]+<span class="hljs-number">1</span>,dfn[v]));
-        <span class="hljs-keyword">return</span> ans;
-    &#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">GetMin</span><span class="hljs-params">(<span class="hljs-keyword">int</span> u,<span class="hljs-keyword">int</span> v)</span> </span>&#123;
+		<span class="hljs-keyword">int</span> ans=inf;
+		<span class="hljs-keyword">while</span>(top[u]!=top[v]) &#123;
+			<span class="hljs-keyword">if</span>(depth[top[u]]&lt;depth[top[v]]) swap(u,v);
+			ans=min(ans,STTable::QueryMin(dfn[top[u]],dfn[u]));
+			u=fa[top[u]];
+		&#125;
+		<span class="hljs-keyword">if</span>(depth[u]&gt;depth[v]) swap(u,v);
+		ans=min(ans,STTable::QueryMin(dfn[u]+<span class="hljs-number">1</span>,dfn[v]));
+		<span class="hljs-keyword">return</span> ans;
+	&#125;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=Graph_1::m;i++)
-            <span class="hljs-keyword">if</span>(!~Graph_1::InTree[i]) &#123;
-                AddEdge(Graph_1::e[i].u,Graph_1::e[i].v,Graph_1::e[i].w);
-                AddEdge(Graph_1::e[i].v,Graph_1::e[i].u,Graph_1::e[i].w);
-            &#125;
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++)
-            <span class="hljs-keyword">if</span>(!dfn[i]) &#123;
-                Cnt_Tree++;
-                dfs1(i);
-                dfs2(i,i);
-            &#125;
-        STTable::Init();
-    &#125;
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=Graph_1::m;i++)
+			<span class="hljs-keyword">if</span>(!~Graph_1::InTree[i]) &#123;
+				AddEdge(Graph_1::e[i].u,Graph_1::e[i].v,Graph_1::e[i].w);
+				AddEdge(Graph_1::e[i].v,Graph_1::e[i].u,Graph_1::e[i].w);
+			&#125;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=N;i++)
+			<span class="hljs-keyword">if</span>(!dfn[i]) &#123;
+				Cnt_Tree++;
+				dfs1(i);
+				dfs2(i,i);
+			&#125;
+		STTable::Init();
+	&#125;
 &#125;</code></pre>
-<h2 id="part5-处理询问"><a href="#part5-处理询问" class="headerlink" title="part5 处理询问"></a>part5 处理询问</h2><p>注意亿点细节。例如，不在一棵树上以及所询问的点就是障碍时，返回无解。</p>
+<h2 id="part5-处理询问"><a class="markdownIt-Anchor" href="#part5-处理询问"></a> part5 处理询问</h2>
+<p>注意亿点细节。例如，不在一棵树上以及所询问的点就是障碍时，返回无解。</p>
 <p>代码：</p>
 <pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Query</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x1,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y1,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x2,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y2)</span> </span>&#123;
-    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[x1][y1]==<span class="hljs-string">&#x27;#&#x27;</span>||<span class="hljs-built_in">map</span>[x2][y2]==<span class="hljs-string">&#x27;#&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">int</span> u=BuildGraph::belong[x1][y1],v=BuildGraph::belong[x2][y2];
-    <span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span> DealMatrix::maxsize[x1][y1];
-    <span class="hljs-keyword">if</span>(Tree::belong[u]!=Tree::belong[v]) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">int</span> ans=Tree::GetMin(u,v);
-    <span class="hljs-keyword">if</span>(ans==inf) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">return</span> ans;
+	<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[x1][y1]==<span class="hljs-string">&#x27;#&#x27;</span>||<span class="hljs-built_in">map</span>[x2][y2]==<span class="hljs-string">&#x27;#&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">int</span> u=BuildGraph::belong[x1][y1],v=BuildGraph::belong[x2][y2];
+	<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span> DealMatrix::maxsize[x1][y1];
+	<span class="hljs-keyword">if</span>(Tree::belong[u]!=Tree::belong[v]) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">int</span> ans=Tree::GetMin(u,v);
+	<span class="hljs-keyword">if</span>(ans==inf) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">return</span> ans;
 &#125;</code></pre>
-<p>总复杂度$O((n^2+q)logn+m\alpha(n^2))$。可以将$m$看作是$n^2$级别，但实际远远要小。</p>
-<p>至此，此题终于做完了。我的代码共354行，算得上是我打过的最长的代码了。<del>还不是因为加了个七十多行的快速读写</del></p>
+<p>总复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo stretchy="false">)</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>+</mo><mi>m</mi><mi>α</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O((n^2+q)logn+m\alpha(n^2))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>。可以将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>看作是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>级别，但实际远远要小。</p>
+<p>至此，此题终于做完了。我的代码共354行，算得上是我打过的最长的代码了。<s>还不是因为加了个七十多行的快速读写</s></p>
 
             </div>
             <hr>
@@ -725,40 +737,8 @@
   
 
   
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
-
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
