@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
+  <link rel="icon" type="image/png" href="/img/avatar.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="算法混子的学习笔记">
+  <meta name="author" content="柳苏明">
+  <meta name="keywords" content="算法,代码">
+  <title>2020-10-13考试总结 - 柳苏明的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="柳苏明的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>柳苏明的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/eriri.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-13 15:54" pubdate>
+        2020年10月13日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">2020-10-13考试总结</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="t1-破冰派对"><a class="markdownIt-Anchor" href="#t1-破冰派对"></a> T1 破冰派对</h1>
+<p>考试时一看就觉得要求出最大团，于是花了一个多小时抠这个。于是最终也没有抠出来，输出大样例跑路了。考完了才知道最大团问题是NP完全的。</p>
+<p>其实正解就是暴搜。因为状态数不多，所以搜的出来。</p>
+<p>教训：一段时间内想不出正解考虑打暴力跑路。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1000</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> n,m;
+<span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
+
+<span class="hljs-keyword">int</span> work[maxn],won,part[maxn],pan;
+<span class="hljs-keyword">int</span> ans;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dfs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(u==n+<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">void</span>(ans+=(won&amp;&amp;pan));
+	<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">flag</span><span class="hljs-params">(<span class="hljs-number">0x00</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=won;i++)
+		<span class="hljs-keyword">if</span>(~<span class="hljs-built_in">map</span>[u][work[i]]) &#123;
+			flag=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">break</span>;
+		&#125;
+	<span class="hljs-keyword">if</span>(~flag) &#123;
+		work[++won]=u;
+		Dfs(u+<span class="hljs-number">1</span>);
+		won--;
+	&#125;
+	flag=<span class="hljs-number">0x00</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=pan;i++)
+		<span class="hljs-keyword">if</span>(!~<span class="hljs-built_in">map</span>[u][part[i]]) &#123;
+			flag=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">break</span>;
+		&#125;
+	<span class="hljs-keyword">if</span>(~flag) &#123;
+		part[++pan]=u;
+		Dfs(u+<span class="hljs-number">1</span>);
+		pan--;
+	&#125;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;party.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-keyword">int</span> T;<span class="hljs-built_in">cin</span>&gt;&gt;T;
+	<span class="hljs-keyword">while</span>(T--) &#123;
+		ans=<span class="hljs-number">0</span>;
+		<span class="hljs-built_in">memset</span>(<span class="hljs-built_in">map</span>,<span class="hljs-number">0x00</span>,<span class="hljs-keyword">sizeof</span> <span class="hljs-built_in">map</span>);
+		<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+			<span class="hljs-keyword">int</span> u,v;<span class="hljs-built_in">cin</span>&gt;&gt;u&gt;&gt;v;
+			<span class="hljs-built_in">map</span>[u][v]=<span class="hljs-built_in">map</span>[v][u]=<span class="hljs-number">0xff</span>;
+		&#125;
+		Dfs(<span class="hljs-number">1</span>);
+		<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t2-无聊游戏"><a class="markdownIt-Anchor" href="#t2-无聊游戏"></a> T2 无聊游戏</h1>
+<p>这题还是考试时想出来了。考虑改变前缀使得后缀最大和最小。</p>
+<pre><code class="hljs cpp"><span class="hljs-comment">// 小A想让数列和尽量小，则他要选择最大后缀变负</span>
+<span class="hljs-comment">// 小N要让最大后缀最小，同时修改的前缀和为负且大</span>
+<span class="hljs-comment">// 从左向右扫，维护左端点到当前点的最大后缀，这个区间要乘上-A。</span>
+<span class="hljs-comment">// 预处理出后缀和和最大后缀</span>
+<span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> n;
+<span class="hljs-keyword">using</span> ll = <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
+ll A,B,q[maxn];
+ll sumpre[maxn];
+ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Calc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(i&lt;j) <span class="hljs-keyword">return</span> sumpre[i]*-A+sumsuf[j]*-B+sumpre[j<span class="hljs-number">-1</span>]-sumpre[i];
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> sumpre[j<span class="hljs-number">-1</span>]*-A+sumsuf[i+<span class="hljs-number">1</span>]*-B+(sumpre[i]-sumpre[j<span class="hljs-number">-1</span>])*A*B;
+
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;game.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-comment">//	freopen(&quot;game.out&quot;,&quot;w&quot;,stdout);</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;A&gt;&gt;B;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;q[i],sumpre[i]=sumpre[i<span class="hljs-number">-1</span>]+q[i];
+	possuf[n+<span class="hljs-number">1</span>]=n+<span class="hljs-number">1</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(n);i;i--) &#123;
+		sumsuf[i]=q[i]+sumsuf[i+<span class="hljs-number">1</span>];
+		<span class="hljs-keyword">if</span>(sumsuf[i]&gt;lensuf[i+<span class="hljs-number">1</span>]) &#123;
+			lensuf[i]=sumsuf[i];
+			possuf[i]=i;
+		&#125;
+		<span class="hljs-keyword">else</span> &#123;
+			lensuf[i]=lensuf[i+<span class="hljs-number">1</span>];
+			possuf[i]=possuf[i+<span class="hljs-number">1</span>];
+		&#125;
+	&#125;
+	ll ans(Calc(0,possuf[1])),sum(0);
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>),t(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;<span class="hljs-comment">// t为前缀的最大后缀位置</span>
+		<span class="hljs-keyword">if</span>(sum+q[i]*(-A)&lt;<span class="hljs-number">0</span>) sum=<span class="hljs-number">0</span>,t=i+<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">else</span> sum+=q[i]*(-A);
+		<span class="hljs-keyword">int</span> nowpos;
+		<span class="hljs-keyword">if</span>(lensuf[i+<span class="hljs-number">1</span>]&gt;sum+sumsuf[i+<span class="hljs-number">1</span>]) nowpos=possuf[i+<span class="hljs-number">1</span>];
+		<span class="hljs-keyword">else</span> nowpos=t;
+		ans=max(ans,Calc(i,nowpos));
+	&#125;
+	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre>
+<h1 id="t3-建设国家"><a class="markdownIt-Anchor" href="#t3-建设国家"></a> T3 建设国家</h1>
+<p>又是最生成树。考试时根本没有思路，因为快没有时间了就乱打了个贪心。其实也不难想出来。</p>
+<p>考虑第一轮计划对每一条边的贡献就是题目中给出的那个式子。第二轮计划拆成一条边上两点加人对对方的影响。推式子后发现优先加<code>F</code>大的，权值转化到边权上做最小生成树即可。</p>
+<pre><code class="hljs cpp">const int maxn(55),maxm(maxn*maxn);
+<span class="hljs-keyword">using</span> ll=<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
+<span class="hljs-keyword">int</span> n,m;ll T[maxn],F[maxn],U[maxn],C;
+<span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
+	<span class="hljs-keyword">int</span> u,v;ll w;
+	Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> ll &amp;w) :u(u),v(v),w(w) &#123;&#125;
+	Edge() &#123;&#125;
+&#125;e[maxm];
+<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Calc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(F[i]&lt;F[j]) <span class="hljs-keyword">return</span> Calc(j,i);
+	<span class="hljs-keyword">return</span> <span class="hljs-number">1l</span>l*F[i]*(U[i]-T[i])*T[j]+<span class="hljs-number">1l</span>l*F[j]*(U[j]-T[j])*U[i];
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionAndFindSet</span> &#123;</span>
+<span class="hljs-keyword">private</span>:
+	<span class="hljs-keyword">int</span> fa[maxn],rank[maxn];
+	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> x == fa[x] ? x : fa[x] = Find(fa[x]);
+	&#125;
+<span class="hljs-keyword">public</span>:
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) fa[i]=i,rank[i]=<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+		int u(Find(x)),v(Find(y));
+		<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span>;
+		<span class="hljs-keyword">if</span>(rank[u]&lt;rank[v]) swap(u,v);
+		fa[v]=u;rank[u]=max(rank[u],rank[v]+<span class="hljs-number">1</span>);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Same</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> Find(x)==Find(y);
+	&#125;
+&#125;S;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;res.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n;
+	S.Init();<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;T[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;U[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;F[i],ans+=(T[i]+U[i]<span class="hljs-number">-1</span>)*(U[i]-T[i])/<span class="hljs-number">2</span>*F[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;&amp;<span class="hljs-built_in">map</span>[i][<span class="hljs-number">1</span>];
+	<span class="hljs-built_in">cin</span>&gt;&gt;C;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;i;j++) &#123;
+			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j]==<span class="hljs-string">&#x27;Y&#x27;</span>) &#123;
+				ans+=Calc(i,j);
+				S.Merge(i,j);
+			&#125;
+			<span class="hljs-keyword">else</span> e[++m]=Edge(i,j,Calc(i,j)+(T[i]+T[j])*C);
+		&#125;
+	<span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+m,[](<span class="hljs-keyword">const</span> Edge &amp;p,<span class="hljs-keyword">const</span> Edge &amp;q) &#123;
+		<span class="hljs-keyword">return</span> p.w&lt;q.w;
+	&#125;);
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+		<span class="hljs-keyword">if</span>(S.Same(e[i].u,e[i].v)) <span class="hljs-keyword">continue</span>;
+		S.Merge(e[i].u,e[i].v);
+		ans+=e[i].w;
+	&#125;
+	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%80%83%E8%AF%95/">考试</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%80%BB%E7%BB%93/">总结</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/12/Works-2020-Oct/">
+                        <span class="hidden-mobile">十月做题记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "2020-10-13考试总结&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
