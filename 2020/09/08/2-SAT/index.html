@@ -178,7 +178,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.5k 字
+      1k 字
     </span>
   
 
@@ -188,7 +188,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      25
+      16
        分钟
     </span>
   
@@ -288,88 +288,7 @@ AddEdge(v+n*(b^<span class="hljs-number">1</span>),u+n*(a&amp;<span class="hljs-
 <pre><code class="hljs cpp"><span class="hljs-keyword">for</span>(R i(<span class="hljs-number">1</span>);i&lt;=n;i++)
 	write((<span class="hljs-keyword">int</span>)(belong[i]&gt;belong[i+n]),<span class="hljs-string">&quot; \n&quot;</span>[i==n]);</code></pre>
 <p>最后放出完整代码,<s>不要说我快读毒瘤</s></p>
-<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cctype&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> R register int</span>
-
-<span class="hljs-keyword">namespace</span> quick &#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> tp template<span class="hljs-meta-string">&lt;typename Type&gt;</span></span>
-	<span class="hljs-keyword">namespace</span> in &#123;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
-			<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1=buf,*p2=buf;
-			<span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>,<span class="hljs-built_in">stdin</span>),p1==p2)?EOF:*p1++;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
-			*s=getc();
-			<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isspace</span>(*s)) &#123;*s=getc();<span class="hljs-keyword">if</span>(*s==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-			<span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;
-			*s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-		&#125;
-		<span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;x)</span> </span>&#123;
-			x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
-			<span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-			<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);c=getc();&#125;
-			x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-		&#125;
-		<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Type,<span class="hljs-keyword">typename</span>... Args&gt;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;t,Args &amp;...args)</span> </span>&#123;
-			<span class="hljs-keyword">int</span> res=<span class="hljs-number">0</span>;
-			res+=read(t);res+=read(args...);
-			<span class="hljs-keyword">return</span> res;
-		&#125;
-	&#125;
-	<span class="hljs-keyword">using</span> in::read;
-	<span class="hljs-keyword">namespace</span> out &#123;
-		<span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1=<span class="hljs-number">-1</span>;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>)<span class="hljs-number">-1</span>;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;
-			fwrite(buf,<span class="hljs-number">1</span>,p1+<span class="hljs-number">1</span>,<span class="hljs-built_in">stdout</span>);
-			p1=<span class="hljs-number">-1</span>;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
-			<span class="hljs-keyword">if</span>(p1==p2) flush();
-			buf[++p1]=c;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
-			<span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span> </span>&#123;
-			<span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
-		&#125;
-		<span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type x)</span> </span>&#123;
-			<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">30</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
-			<span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;putc(<span class="hljs-string">&#x27;-&#x27;</span>);x=-x;&#125;
-			<span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(;x;x/=<span class="hljs-number">10</span>) buf[++p]=x%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
-			<span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;
-		<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Type,<span class="hljs-keyword">typename</span>... Args&gt;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type t,Args ...args)</span> </span>&#123;
-			write(t);write(args...);
-		&#125;
-	&#125;
-	<span class="hljs-keyword">using</span> out::write;
-	<span class="hljs-keyword">using</span> out::flush;
-	<span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type &amp;a,<span class="hljs-keyword">const</span> Type &amp;b)</span> </span>&#123;
-		<span class="hljs-keyword">if</span>(a&lt;b) <span class="hljs-keyword">return</span> b;
-		<span class="hljs-keyword">return</span> a;
-	&#125;
-	<span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">min</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type &amp;a,<span class="hljs-keyword">const</span> Type &amp;b)</span> </span>&#123;
-		<span class="hljs-keyword">if</span>(a&lt;b) <span class="hljs-keyword">return</span> a;
-		<span class="hljs-keyword">return</span> b;
-	&#125;
-	<span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(Type &amp;a,Type &amp;b)</span> </span>&#123;
-		a^=b^=a^=b;
-	&#125;
-	<span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">abs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type &amp;a)</span> </span>&#123;
-		<span class="hljs-keyword">return</span> a&gt;=<span class="hljs-number">0</span>?a:-a;
-	&#125;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> tp</span>
-&#125;
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> quick;
-
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn=<span class="hljs-number">1e6</span>+<span class="hljs-number">20</span>,inf=<span class="hljs-number">0x3f3f3f3f</span>;
+<pre><code class="hljs cpp"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn=<span class="hljs-number">1e6</span>+<span class="hljs-number">20</span>,inf=<span class="hljs-number">0x3f3f3f3f</span>;
 <span class="hljs-keyword">int</span> n,m;
 
 <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>

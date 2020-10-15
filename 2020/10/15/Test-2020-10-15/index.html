@@ -1,0 +1,882 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
+  <link rel="icon" type="image/png" href="/img/avatar.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="算法混子的学习笔记">
+  <meta name="author" content="柳苏明">
+  <meta name="keywords" content="算法,代码">
+  <title>Test-2020-10-15 - 柳苏明的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="柳苏明的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>柳苏明的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/eriri.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-15 19:34" pubdate>
+        2020年10月15日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      41
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Test-2020-10-15</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="t1-运货"><a class="markdownIt-Anchor" href="#t1-运货"></a> T1 运货</h1>
+<p>考试时想了半个小时想出了正解。但是由于鬼畜的数据范围就当作暴力了没优化空间，于是成功没过。</p>
+<p>按照出现时间减去到达时间排序，一个一个选就行了。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;
+<span class="hljs-keyword">int</span> n,m;
+<span class="hljs-keyword">int</span> a[maxn];
+ll s[maxn*<span class="hljs-number">10</span>],tot;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;Shipment.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+	freopen(<span class="hljs-string">&quot;Shipment.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;
+		<span class="hljs-built_in">cin</span>&gt;&gt;a[i];
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=a[i];j++) &#123;
+			ll x;<span class="hljs-built_in">cin</span>&gt;&gt;x;
+			s[++tot]=x-ll(i);
+		&#125;
+	&#125;
+	<span class="hljs-built_in">std</span>::sort(s+<span class="hljs-number">1</span>,s+<span class="hljs-number">1</span>+tot);
+	<span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">priority_queue</span>&lt;ll,<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;ll&gt;,<span class="hljs-built_in">std</span>::greater&lt;ll&gt;&gt; q;<span class="hljs-comment">//小根堆</span>
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) q.push(<span class="hljs-number">0</span>);
+	<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=tot;i++) &#123;
+		<span class="hljs-function">ll <span class="hljs-title">k</span><span class="hljs-params">(q.top())</span></span>;q.pop();
+		<span class="hljs-function">ll <span class="hljs-title">now</span><span class="hljs-params">(max(s[i]+ll(n)+<span class="hljs-number">1</span>,k+ll(n)+<span class="hljs-number">1</span>))</span></span>;
+		ans=max(ans,now);<span class="hljs-comment">//什么时候出现的，加上到右边的</span>
+		q.push(now);
+	&#125;
+	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t2-维护"><a class="markdownIt-Anchor" href="#t2-维护"></a> T2 维护</h1>
+<p>考试时觉得可能是LCT，但LCT不熟并且耗时，所以选择了打指针暴力。可惜出锅了。</p>
+<p>正解是LCT，每个点没被删除权值就为1，否则为0。每次在一个链的Splay上二分查找就行了。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">2e5</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> q,online;
+
+<span class="hljs-keyword">namespace</span> LCT &#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> lc c[x][0]</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rc c[x][1]</span>
+	<span class="hljs-keyword">int</span> size[maxn],val[maxn],c[maxn][<span class="hljs-number">2</span>],fa[maxn];
+	<span class="hljs-keyword">char</span> tag[maxn];
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">dir</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> x==c[fa[x]][<span class="hljs-number">1</span>];
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">notroot</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> ~<span class="hljs-keyword">char</span>(!(x==c[fa[x]][<span class="hljs-number">0</span>]||x==c[fa[x]][<span class="hljs-number">1</span>]));
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushup</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		size[x]=size[lc]+size[rc]+val[x];
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushtag</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		tag[x]^=<span class="hljs-number">0xff</span>;
+		swap(lc,rc);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushdown</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!~tag[x]) &#123;
+			pushtag(lc);
+			pushtag(rc);
+			tag[x]=<span class="hljs-number">0x00</span>;
+		&#125;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connect</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;f,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;d,<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;notr)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!~notr) c[f][d]=x;
+		fa[x]=f;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Rotate</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		int f(fa[x]),ff(fa[f]),d(dir(x)),t(dir(f));
+		<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">p</span><span class="hljs-params">(notroot(f))</span></span>;
+		connect(c[x][d^<span class="hljs-number">1</span>],f,d,<span class="hljs-number">0xff</span>);
+		connect(f,x,d^<span class="hljs-number">1</span>,<span class="hljs-number">0xff</span>);
+		connect(x,ff,t,p);
+		pushup(f);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">pushstack</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!~notroot(x)) pushstack(fa[x]);
+		pushdown(x);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Splay</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		pushstack(x);
+		<span class="hljs-keyword">for</span>(;!~notroot(x);Rotate(x))
+			<span class="hljs-keyword">if</span>(!~notroot(fa[x])) Rotate(dir(x)^dir(fa[x])?x:fa[x]);
+		pushup(x);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Access</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> y(<span class="hljs-number">0</span>);x;x=fa[y=x])
+			Splay(x),rc=y,pushup(x);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeRoot</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		Access(x);
+		Splay(x);
+		pushtag(x);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> k)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!k) <span class="hljs-keyword">return</span> x;
+		Access(x);Splay(x);
+		x=lc;
+		<span class="hljs-keyword">while</span>(x) &#123;
+			pushdown(x);
+			<span class="hljs-keyword">if</span>(k&lt;=size[rc]) x=rc;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(k==val[x]+size[rc]) <span class="hljs-keyword">return</span> x;
+			<span class="hljs-keyword">else</span> k-=val[x]+size[rc],x=lc;
+		&#125;
+		<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Insert</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+		fa[y]=x;val[y]=size[y]=<span class="hljs-number">1</span>;
+		Access(y);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Remove</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		val[x]=<span class="hljs-number">0</span>;
+		<span class="hljs-keyword">return</span> Find(x,<span class="hljs-number">1</span>);
+	&#125;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> lc</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> rc</span>
+&#125;
+
+<span class="hljs-keyword">char</span> deled[maxn];
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;maintain.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+	freopen(<span class="hljs-string">&quot;maintain.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;q&gt;&gt;online;
+	LCT::val[<span class="hljs-number">1</span>]=LCT::size[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>),tot(<span class="hljs-number">1</span>),lastans(<span class="hljs-number">0</span>),ans;i&lt;=q;i++) &#123;
+		<span class="hljs-keyword">int</span> opt,x,y;<span class="hljs-built_in">cin</span>&gt;&gt;opt&gt;&gt;x;
+		<span class="hljs-keyword">if</span>(opt==<span class="hljs-number">1</span>) &#123;
+			x^=lastans;
+			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
+				LCT::Insert(x,++tot);
+				<span class="hljs-keyword">if</span>(online) lastans=x;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(opt==<span class="hljs-number">2</span>) &#123;
+			x^=lastans;
+			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
+				ans=LCT::Remove(x);
+				deled[x]=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">if</span>(online) lastans=ans;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> &#123;
+			<span class="hljs-built_in">cin</span>&gt;&gt;y;x^=lastans;y^=lastans;
+			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
+				<span class="hljs-built_in">cout</span>&lt;&lt;(ans=LCT::Find(x,y))&lt;&lt;<span class="hljs-built_in">endl</span>;
+				<span class="hljs-keyword">if</span>(online) lastans=ans;
+			&#125;
+		&#125;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t3-相似"><a class="markdownIt-Anchor" href="#t3-相似"></a> T3 相似</h1>
+<p>考试时打出来了，但是有一种情况没考虑，就是<code>AAS</code>且有唯一解的情况。通过边和角的<code>sin</code>值判断，可惜数据里根本没有没有唯一解的情况。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Pi</span><span class="hljs-params">(<span class="hljs-built_in">acos</span>(<span class="hljs-number">-1.0</span>))</span></span>;
+<span class="hljs-keyword">int</span> T,x,y;
+<span class="hljs-keyword">double</span> a,b,c,A,B,C,d,e,f,D,E,F;
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SAS</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	b=<span class="hljs-built_in">sqrt</span>(a*a+c*c<span class="hljs-number">-2</span>*a*c*<span class="hljs-built_in">cos</span>(B/<span class="hljs-number">180.0</span>*Pi));
+	A=<span class="hljs-built_in">asin</span>(a*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+&#125;<span class="hljs-comment">//a , B , c</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSS</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	B=<span class="hljs-built_in">acos</span>((a*a+c*c-b*b)/<span class="hljs-number">2</span>/a/c)/Pi*<span class="hljs-number">180.0</span>;
+	A=<span class="hljs-built_in">asin</span>(a*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+&#125;<span class="hljs-comment">// a, b, c</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	B=<span class="hljs-number">180.0</span>-A-C;
+&#125;<span class="hljs-comment">// A , C</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSA_</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(!a) a=<span class="hljs-built_in">sqrt</span>(b*b-c*c);
+	<span class="hljs-keyword">if</span>(!c) c=<span class="hljs-built_in">sqrt</span>(b*b-a*a);
+	<span class="hljs-keyword">if</span>(!b) b=<span class="hljs-built_in">sqrt</span>(a*a+c*c);
+	A=<span class="hljs-built_in">asin</span>(a/b)/Pi*<span class="hljs-number">180.0</span>;C=<span class="hljs-built_in">asin</span>(c/b)/Pi*<span class="hljs-number">180.0</span>;
+&#125;<span class="hljs-comment">// B = Pi/2</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(A/<span class="hljs-number">180.0</span>*Pi)/a)/Pi*<span class="hljs-number">180.0</span>;
+	B=<span class="hljs-number">180.0</span>-A-C;
+	b=a/<span class="hljs-built_in">sin</span>(a)*<span class="hljs-built_in">sin</span>(b);
+&#125;<span class="hljs-comment">// A , a , c</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> &amp;y)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(<span class="hljs-built_in">fabs</span>(x-y)&lt;<span class="hljs-number">1e-2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Solve</span><span class="hljs-params">()</span> </span>&#123;
+	char flag1(0x00),flag2(0x00);
+	<span class="hljs-keyword">if</span>(x==<span class="hljs-number">3</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(A,<span class="hljs-number">0</span>)+cmp(B,<span class="hljs-number">0</span>)+cmp(C,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">3</span>) SSS(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag1=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">0</span>)) AA(B,A,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">0</span>)) AA(A,B,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">0</span>)) AA(A,C,B);
+		&#125;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">2</span>) &#123;
+			<span class="hljs-keyword">if</span>(!cmp(A,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)&amp;&amp;!cmp(c,<span class="hljs-number">0</span>)) &#123;
+					SAS(b,a,c,B,A,C);flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">90.0</span>)) SSA_(b,a,c,B,A,C),flag1=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)) SSA(a,c,b,A,C,B),flag1=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(c,<span class="hljs-number">0</span>)) SSA(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(B,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)&amp;&amp;!cmp(c,<span class="hljs-number">0</span>)) &#123;
+					SAS(a,b,c,A,B,C);flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">90.0</span>)) SSA_(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)) SSA(b,c,a,B,C,A),flag1=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(c,<span class="hljs-number">0</span>)) SSA(b,a,c,B,A,C),flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(C,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)&amp;&amp;!cmp(b,<span class="hljs-number">0</span>)) &#123;
+					SAS(a,c,b,A,C,B);flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">90.0</span>)) SSA_(a,c,b,A,C,B),flag1=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)) SSA(c,b,a,C,B,A),flag1=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)) SSA(c,a,b,C,A,B),flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> SSS(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(x==<span class="hljs-number">2</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(A,<span class="hljs-number">0</span>)+cmp(B,<span class="hljs-number">0</span>)+cmp(C,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag1=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">0</span>)) AA(B,A,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">0</span>)) AA(A,B,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">0</span>)) AA(A,C,B);
+		&#125;
+	&#125;
+	<span class="hljs-keyword">if</span>(y==<span class="hljs-number">3</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(D,<span class="hljs-number">0</span>)+cmp(E,<span class="hljs-number">0</span>)+cmp(F,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">3</span>) SSS(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag2=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">0</span>)) AA(E,D,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">0</span>)) AA(D,E,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">0</span>)) AA(D,F,E);
+		&#125;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">2</span>) &#123;
+			<span class="hljs-keyword">if</span>(!cmp(D,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)&amp;&amp;!cmp(f,<span class="hljs-number">0</span>)) &#123;
+					SAS(e,d,f,E,D,F);flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">90.0</span>)) SSA_(e,d,f,E,D,F),flag2=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)) SSA(d,f,e,D,F,E),flag2=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(f,<span class="hljs-number">0</span>)) SSA(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(E,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)&amp;&amp;!cmp(f,<span class="hljs-number">0</span>)) &#123;
+					SAS(d,e,f,D,E,F);flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">90.0</span>)) SSA_(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)) SSA(e,f,d,E,F,D),flag2=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(f,<span class="hljs-number">0</span>)) SSA(e,d,f,E,D,F),flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(F,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)&amp;&amp;!cmp(e,<span class="hljs-number">0</span>)) &#123;
+					SAS(d,f,e,D,F,E);flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">90.0</span>)) SSA_(d,f,e,D,F,E),flag2=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)) SSA(f,e,d,F,E,D),flag2=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)) SSA(f,d,e,F,D,E),flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> SSS(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(y==<span class="hljs-number">2</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(D,<span class="hljs-number">0</span>)+cmp(E,<span class="hljs-number">0</span>)+cmp(F,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag2=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">0</span>)) AA(E,D,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">0</span>)) AA(D,E,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">0</span>)) AA(D,F,E);
+		&#125;
+	&#125;
+	<span class="hljs-keyword">if</span>(!~flag1&amp;&amp;!~flag2&amp;&amp;cmp(A,D)&amp;&amp;cmp(B,E)&amp;&amp;cmp(C,F)) <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;YES\n&quot;</span>;
+	<span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;((!cmp(A,<span class="hljs-number">0</span>)&amp;&amp;!cmp(D,<span class="hljs-number">0</span>)&amp;&amp;cmp(A,D))
+		+(!cmp(B,<span class="hljs-number">0</span>)&amp;&amp;!cmp(E,<span class="hljs-number">0</span>)&amp;&amp;cmp(B,E))
+		+(!cmp(C,<span class="hljs-number">0</span>)&amp;&amp;!cmp(F,<span class="hljs-number">0</span>)&amp;&amp;cmp(C,F)))&lt;&lt;<span class="hljs-built_in">endl</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;similarity.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;T;
+	<span class="hljs-keyword">while</span>(T--) &#123;
+		a=b=c=A=B=C=d=e=f=D=E=F=<span class="hljs-number">0.0</span>;
+		<span class="hljs-built_in">cin</span>&gt;&gt;x&gt;&gt;y;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=x+y;i++) &#123;
+			<span class="hljs-keyword">char</span> ch;<span class="hljs-keyword">double</span> xx;
+			<span class="hljs-built_in">cin</span>&gt;&gt;ch&gt;&gt;xx;
+			<span class="hljs-keyword">switch</span>(ch) &#123;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;a&#x27;</span>: a=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;b&#x27;</span>: b=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;c&#x27;</span>: c=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>: A=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>: B=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;C&#x27;</span>: C=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;d&#x27;</span>: d=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;e&#x27;</span>: e=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;f&#x27;</span>: f=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;D&#x27;</span>: D=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;E&#x27;</span>: E=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;F&#x27;</span>: F=xx;<span class="hljs-keyword">break</span>;
+			&#125;
+		&#125;
+		Solve();
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%80%83%E8%AF%95/">考试</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%80%BB%E7%BB%93/">总结</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/13/Test-2020-10-13/">
+                        <span class="hidden-mobile">2020-10-13考试总结</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Test-2020-10-15&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
