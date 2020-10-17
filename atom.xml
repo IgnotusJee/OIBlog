@@ -137,9 +137,9 @@
     
     
     
-    <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
-    
     <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+    <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
     
   </entry>
   
