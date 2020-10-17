@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-15T11:49:36.212Z</updated>
+  <updated>2020-10-17T06:57:22.179Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Test-2020-10-15</title>
+    <title>[CSOI2020]TestOfCoachWang</title>
+    <link href="http://yoursite.com/2020/10/16/CSOI2020-TestOfCoachWang/"/>
+    <id>http://yoursite.com/2020/10/16/CSOI2020-TestOfCoachWang/</id>
+    <published>2020-10-16T12:34:01.000Z</published>
+    <updated>2020-10-17T06:57:22.179Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;仓鼠保护协会：王教练的试炼 题解&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+    <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020-10-15考试总结</title>
     <link href="http://yoursite.com/2020/10/15/Test-2020-10-15/"/>
     <id>http://yoursite.com/2020/10/15/Test-2020-10-15/</id>
     <published>2020-10-15T11:34:48.000Z</published>
-    <updated>2020-10-15T11:49:36.212Z</updated>
+    <updated>2020-10-17T06:57:38.134Z</updated>
     
     
       
