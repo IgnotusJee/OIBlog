@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
+  <link rel="icon" type="image/png" href="/img/avatar.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="算法混子的学习笔记">
+  <meta name="author" content="柳苏明">
+  <meta name="keywords" content="算法,代码">
+  <title>2020-10-19考试总结 - 柳苏明的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.6.2/gitalk.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="柳苏明的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>柳苏明的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/eriri.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-19 16:05" pubdate>
+        2020年10月19日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      27
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">2020-10-19考试总结</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>考试的屑人的总结。</p>
+<a id="more"></a>
+<h1 id="t1-candy"><a class="markdownIt-Anchor" href="#t1-candy"></a> T1 Candy</h1>
+<p>数学题。考试时就想到了要算两个数分别的最小质因子，但是该想到式子转化逆元的地方思维就拐弯了，跑去用<code>phthon</code>打表，跑了<code>2h</code>也没跑出来。还是见题太少，导致想偏了。</p>
+<p>考虑计算<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>u</mi><mi>m</mi><mo stretchy="false">(</mo><mi>d</mi><mi>i</mi><mi>g</mi><mi>i</mi><mi>t</mi><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">sum(digits)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mopen">(</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn><msup><mn>0</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mn>9</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{10^n-1}{9}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.25598em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.91098em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385428571428572em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>的最小质因子。因为前者不会大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">5\times10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span>，所以筛出值域内的所有质数，枚举对后者进行判断。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn><msup><mn>0</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mn>9</mn></mfrac><mo>≡</mo><mn>0</mn><mspace></mspace><mspace width="0.4444444444444444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333333333333333em"/><mi>p</mi><mo stretchy="false">)</mo><mo>⇒</mo><mn>1</mn><msup><mn>0</mn><mi>n</mi></msup><mo>≡</mo><mn>1</mn><mspace></mspace><mspace width="0.4444444444444444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333333333333333em"/><mn>9</mn><mo>×</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{10^n-1}{9} \equiv 0 \pmod p \Rightarrow 10^n \equiv 1 \pmod {9\times p}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.25598em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.91098em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385428571428572em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444444444444444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.3333333333333333em;"></span><span class="mord mathdefault">p</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444444444444444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.3333333333333333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mclose">)</span></span></span></span>。快速幂即可。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">5e5</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> n;
+<span class="hljs-keyword">char</span> s[maxn];
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">QuickPow</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-keyword">int</span> b,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;mod)</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(;b;a=a*a%mod,b&gt;&gt;=<span class="hljs-number">1</span>) <span class="hljs-keyword">if</span>(b&amp;<span class="hljs-number">1</span>) ans=ans*a%mod;
+	<span class="hljs-keyword">return</span> ans;
+&#125;
+
+<span class="hljs-keyword">int</span> prime[<span class="hljs-number">348520</span>],cnt;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Get1</span><span class="hljs-params">()</span> </span>&#123;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=cnt;i++) <span class="hljs-keyword">if</span>(QuickPow(<span class="hljs-number">10</span>,n,<span class="hljs-number">9</span>*prime[i])==<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> prime[i];
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0x3f3f3f3f</span>;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Get2</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;now)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(now==<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0x3f3f3f3f</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=cnt;i++) <span class="hljs-keyword">if</span>(now%prime[i]==<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> prime[i];
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0x3f3f3f3f</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;candy.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> not_prime[maxn*<span class="hljs-number">10</span>];
+	not_prime[<span class="hljs-number">1</span>]=<span class="hljs-number">0xff</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">2</span>);i&lt;=<span class="hljs-number">5000000</span>;i++) &#123;
+		<span class="hljs-keyword">if</span>(~not_prime[i]) prime[++cnt]=i;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=cnt&amp;&amp;i*prime[j]&lt;=<span class="hljs-number">5000000</span>;j++) &#123;
+			not_prime[i*prime[j]]=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(i%prime[j]==<span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;
+		&#125;
+	&#125;
+	<span class="hljs-built_in">cin</span>&gt;&gt;(s+<span class="hljs-number">1</span>);
+	n=<span class="hljs-built_in">strlen</span>(s+<span class="hljs-number">1</span>);
+	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">now</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) now+=s[i]-<span class="hljs-string">&#x27;0&#x27;</span>;
+	<span class="hljs-built_in">cout</span>&lt;&lt;min(Get1(),Get2(now))&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t2-遗失的二叉树"><a class="markdownIt-Anchor" href="#t2-遗失的二叉树"></a> T2 遗失的二叉树</h1>
+<p>考试时因为T1打表太久，这题就只打了暴搜。没有考虑到其他情况还WA了两个点。后来把暴搜改为记忆化搜索，<code>TLE80pts</code>。</p>
+<p>就是一个区间DP。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">500</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> T,n,a[maxn];
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">gcd</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;a,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;b)</span> </span>&#123;
+	<span class="hljs-keyword">return</span> b ? gcd( b , a%b ) : a;
+&#125;
+
+<span class="hljs-keyword">char</span> mp[maxn][maxn],L[maxn][maxn],R[maxn][maxn];
+<span class="hljs-comment">// L[l][r] 表示[l,r]区间以r为根是否有解,R[l][r]表示[l,r]区间以l为根是否有解</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;tree.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;T;
+	<span class="hljs-keyword">while</span>(T--) &#123;
+		<span class="hljs-built_in">memset</span>(mp,<span class="hljs-number">0x00</span>,<span class="hljs-keyword">sizeof</span> mp);
+		<span class="hljs-built_in">memset</span>(L,<span class="hljs-number">0x00</span>,<span class="hljs-keyword">sizeof</span> L);
+		<span class="hljs-built_in">memset</span>(R,<span class="hljs-number">0x00</span>,<span class="hljs-keyword">sizeof</span> R);
+		<span class="hljs-built_in">cin</span>&gt;&gt;n;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;a[i];
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=n;j++)
+				mp[i][j]|=gcd(a[i],a[j])!=<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) L[i][i]=R[i][i]=<span class="hljs-number">0xff</span>;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> len(<span class="hljs-number">2</span>);len&lt;=n;len++)
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> l(<span class="hljs-number">1</span>);l+len<span class="hljs-number">-1</span>&lt;=n;l++) &#123;
+				<span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">r</span><span class="hljs-params">(l+len<span class="hljs-number">-1</span>)</span></span>;
+				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k(l);k&lt;r;k++) L[l][r]|=L[l][k]&amp;R[k][r<span class="hljs-number">-1</span>]&amp;mp[r][k];
+				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k(l+<span class="hljs-number">1</span>);k&lt;=r;k++) R[l][r]|=L[l+<span class="hljs-number">1</span>][k]&amp;R[k][r]&amp;mp[k][l];
+			&#125;
+		<span class="hljs-keyword">char</span> flag=<span class="hljs-number">0x00</span>;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) flag|=L[<span class="hljs-number">1</span>][i]&amp;R[i][n];
+		<span class="hljs-built_in">cout</span>&lt;&lt;(flag?<span class="hljs-string">&quot;Yes&quot;</span>:<span class="hljs-string">&quot;No&quot;</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t3-精灵"><a class="markdownIt-Anchor" href="#t3-精灵"></a> T3 精灵</h1>
+<p>原题，打出一次便过（假，其实开始没有给复数取模。）</p>
+<pre><code class="hljs cpp">const int maxn(1e5+10),mod(201314);
+<span class="hljs-keyword">int</span> n,q;
+
+<span class="hljs-keyword">namespace</span> Tree &#123;
+	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
+		<span class="hljs-keyword">int</span> v,next;
+		Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;next) :v(v),next(next) &#123;&#125;
+		Edge() &#123;&#125;
+	&#125;e[maxn];
+	<span class="hljs-keyword">int</span> head[maxn],cnt;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddEdge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v)</span> </span>&#123;
+		e[++cnt]=Edge(v,head[u]);
+		head[u]=cnt;
+	&#125;
+
+	<span class="hljs-keyword">int</span> size[maxn],son[maxn],depth[maxn],fa[maxn];
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dfs1</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u=<span class="hljs-number">1</span>)</span> </span>&#123;
+		size[u]=<span class="hljs-number">1</span>;depth[u]=depth[fa[u]]+<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(head[u]);i;i=e[i].next) &#123;
+			<span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;<span class="hljs-title">v</span><span class="hljs-params">(e[i].v)</span></span>;
+			fa[v]=u;
+			Dfs1(v);
+			size[u]+=size[v];
+			<span class="hljs-keyword">if</span>(size[v]&gt;size[son[u]]) son[u]=v;
+		&#125;
+	&#125;
+	<span class="hljs-keyword">int</span> dfn[maxn],stamp,top[maxn];
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dfs2</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u=<span class="hljs-number">1</span>,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;anc=<span class="hljs-number">1</span>)</span> </span>&#123;
+		dfn[u]=++stamp;top[u]=anc;
+		<span class="hljs-keyword">if</span>(son[u]) Dfs2(son[u],anc);
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(head[u]);i;i=e[i].next) &#123;
+			<span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;<span class="hljs-title">v</span><span class="hljs-params">(e[i].v)</span></span>;
+			<span class="hljs-keyword">if</span>(v==son[u]) <span class="hljs-keyword">continue</span>;
+			Dfs2(v,v);
+		&#125;
+	&#125;
+
+	<span class="hljs-keyword">namespace</span> SegmentTree &#123;
+	<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> lc (a&lt;&lt;1)</span>
+	<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rc ((a&lt;&lt;1)|1)</span>
+		<span class="hljs-keyword">int</span> val[maxn&lt;&lt;<span class="hljs-number">2</span>],delta[maxn&lt;&lt;<span class="hljs-number">2</span>];
+		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushup</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;a)</span> </span>&#123;
+			val[a]=val[lc]+val[rc];
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushtag</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;a,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;k,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;l,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;r)</span> </span>&#123;
+			(val[a]+=k*(r-l+<span class="hljs-number">1</span>)%mod)%=mod;
+			(delta[a]+=k)%=mod;
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushdown</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;a,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;l,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;r,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;mid)</span> </span>&#123;
+			pushtag(lc,delta[a],l,mid);
+			pushtag(rc,delta[a],mid+<span class="hljs-number">1</span>,r);
+			delta[a]=<span class="hljs-number">0</span>;
+		&#125;
+
+		<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Modify</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;left,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;right,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;k,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;a=<span class="hljs-number">1</span>,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;l=<span class="hljs-number">1</span>,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;r=n)</span> </span>&#123;
+			<span class="hljs-keyword">if</span>(left&lt;=l&amp;&amp;right&gt;=r) <span class="hljs-keyword">return</span> pushtag(a,k,l,r);
+			<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mid</span><span class="hljs-params">((l+r)&gt;&gt;<span class="hljs-number">1</span>)</span></span>;
+			<span class="hljs-keyword">if</span>(delta[a]) pushdown(a,l,r,mid);
+			<span class="hljs-keyword">if</span>(left&lt;=mid) Modify(left,right,k,lc,l,mid);
+			<span class="hljs-keyword">if</span>(right&gt;mid) Modify(left,right,k,rc,mid+<span class="hljs-number">1</span>,r);
+			pushup(a);
+		&#125;
+		<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Query</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;left,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;right,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;a=<span class="hljs-number">1</span>,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;l=<span class="hljs-number">1</span>,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;r=n)</span> </span>&#123;
+			<span class="hljs-keyword">if</span>(left&lt;=l&amp;&amp;right&gt;=r) <span class="hljs-keyword">return</span> val[a]%mod;
+			<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mid</span><span class="hljs-params">((l+r)&gt;&gt;<span class="hljs-number">1</span>)</span></span>;
+			<span class="hljs-keyword">if</span>(delta[a]) pushdown(a,l,r,mid);
+			<span class="hljs-keyword">if</span>(right&lt;=mid) <span class="hljs-keyword">return</span> Query(left,right,lc,l,mid);
+			<span class="hljs-keyword">if</span>(left&gt;mid) <span class="hljs-keyword">return</span> Query(left,right,rc,mid+<span class="hljs-number">1</span>,r);
+			<span class="hljs-keyword">return</span> (Query(left,right,lc,l,mid)+Query(left,right,rc,mid+<span class="hljs-number">1</span>,r))%mod;
+		&#125;
+	<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> lc</span>
+	<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> rc</span>
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Modify</span><span class="hljs-params">(<span class="hljs-keyword">int</span> u)</span> </span>&#123;
+		<span class="hljs-keyword">for</span>(;u;u=fa[top[u]]) SegmentTree::Modify(dfn[top[u]],dfn[u],<span class="hljs-number">1</span>);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Query</span><span class="hljs-params">(<span class="hljs-keyword">int</span> u)</span> </span>&#123;
+		<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+		<span class="hljs-keyword">for</span>(;u;u=fa[top[u]]) (ans+=SegmentTree::Query(dfn[top[u]],dfn[u]))%=mod;
+		<span class="hljs-keyword">return</span> ans;
+	&#125;
+&#125;
+
+<span class="hljs-keyword">int</span> ans[maxn];
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">QueryNode</span> &#123;</span>
+	<span class="hljs-keyword">int</span> z,id;
+	QueryNode(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;z,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;id) :z(z),id(id) &#123;&#125;
+&#125;;
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;QueryNode&gt; v[maxn];
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;elf.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+	freopen(<span class="hljs-string">&quot;elf.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;q;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">2</span>);i&lt;=n;i++) &#123;
+		<span class="hljs-keyword">int</span> x;<span class="hljs-built_in">cin</span>&gt;&gt;x;
+		Tree::AddEdge(x,i);
+	&#125;
+	Tree::Dfs1();Tree::Dfs2();
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=q;i++) &#123;
+		<span class="hljs-keyword">int</span> l,r,z;
+		<span class="hljs-built_in">cin</span>&gt;&gt;l&gt;&gt;r&gt;&gt;z;
+		v[l<span class="hljs-number">-1</span>].emplace_back(z,-i);
+		v[r].emplace_back(z,i);
+	&#125;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;
+		Tree::Modify(i);
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span> &amp;p: v[i])
+			(ans[<span class="hljs-built_in">abs</span>(p.id)]+=((p.id&gt;<span class="hljs-number">0</span>?<span class="hljs-number">1</span>:<span class="hljs-number">-1</span>)*Tree::Query(p.z)+mod)%mod)%=mod;
+	&#125;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=q;i++) <span class="hljs-built_in">cout</span>&lt;&lt;ans[i]&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%80%83%E8%AF%95/">考试</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%80%BB%E7%BB%93/">总结</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/16/CSOI2020-TestOfCoachWang/">
+                        <span class="hidden-mobile">[CSOI2020]王教练的试炼</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    function loadGitalk() {
+      addScript('https://cdn.staticfile.org/blueimp-md5/2.13.0/js/md5.min.js');
+      addScript('https://cdn.staticfile.org/gitalk/1.6.2/gitalk.min.js', function () {
+        var gitalk = new Gitalk({
+          clientID: 'a4a767f2300d7076a2d5',
+          clientSecret: 'd7d086ca6b819446aa028a4a717ff1528689265a',
+          repo: 'BlogComments',
+          owner: 'IgnotusJee',
+          admin: ["IgnotusJee"],
+          id: md5(location.pathname),
+          language: 'zh-CN',
+          labels: ["Gitalk"],
+          perPage: 10,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        });
+        gitalk.render('gitalk-container');
+      });
+    }
+    waitElementVisible('gitalk-container', loadGitalk);
+  </script>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "2020-10-19考试总结&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
