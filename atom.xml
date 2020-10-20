@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-19T08:18:44.096Z</updated>
+  <updated>2020-10-20T08:04:31.917Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020-10-19考试总结</title>
+    <link href="http://yoursite.com/2020/10/20/Test-2020-10-20/"/>
+    <id>http://yoursite.com/2020/10/20/Test-2020-10-20/</id>
+    <published>2020-10-20T07:31:32.000Z</published>
+    <updated>2020-10-20T08:04:31.917Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2020-10-19考试总结。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
+    
+    <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>2020-10-19考试总结</title>
