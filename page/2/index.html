@@ -177,6 +177,98 @@
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
+        <a href="/2020/10/12/solution-CF570D/">CF570D Tree Requests 题解</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/12/solution-CF570D/">
+          
+          
+            
+          
+           题意
+给定一棵以111为根的树，每个点有一个小写字母。每次询问以一个点为根的子树内深度为ddd的所有点构成的字母集能不能重排为一个回文串。
+ 解法
+容易发现一个字母集可以重排为回文串，当且仅当小于等于一个字母出现奇数次。于是问题转化为以一个点为根的子树内深度为ddd的所有点出现奇数次的字母有几个。
+考虑二进制数xxx，其第iii位表示字母char('a' + i)是否出现奇数次。如果popcou
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-12 17:21" pubdate>
+              2020-10-12
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+              <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6/">线段树合并</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2020/10/11/Birthday/">CF718E Matvey&#39;s Birthday 题解</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/11/Birthday/">
+          
+          
+            
+          
+          题面
+ 题意
+给定一个字符串，将每一位视为一个节点，两个节点之间有一条边当且仅当它们在串上相邻或它们的字母相同。字母只有a到h。求此图的直径长度及条数。
+ 解法
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-11 21:14" pubdate>
+              2020-10-11
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+              <a href="/tags/DP/">DP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         <a href="/2020/10/11/CSP2020%E5%88%9D%E8%B5%9B%E6%B8%B8%E8%AE%B0/">CSP2020初赛游记</a>
       </h1>
 
@@ -546,105 +638,11 @@ gcd⁡(a,b)=axor⁡b=c(a≥b)⇒gcd⁡(ac,bc)=1,\operatorname{g
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/09/08/2-SAT/">2-SAT</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/08/2-SAT/">
-          
-          
-            
-          
-          洛谷4782
-题意：给定m个约束条件，形式为xi,xjx_i,x_jxi​,xj​，表示xix_ixi​为真/假或xjx_jxj​为真/假，给每个变量赋值使得所有条件得到满足。
- 方法：
-将问题转化为图论问题。设xxx表示变量xxx取false，¬xxx表示变量xxx取true。建立2×n2 \times n2×n个点，设xix_ixi​对应点iii，¬xix_ixi​对应点i+ni+ni+n，则
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-08 10:50" pubdate>
-              2020-09-08
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/08/21/cyclebuity/">洛谷1587 循环之美 题解</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/08/21/cyclebuity/">
-          
-          
-            
-          
-          题面
- 题意：
-给定n,m,kn,m,kn,m,k,求对于1≤x≤n,1≤y≤m1\le x \le n,1\le y\le m1≤x≤n,1≤y≤m，xy\frac{x}{y}yx​满足数值上互不相等且在kkk进制下为纯循环小数的个数。
-从小数部分第一位开始的循环小数，称为纯循环小数。特别地，整数为纯循环小数。
- 解法：
-要满足数值上互不相等，只需统计最简分数，即x⊥yx\perp yx⊥y即可
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-21 16:45" pubdate>
-              2020-08-21
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
-            
-              <a href="/tags/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94/">莫比乌斯反演</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
   
