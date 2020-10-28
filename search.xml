@@ -133,6 +133,19 @@ AddEdge(v+n*(b^<span class="hljs-number">1</span>),u+n*(a&amp;<span class="hljs-
       </tags>
   </entry>
   <entry>
+    <title>CF718E Matvey&#39;s Birthday 题解</title>
+    <url>/2020/10/11/Birthday/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF718E">题面</a></p>
+<h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
+<p>给定一个字符串，将每一位视为一个节点，两个节点之间有一条边当且仅当它们在串上相邻或它们的字母相同。字母只有<code>a</code>到<code>h</code>。求此图的直径长度及条数。</p>
+<h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
+]]></content>
+      <tags>
+        <tag>题解</tag>
+        <tag>DP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[CSOI2020]王教练的试炼</title>
     <url>/2020/10/16/CSOI2020-TestOfCoachWang/</url>
     <content><![CDATA[<p>仓鼠保护协会：王教练的试炼 题解</p>
@@ -362,40 +375,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </tags>
   </entry>
   <entry>
-    <title>CF718E Matvey&#39;s Birthday 题解</title>
-    <url>/2020/10/11/Birthday/</url>
-    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF718E">题面</a></p>
-<h1 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h1>
-<p>给定一个字符串，将每一位视为一个节点，两个节点之间有一条边当且仅当它们在串上相邻或它们的字母相同。字母只有<code>a</code>到<code>h</code>。求此图的直径长度及条数。</p>
-<h1 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h1>
-]]></content>
-      <tags>
-        <tag>题解</tag>
-        <tag>DP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSP2020初赛游记</title>
-    <url>/2020/10/11/CSP2020%E5%88%9D%E8%B5%9B%E6%B8%B8%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="day0"><a class="markdownIt-Anchor" href="#day0"></a> Day0</h1>
-<p>白天都对明天的比赛无感，大多时间都在复习初赛。</p>
-<p>因为<code>markdown</code>的渲染问题花了一个半小时给博客换了主题<s>话说我是有多闲啊</s></p>
-<p>晚上老刘来机房网上报高考，突然有了紧张感。</p>
-<h1 id="day1"><a class="markdownIt-Anchor" href="#day1"></a> Day1</h1>
-<p>昨天晚上一两点才睡着，早上起来还挺精神。</p>
-<p>到考场碰到了绵竹中学的竞赛教练。互相诉苦。</p>
-<p>拿到卷子感觉难度海星，十多分钟写完了单选。然后就肚子疼请求上厕所，被告知要等到最后半个小时才能去。<s>话说CCF你不怕憋死人吗</s></p>
-<p>到了阅读程序第三题就卡住了。完全不知道这个程序是干什么的。手撸样例画了半个多小时连蒙带猜填满了空。</p>
-<p>程序补全还是挺简单的。</p>
-<p>下午对着洛谷上大佬的答案对了下，大概85分左右，当场裂开。不知道能不能挂线上。机房大佬一个个都九十几还嚷着要退役，还<sup>tm</sup>给不给活路了。</p>
-<p>等着出成绩了。</p>
-]]></content>
-      <tags>
-        <tag>CSP</tag>
-        <tag>游记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>算法笔记-莫队二次离线</title>
     <url>/2020/09/15/CaptainMoTwiceOffine/</url>
     <content><![CDATA[]]></content>
@@ -434,6 +413,27 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
         <tag>题解</tag>
         <tag>数学</tag>
         <tag>练习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSP2020初赛游记</title>
+    <url>/2020/10/11/CSP2020%E5%88%9D%E8%B5%9B%E6%B8%B8%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="day0"><a class="markdownIt-Anchor" href="#day0"></a> Day0</h1>
+<p>白天都对明天的比赛无感，大多时间都在复习初赛。</p>
+<p>因为<code>markdown</code>的渲染问题花了一个半小时给博客换了主题<s>话说我是有多闲啊</s></p>
+<p>晚上老刘来机房网上报高考，突然有了紧张感。</p>
+<h1 id="day1"><a class="markdownIt-Anchor" href="#day1"></a> Day1</h1>
+<p>昨天晚上一两点才睡着，早上起来还挺精神。</p>
+<p>到考场碰到了绵竹中学的竞赛教练。互相诉苦。</p>
+<p>拿到卷子感觉难度海星，十多分钟写完了单选。然后就肚子疼请求上厕所，被告知要等到最后半个小时才能去。<s>话说CCF你不怕憋死人吗</s></p>
+<p>到了阅读程序第三题就卡住了。完全不知道这个程序是干什么的。手撸样例画了半个多小时连蒙带猜填满了空。</p>
+<p>程序补全还是挺简单的。</p>
+<p>下午对着洛谷上大佬的答案对了下，大概85分左右，当场裂开。不知道能不能挂线上。机房大佬一个个都九十几还嚷着要退役，还<sup>tm</sup>给不给活路了。</p>
+<p>等着出成绩了。</p>
+]]></content>
+      <tags>
+        <tag>CSP</tag>
+        <tag>游记</tag>
       </tags>
   </entry>
   <entry>
@@ -1046,6 +1046,545 @@ ll Round[maxn],Val[maxn];
       </tags>
   </entry>
   <entry>
+    <title>2020-10-13考试总结</title>
+    <url>/2020/10/13/Test-2020-10-13/</url>
+    <content><![CDATA[<h1 id="t1-破冰派对"><a class="markdownIt-Anchor" href="#t1-破冰派对"></a> T1 破冰派对</h1>
+<p>考试时一看就觉得要求出最大团，于是花了一个多小时抠这个。于是最终也没有抠出来，输出大样例跑路了。考完了才知道最大团问题是NP完全的。</p>
+<p>其实正解就是暴搜。因为状态数不多，所以搜的出来。</p>
+<p>教训：一段时间内想不出正解考虑打暴力跑路。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1000</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> n,m;
+<span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
+
+<span class="hljs-keyword">int</span> work[maxn],won,part[maxn],pan;
+<span class="hljs-keyword">int</span> ans;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dfs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(u==n+<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">void</span>(ans+=(won&amp;&amp;pan));
+	<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">flag</span><span class="hljs-params">(<span class="hljs-number">0x00</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=won;i++)
+		<span class="hljs-keyword">if</span>(~<span class="hljs-built_in">map</span>[u][work[i]]) &#123;
+			flag=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">break</span>;
+		&#125;
+	<span class="hljs-keyword">if</span>(~flag) &#123;
+		work[++won]=u;
+		Dfs(u+<span class="hljs-number">1</span>);
+		won--;
+	&#125;
+	flag=<span class="hljs-number">0x00</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=pan;i++)
+		<span class="hljs-keyword">if</span>(!~<span class="hljs-built_in">map</span>[u][part[i]]) &#123;
+			flag=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">break</span>;
+		&#125;
+	<span class="hljs-keyword">if</span>(~flag) &#123;
+		part[++pan]=u;
+		Dfs(u+<span class="hljs-number">1</span>);
+		pan--;
+	&#125;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;party.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-keyword">int</span> T;<span class="hljs-built_in">cin</span>&gt;&gt;T;
+	<span class="hljs-keyword">while</span>(T--) &#123;
+		ans=<span class="hljs-number">0</span>;
+		<span class="hljs-built_in">memset</span>(<span class="hljs-built_in">map</span>,<span class="hljs-number">0x00</span>,<span class="hljs-keyword">sizeof</span> <span class="hljs-built_in">map</span>);
+		<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+			<span class="hljs-keyword">int</span> u,v;<span class="hljs-built_in">cin</span>&gt;&gt;u&gt;&gt;v;
+			<span class="hljs-built_in">map</span>[u][v]=<span class="hljs-built_in">map</span>[v][u]=<span class="hljs-number">0xff</span>;
+		&#125;
+		Dfs(<span class="hljs-number">1</span>);
+		<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t2-无聊游戏"><a class="markdownIt-Anchor" href="#t2-无聊游戏"></a> T2 无聊游戏</h1>
+<p>这题还是考试时想出来了。考虑改变前缀使得后缀最大和最小。</p>
+<pre><code class="hljs cpp"><span class="hljs-comment">// 小A想让数列和尽量小，则他要选择最大后缀变负</span>
+<span class="hljs-comment">// 小N要让最大后缀最小，同时修改的前缀和为负且大</span>
+<span class="hljs-comment">// 从左向右扫，维护左端点到当前点的最大后缀，这个区间要乘上-A。</span>
+<span class="hljs-comment">// 预处理出后缀和和最大后缀</span>
+<span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> n;
+<span class="hljs-keyword">using</span> ll = <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
+ll A,B,q[maxn];
+ll sumpre[maxn];
+ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Calc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(i&lt;j) <span class="hljs-keyword">return</span> sumpre[i]*-A+sumsuf[j]*-B+sumpre[j<span class="hljs-number">-1</span>]-sumpre[i];
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> sumpre[j<span class="hljs-number">-1</span>]*-A+sumsuf[i+<span class="hljs-number">1</span>]*-B+(sumpre[i]-sumpre[j<span class="hljs-number">-1</span>])*A*B;
+
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;game.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-comment">//	freopen(&quot;game.out&quot;,&quot;w&quot;,stdout);</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;A&gt;&gt;B;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;q[i],sumpre[i]=sumpre[i<span class="hljs-number">-1</span>]+q[i];
+	possuf[n+<span class="hljs-number">1</span>]=n+<span class="hljs-number">1</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(n);i;i--) &#123;
+		sumsuf[i]=q[i]+sumsuf[i+<span class="hljs-number">1</span>];
+		<span class="hljs-keyword">if</span>(sumsuf[i]&gt;lensuf[i+<span class="hljs-number">1</span>]) &#123;
+			lensuf[i]=sumsuf[i];
+			possuf[i]=i;
+		&#125;
+		<span class="hljs-keyword">else</span> &#123;
+			lensuf[i]=lensuf[i+<span class="hljs-number">1</span>];
+			possuf[i]=possuf[i+<span class="hljs-number">1</span>];
+		&#125;
+	&#125;
+	ll ans(Calc(0,possuf[1])),sum(0);
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>),t(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;<span class="hljs-comment">// t为前缀的最大后缀位置</span>
+		<span class="hljs-keyword">if</span>(sum+q[i]*(-A)&lt;<span class="hljs-number">0</span>) sum=<span class="hljs-number">0</span>,t=i+<span class="hljs-number">1</span>;
+		<span class="hljs-keyword">else</span> sum+=q[i]*(-A);
+		<span class="hljs-keyword">int</span> nowpos;
+		<span class="hljs-keyword">if</span>(lensuf[i+<span class="hljs-number">1</span>]&gt;sum+sumsuf[i+<span class="hljs-number">1</span>]) nowpos=possuf[i+<span class="hljs-number">1</span>];
+		<span class="hljs-keyword">else</span> nowpos=t;
+		ans=max(ans,Calc(i,nowpos));
+	&#125;
+	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre>
+<h1 id="t3-建设国家"><a class="markdownIt-Anchor" href="#t3-建设国家"></a> T3 建设国家</h1>
+<p>又是最生成树。考试时根本没有思路，因为快没有时间了就乱打了个贪心。其实也不难想出来。</p>
+<p>考虑第一轮计划对每一条边的贡献就是题目中给出的那个式子。第二轮计划拆成一条边上两点加人对对方的影响。推式子后发现优先加<code>F</code>大的，权值转化到边权上做最小生成树即可。</p>
+<pre><code class="hljs cpp">const int maxn(55),maxm(maxn*maxn);
+<span class="hljs-keyword">using</span> ll=<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
+<span class="hljs-keyword">int</span> n,m;ll T[maxn],F[maxn],U[maxn],C;
+<span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
+	<span class="hljs-keyword">int</span> u,v;ll w;
+	Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> ll &amp;w) :u(u),v(v),w(w) &#123;&#125;
+	Edge() &#123;&#125;
+&#125;e[maxm];
+<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Calc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(F[i]&lt;F[j]) <span class="hljs-keyword">return</span> Calc(j,i);
+	<span class="hljs-keyword">return</span> <span class="hljs-number">1l</span>l*F[i]*(U[i]-T[i])*T[j]+<span class="hljs-number">1l</span>l*F[j]*(U[j]-T[j])*U[i];
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionAndFindSet</span> &#123;</span>
+<span class="hljs-keyword">private</span>:
+	<span class="hljs-keyword">int</span> fa[maxn],rank[maxn];
+	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> x == fa[x] ? x : fa[x] = Find(fa[x]);
+	&#125;
+<span class="hljs-keyword">public</span>:
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) fa[i]=i,rank[i]=<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+		int u(Find(x)),v(Find(y));
+		<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span>;
+		<span class="hljs-keyword">if</span>(rank[u]&lt;rank[v]) swap(u,v);
+		fa[v]=u;rank[u]=max(rank[u],rank[v]+<span class="hljs-number">1</span>);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Same</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> Find(x)==Find(y);
+	&#125;
+&#125;S;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;res.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n;
+	S.Init();<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;T[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;U[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;F[i],ans+=(T[i]+U[i]<span class="hljs-number">-1</span>)*(U[i]-T[i])/<span class="hljs-number">2</span>*F[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;&amp;<span class="hljs-built_in">map</span>[i][<span class="hljs-number">1</span>];
+	<span class="hljs-built_in">cin</span>&gt;&gt;C;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;i;j++) &#123;
+			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j]==<span class="hljs-string">&#x27;Y&#x27;</span>) &#123;
+				ans+=Calc(i,j);
+				S.Merge(i,j);
+			&#125;
+			<span class="hljs-keyword">else</span> e[++m]=Edge(i,j,Calc(i,j)+(T[i]+T[j])*C);
+		&#125;
+	<span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+m,[](<span class="hljs-keyword">const</span> Edge &amp;p,<span class="hljs-keyword">const</span> Edge &amp;q) &#123;
+		<span class="hljs-keyword">return</span> p.w&lt;q.w;
+	&#125;);
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+		<span class="hljs-keyword">if</span>(S.Same(e[i].u,e[i].v)) <span class="hljs-keyword">continue</span>;
+		S.Merge(e[i].u,e[i].v);
+		ans+=e[i].w;
+	&#125;
+	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+]]></content>
+      <tags>
+        <tag>考试</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020-10-15考试总结</title>
+    <url>/2020/10/15/Test-2020-10-15/</url>
+    <content><![CDATA[<h1 id="t1-运货"><a class="markdownIt-Anchor" href="#t1-运货"></a> T1 运货</h1>
+<p>考试时想了半个小时想出了正解。但是由于鬼畜的数据范围就当作暴力了没优化空间，于是成功没过。</p>
+<p>按照出现时间减去到达时间排序，一个一个选就行了。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;
+<span class="hljs-keyword">int</span> n,m;
+<span class="hljs-keyword">int</span> a[maxn];
+ll s[maxn*<span class="hljs-number">10</span>],tot;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;Shipment.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+	freopen(<span class="hljs-string">&quot;Shipment.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;
+		<span class="hljs-built_in">cin</span>&gt;&gt;a[i];
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=a[i];j++) &#123;
+			ll x;<span class="hljs-built_in">cin</span>&gt;&gt;x;
+			s[++tot]=x-ll(i);
+		&#125;
+	&#125;
+	<span class="hljs-built_in">std</span>::sort(s+<span class="hljs-number">1</span>,s+<span class="hljs-number">1</span>+tot);
+	<span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">priority_queue</span>&lt;ll,<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;ll&gt;,<span class="hljs-built_in">std</span>::greater&lt;ll&gt;&gt; q;<span class="hljs-comment">//小根堆</span>
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) q.push(<span class="hljs-number">0</span>);
+	<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=tot;i++) &#123;
+		<span class="hljs-function">ll <span class="hljs-title">k</span><span class="hljs-params">(q.top())</span></span>;q.pop();
+		<span class="hljs-function">ll <span class="hljs-title">now</span><span class="hljs-params">(max(s[i]+ll(n)+<span class="hljs-number">1</span>,k+ll(n)+<span class="hljs-number">1</span>))</span></span>;
+		ans=max(ans,now);<span class="hljs-comment">//什么时候出现的，加上到右边的</span>
+		q.push(now);
+	&#125;
+	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t2-维护"><a class="markdownIt-Anchor" href="#t2-维护"></a> T2 维护</h1>
+<p>考试时觉得可能是LCT，但LCT不熟并且耗时，所以选择了打指针暴力。可惜出锅了。</p>
+<p>正解是LCT，每个点没被删除权值就为1，否则为0。每次在一个链的Splay上二分查找就行了。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">2e5</span>+<span class="hljs-number">10</span>)</span></span>;
+<span class="hljs-keyword">int</span> q,online;
+
+<span class="hljs-keyword">namespace</span> LCT &#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> lc c[x][0]</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rc c[x][1]</span>
+	<span class="hljs-keyword">int</span> size[maxn],val[maxn],c[maxn][<span class="hljs-number">2</span>],fa[maxn];
+	<span class="hljs-keyword">char</span> tag[maxn];
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">dir</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> x==c[fa[x]][<span class="hljs-number">1</span>];
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">notroot</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">return</span> ~<span class="hljs-keyword">char</span>(!(x==c[fa[x]][<span class="hljs-number">0</span>]||x==c[fa[x]][<span class="hljs-number">1</span>]));
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushup</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		size[x]=size[lc]+size[rc]+val[x];
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushtag</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		tag[x]^=<span class="hljs-number">0xff</span>;
+		swap(lc,rc);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushdown</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!~tag[x]) &#123;
+			pushtag(lc);
+			pushtag(rc);
+			tag[x]=<span class="hljs-number">0x00</span>;
+		&#125;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connect</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;f,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;d,<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;notr)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!~notr) c[f][d]=x;
+		fa[x]=f;
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Rotate</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		int f(fa[x]),ff(fa[f]),d(dir(x)),t(dir(f));
+		<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">p</span><span class="hljs-params">(notroot(f))</span></span>;
+		connect(c[x][d^<span class="hljs-number">1</span>],f,d,<span class="hljs-number">0xff</span>);
+		connect(f,x,d^<span class="hljs-number">1</span>,<span class="hljs-number">0xff</span>);
+		connect(x,ff,t,p);
+		pushup(f);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">pushstack</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!~notroot(x)) pushstack(fa[x]);
+		pushdown(x);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Splay</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		pushstack(x);
+		<span class="hljs-keyword">for</span>(;!~notroot(x);Rotate(x))
+			<span class="hljs-keyword">if</span>(!~notroot(fa[x])) Rotate(dir(x)^dir(fa[x])?x:fa[x]);
+		pushup(x);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Access</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> y(<span class="hljs-number">0</span>);x;x=fa[y=x])
+			Splay(x),rc=y,pushup(x);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeRoot</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		Access(x);
+		Splay(x);
+		pushtag(x);
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> k)</span> </span>&#123;
+		<span class="hljs-keyword">if</span>(!k) <span class="hljs-keyword">return</span> x;
+		Access(x);Splay(x);
+		x=lc;
+		<span class="hljs-keyword">while</span>(x) &#123;
+			pushdown(x);
+			<span class="hljs-keyword">if</span>(k&lt;=size[rc]) x=rc;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(k==val[x]+size[rc]) <span class="hljs-keyword">return</span> x;
+			<span class="hljs-keyword">else</span> k-=val[x]+size[rc],x=lc;
+		&#125;
+		<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	&#125;
+
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Insert</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+		fa[y]=x;val[y]=size[y]=<span class="hljs-number">1</span>;
+		Access(y);
+	&#125;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Remove</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+		val[x]=<span class="hljs-number">0</span>;
+		<span class="hljs-keyword">return</span> Find(x,<span class="hljs-number">1</span>);
+	&#125;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> lc</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> rc</span>
+&#125;
+
+<span class="hljs-keyword">char</span> deled[maxn];
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;maintain.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+	freopen(<span class="hljs-string">&quot;maintain.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;q&gt;&gt;online;
+	LCT::val[<span class="hljs-number">1</span>]=LCT::size[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>),tot(<span class="hljs-number">1</span>),lastans(<span class="hljs-number">0</span>),ans;i&lt;=q;i++) &#123;
+		<span class="hljs-keyword">int</span> opt,x,y;<span class="hljs-built_in">cin</span>&gt;&gt;opt&gt;&gt;x;
+		<span class="hljs-keyword">if</span>(opt==<span class="hljs-number">1</span>) &#123;
+			x^=lastans;
+			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
+				LCT::Insert(x,++tot);
+				<span class="hljs-keyword">if</span>(online) lastans=x;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(opt==<span class="hljs-number">2</span>) &#123;
+			x^=lastans;
+			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
+				ans=LCT::Remove(x);
+				deled[x]=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">if</span>(online) lastans=ans;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> &#123;
+			<span class="hljs-built_in">cin</span>&gt;&gt;y;x^=lastans;y^=lastans;
+			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
+				<span class="hljs-built_in">cout</span>&lt;&lt;(ans=LCT::Find(x,y))&lt;&lt;<span class="hljs-built_in">endl</span>;
+				<span class="hljs-keyword">if</span>(online) lastans=ans;
+			&#125;
+		&#125;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t3-相似"><a class="markdownIt-Anchor" href="#t3-相似"></a> T3 相似</h1>
+<p>考试时打出来了，但是有一种情况没考虑，就是<code>AAS</code>且有唯一解的情况。通过边和角的<code>sin</code>值判断，可惜数据里根本没有没有唯一解的情况。</p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Pi</span><span class="hljs-params">(<span class="hljs-built_in">acos</span>(<span class="hljs-number">-1.0</span>))</span></span>;
+<span class="hljs-keyword">int</span> T,x,y;
+<span class="hljs-keyword">double</span> a,b,c,A,B,C,d,e,f,D,E,F;
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SAS</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	b=<span class="hljs-built_in">sqrt</span>(a*a+c*c<span class="hljs-number">-2</span>*a*c*<span class="hljs-built_in">cos</span>(B/<span class="hljs-number">180.0</span>*Pi));
+	A=<span class="hljs-built_in">asin</span>(a*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+&#125;<span class="hljs-comment">//a , B , c</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSS</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	B=<span class="hljs-built_in">acos</span>((a*a+c*c-b*b)/<span class="hljs-number">2</span>/a/c)/Pi*<span class="hljs-number">180.0</span>;
+	A=<span class="hljs-built_in">asin</span>(a*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
+&#125;<span class="hljs-comment">// a, b, c</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	B=<span class="hljs-number">180.0</span>-A-C;
+&#125;<span class="hljs-comment">// A , C</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSA_</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(!a) a=<span class="hljs-built_in">sqrt</span>(b*b-c*c);
+	<span class="hljs-keyword">if</span>(!c) c=<span class="hljs-built_in">sqrt</span>(b*b-a*a);
+	<span class="hljs-keyword">if</span>(!b) b=<span class="hljs-built_in">sqrt</span>(a*a+c*c);
+	A=<span class="hljs-built_in">asin</span>(a/b)/Pi*<span class="hljs-number">180.0</span>;C=<span class="hljs-built_in">asin</span>(c/b)/Pi*<span class="hljs-number">180.0</span>;
+&#125;<span class="hljs-comment">// B = Pi/2</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
+	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(A/<span class="hljs-number">180.0</span>*Pi)/a)/Pi*<span class="hljs-number">180.0</span>;
+	B=<span class="hljs-number">180.0</span>-A-C;
+	b=a/<span class="hljs-built_in">sin</span>(a)*<span class="hljs-built_in">sin</span>(b);
+&#125;<span class="hljs-comment">// A , a , c</span>
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> &amp;y)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(<span class="hljs-built_in">fabs</span>(x-y)&lt;<span class="hljs-number">1e-2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Solve</span><span class="hljs-params">()</span> </span>&#123;
+	char flag1(0x00),flag2(0x00);
+	<span class="hljs-keyword">if</span>(x==<span class="hljs-number">3</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(A,<span class="hljs-number">0</span>)+cmp(B,<span class="hljs-number">0</span>)+cmp(C,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">3</span>) SSS(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag1=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">0</span>)) AA(B,A,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">0</span>)) AA(A,B,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">0</span>)) AA(A,C,B);
+		&#125;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">2</span>) &#123;
+			<span class="hljs-keyword">if</span>(!cmp(A,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)&amp;&amp;!cmp(c,<span class="hljs-number">0</span>)) &#123;
+					SAS(b,a,c,B,A,C);flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">90.0</span>)) SSA_(b,a,c,B,A,C),flag1=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)) SSA(a,c,b,A,C,B),flag1=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(c,<span class="hljs-number">0</span>)) SSA(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(B,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)&amp;&amp;!cmp(c,<span class="hljs-number">0</span>)) &#123;
+					SAS(a,b,c,A,B,C);flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">90.0</span>)) SSA_(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)) SSA(b,c,a,B,C,A),flag1=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(c,<span class="hljs-number">0</span>)) SSA(b,a,c,B,A,C),flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(C,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)&amp;&amp;!cmp(b,<span class="hljs-number">0</span>)) &#123;
+					SAS(a,c,b,A,C,B);flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">90.0</span>)) SSA_(a,c,b,A,C,B),flag1=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)) SSA(c,b,a,C,B,A),flag1=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)) SSA(c,a,b,C,A,B),flag1=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> SSS(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(x==<span class="hljs-number">2</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(A,<span class="hljs-number">0</span>)+cmp(B,<span class="hljs-number">0</span>)+cmp(C,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag1=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">0</span>)) AA(B,A,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">0</span>)) AA(A,B,C);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">0</span>)) AA(A,C,B);
+		&#125;
+	&#125;
+	<span class="hljs-keyword">if</span>(y==<span class="hljs-number">3</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(D,<span class="hljs-number">0</span>)+cmp(E,<span class="hljs-number">0</span>)+cmp(F,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">3</span>) SSS(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag2=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">0</span>)) AA(E,D,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">0</span>)) AA(D,E,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">0</span>)) AA(D,F,E);
+		&#125;
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">2</span>) &#123;
+			<span class="hljs-keyword">if</span>(!cmp(D,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)&amp;&amp;!cmp(f,<span class="hljs-number">0</span>)) &#123;
+					SAS(e,d,f,E,D,F);flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">90.0</span>)) SSA_(e,d,f,E,D,F),flag2=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)) SSA(d,f,e,D,F,E),flag2=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(f,<span class="hljs-number">0</span>)) SSA(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(E,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)&amp;&amp;!cmp(f,<span class="hljs-number">0</span>)) &#123;
+					SAS(d,e,f,D,E,F);flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">90.0</span>)) SSA_(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)) SSA(e,f,d,E,F,D),flag2=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(f,<span class="hljs-number">0</span>)) SSA(e,d,f,E,D,F),flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(F,<span class="hljs-number">0</span>)) &#123;
+				<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)&amp;&amp;!cmp(e,<span class="hljs-number">0</span>)) &#123;
+					SAS(d,f,e,D,F,E);flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">90.0</span>)) SSA_(d,f,e,D,F,E),flag2=<span class="hljs-number">0xff</span>;
+				<span class="hljs-keyword">else</span> &#123;
+					<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)) SSA(f,e,d,F,E,D),flag2=<span class="hljs-number">0xff</span>;
+					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)) SSA(f,d,e,F,D,E),flag2=<span class="hljs-number">0xff</span>;
+				&#125;
+			&#125;
+		&#125;
+		<span class="hljs-keyword">else</span> SSS(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(y==<span class="hljs-number">2</span>) &#123;
+		<span class="hljs-keyword">int</span> s;
+		s=cmp(D,<span class="hljs-number">0</span>)+cmp(E,<span class="hljs-number">0</span>)+cmp(F,<span class="hljs-number">0</span>);
+		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
+			flag2=<span class="hljs-number">0xff</span>;
+			<span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">0</span>)) AA(E,D,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">0</span>)) AA(D,E,F);
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">0</span>)) AA(D,F,E);
+		&#125;
+	&#125;
+	<span class="hljs-keyword">if</span>(!~flag1&amp;&amp;!~flag2&amp;&amp;cmp(A,D)&amp;&amp;cmp(B,E)&amp;&amp;cmp(C,F)) <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;YES\n&quot;</span>;
+	<span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;((!cmp(A,<span class="hljs-number">0</span>)&amp;&amp;!cmp(D,<span class="hljs-number">0</span>)&amp;&amp;cmp(A,D))
+		+(!cmp(B,<span class="hljs-number">0</span>)&amp;&amp;!cmp(E,<span class="hljs-number">0</span>)&amp;&amp;cmp(B,E))
+		+(!cmp(C,<span class="hljs-number">0</span>)&amp;&amp;!cmp(F,<span class="hljs-number">0</span>)&amp;&amp;cmp(C,F)))&lt;&lt;<span class="hljs-built_in">endl</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
+	freopen(<span class="hljs-string">&quot;similarity.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+	<span class="hljs-built_in">cin</span>&gt;&gt;T;
+	<span class="hljs-keyword">while</span>(T--) &#123;
+		a=b=c=A=B=C=d=e=f=D=E=F=<span class="hljs-number">0.0</span>;
+		<span class="hljs-built_in">cin</span>&gt;&gt;x&gt;&gt;y;
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=x+y;i++) &#123;
+			<span class="hljs-keyword">char</span> ch;<span class="hljs-keyword">double</span> xx;
+			<span class="hljs-built_in">cin</span>&gt;&gt;ch&gt;&gt;xx;
+			<span class="hljs-keyword">switch</span>(ch) &#123;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;a&#x27;</span>: a=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;b&#x27;</span>: b=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;c&#x27;</span>: c=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>: A=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>: B=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;C&#x27;</span>: C=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;d&#x27;</span>: d=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;e&#x27;</span>: e=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;f&#x27;</span>: f=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;D&#x27;</span>: D=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;E&#x27;</span>: E=xx;<span class="hljs-keyword">break</span>;
+				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;F&#x27;</span>: F=xx;<span class="hljs-keyword">break</span>;
+			&#125;
+		&#125;
+		Solve();
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+]]></content>
+      <tags>
+        <tag>考试</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>动态规划基础题型总结</title>
     <url>/2020/10/28/Summary-BasicDP/</url>
     <content><![CDATA[<p>提高组可能会考到的部分DP题型的总结。后面是曾老师做的。</p>
@@ -1442,486 +1981,47 @@ ll f[maxn],st[maxn],ed[maxn],ans;<span class="hljs-comment">// st,ed 记录每�
       </tags>
   </entry>
   <entry>
-    <title>2020-10-15考试总结</title>
-    <url>/2020/10/15/Test-2020-10-15/</url>
-    <content><![CDATA[<h1 id="t1-运货"><a class="markdownIt-Anchor" href="#t1-运货"></a> T1 运货</h1>
-<p>考试时想了半个小时想出了正解。但是由于鬼畜的数据范围就当作暴力了没优化空间，于是成功没过。</p>
-<p>按照出现时间减去到达时间排序，一个一个选就行了。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
-<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;
-<span class="hljs-keyword">int</span> n,m;
-<span class="hljs-keyword">int</span> a[maxn];
-ll s[maxn*<span class="hljs-number">10</span>],tot;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
-	freopen(<span class="hljs-string">&quot;Shipment.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
-	freopen(<span class="hljs-string">&quot;Shipment.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;
-		<span class="hljs-built_in">cin</span>&gt;&gt;a[i];
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=a[i];j++) &#123;
-			ll x;<span class="hljs-built_in">cin</span>&gt;&gt;x;
-			s[++tot]=x-ll(i);
-		&#125;
-	&#125;
-	<span class="hljs-built_in">std</span>::sort(s+<span class="hljs-number">1</span>,s+<span class="hljs-number">1</span>+tot);
-	<span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">priority_queue</span>&lt;ll,<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;ll&gt;,<span class="hljs-built_in">std</span>::greater&lt;ll&gt;&gt; q;<span class="hljs-comment">//小根堆</span>
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) q.push(<span class="hljs-number">0</span>);
-	<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=tot;i++) &#123;
-		<span class="hljs-function">ll <span class="hljs-title">k</span><span class="hljs-params">(q.top())</span></span>;q.pop();
-		<span class="hljs-function">ll <span class="hljs-title">now</span><span class="hljs-params">(max(s[i]+ll(n)+<span class="hljs-number">1</span>,k+ll(n)+<span class="hljs-number">1</span>))</span></span>;
-		ans=max(ans,now);<span class="hljs-comment">//什么时候出现的，加上到右边的</span>
-		q.push(now);
-	&#125;
-	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-<h1 id="t2-维护"><a class="markdownIt-Anchor" href="#t2-维护"></a> T2 维护</h1>
-<p>考试时觉得可能是LCT，但LCT不熟并且耗时，所以选择了打指针暴力。可惜出锅了。</p>
-<p>正解是LCT，每个点没被删除权值就为1，否则为0。每次在一个链的Splay上二分查找就行了。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">2e5</span>+<span class="hljs-number">10</span>)</span></span>;
-<span class="hljs-keyword">int</span> q,online;
-
-<span class="hljs-keyword">namespace</span> LCT &#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> lc c[x][0]</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rc c[x][1]</span>
-	<span class="hljs-keyword">int</span> size[maxn],val[maxn],c[maxn][<span class="hljs-number">2</span>],fa[maxn];
-	<span class="hljs-keyword">char</span> tag[maxn];
-
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">dir</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		<span class="hljs-keyword">return</span> x==c[fa[x]][<span class="hljs-number">1</span>];
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">notroot</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		<span class="hljs-keyword">return</span> ~<span class="hljs-keyword">char</span>(!(x==c[fa[x]][<span class="hljs-number">0</span>]||x==c[fa[x]][<span class="hljs-number">1</span>]));
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushup</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		size[x]=size[lc]+size[rc]+val[x];
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushtag</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		tag[x]^=<span class="hljs-number">0xff</span>;
-		swap(lc,rc);
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushdown</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		<span class="hljs-keyword">if</span>(!~tag[x]) &#123;
-			pushtag(lc);
-			pushtag(rc);
-			tag[x]=<span class="hljs-number">0x00</span>;
-		&#125;
-	&#125;
-
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connect</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;f,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;d,<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;notr)</span> </span>&#123;
-		<span class="hljs-keyword">if</span>(!~notr) c[f][d]=x;
-		fa[x]=f;
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Rotate</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		int f(fa[x]),ff(fa[f]),d(dir(x)),t(dir(f));
-		<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">p</span><span class="hljs-params">(notroot(f))</span></span>;
-		connect(c[x][d^<span class="hljs-number">1</span>],f,d,<span class="hljs-number">0xff</span>);
-		connect(f,x,d^<span class="hljs-number">1</span>,<span class="hljs-number">0xff</span>);
-		connect(x,ff,t,p);
-		pushup(f);
-	&#125;
-
-	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">pushstack</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		<span class="hljs-keyword">if</span>(!~notroot(x)) pushstack(fa[x]);
-		pushdown(x);
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Splay</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		pushstack(x);
-		<span class="hljs-keyword">for</span>(;!~notroot(x);Rotate(x))
-			<span class="hljs-keyword">if</span>(!~notroot(fa[x])) Rotate(dir(x)^dir(fa[x])?x:fa[x]);
-		pushup(x);
-	&#125;
-
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Access</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> y(<span class="hljs-number">0</span>);x;x=fa[y=x])
-			Splay(x),rc=y,pushup(x);
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeRoot</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		Access(x);
-		Splay(x);
-		pushtag(x);
-	&#125;
-
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> k)</span> </span>&#123;
-		<span class="hljs-keyword">if</span>(!k) <span class="hljs-keyword">return</span> x;
-		Access(x);Splay(x);
-		x=lc;
-		<span class="hljs-keyword">while</span>(x) &#123;
-			pushdown(x);
-			<span class="hljs-keyword">if</span>(k&lt;=size[rc]) x=rc;
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(k==val[x]+size[rc]) <span class="hljs-keyword">return</span> x;
-			<span class="hljs-keyword">else</span> k-=val[x]+size[rc],x=lc;
-		&#125;
-		<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-	&#125;
-
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Insert</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
-		fa[y]=x;val[y]=size[y]=<span class="hljs-number">1</span>;
-		Access(y);
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Remove</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		val[x]=<span class="hljs-number">0</span>;
-		<span class="hljs-keyword">return</span> Find(x,<span class="hljs-number">1</span>);
-	&#125;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> lc</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> rc</span>
-&#125;
-
-<span class="hljs-keyword">char</span> deled[maxn];
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
-	freopen(<span class="hljs-string">&quot;maintain.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
-	freopen(<span class="hljs-string">&quot;maintain.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-	<span class="hljs-built_in">cin</span>&gt;&gt;q&gt;&gt;online;
-	LCT::val[<span class="hljs-number">1</span>]=LCT::size[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>),tot(<span class="hljs-number">1</span>),lastans(<span class="hljs-number">0</span>),ans;i&lt;=q;i++) &#123;
-		<span class="hljs-keyword">int</span> opt,x,y;<span class="hljs-built_in">cin</span>&gt;&gt;opt&gt;&gt;x;
-		<span class="hljs-keyword">if</span>(opt==<span class="hljs-number">1</span>) &#123;
-			x^=lastans;
-			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
-				LCT::Insert(x,++tot);
-				<span class="hljs-keyword">if</span>(online) lastans=x;
-			&#125;
-		&#125;
-		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(opt==<span class="hljs-number">2</span>) &#123;
-			x^=lastans;
-			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
-				ans=LCT::Remove(x);
-				deled[x]=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">if</span>(online) lastans=ans;
-			&#125;
-		&#125;
-		<span class="hljs-keyword">else</span> &#123;
-			<span class="hljs-built_in">cin</span>&gt;&gt;y;x^=lastans;y^=lastans;
-			<span class="hljs-keyword">if</span>(x&amp;&amp;x&lt;=tot&amp;&amp;~deled[x]) &#123;
-				<span class="hljs-built_in">cout</span>&lt;&lt;(ans=LCT::Find(x,y))&lt;&lt;<span class="hljs-built_in">endl</span>;
-				<span class="hljs-keyword">if</span>(online) lastans=ans;
-			&#125;
-		&#125;
-	&#125;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-<h1 id="t3-相似"><a class="markdownIt-Anchor" href="#t3-相似"></a> T3 相似</h1>
-<p>考试时打出来了，但是有一种情况没考虑，就是<code>AAS</code>且有唯一解的情况。通过边和角的<code>sin</code>值判断，可惜数据里根本没有没有唯一解的情况。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Pi</span><span class="hljs-params">(<span class="hljs-built_in">acos</span>(<span class="hljs-number">-1.0</span>))</span></span>;
-<span class="hljs-keyword">int</span> T,x,y;
-<span class="hljs-keyword">double</span> a,b,c,A,B,C,d,e,f,D,E,F;
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SAS</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
-	b=<span class="hljs-built_in">sqrt</span>(a*a+c*c<span class="hljs-number">-2</span>*a*c*<span class="hljs-built_in">cos</span>(B/<span class="hljs-number">180.0</span>*Pi));
-	A=<span class="hljs-built_in">asin</span>(a*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
-	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
-&#125;<span class="hljs-comment">//a , B , c</span>
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSS</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
-	B=<span class="hljs-built_in">acos</span>((a*a+c*c-b*b)/<span class="hljs-number">2</span>/a/c)/Pi*<span class="hljs-number">180.0</span>;
-	A=<span class="hljs-built_in">asin</span>(a*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
-	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(B/<span class="hljs-number">180.0</span>*Pi)/b)/Pi*<span class="hljs-number">180.0</span>;
-&#125;<span class="hljs-comment">// a, b, c</span>
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
-	B=<span class="hljs-number">180.0</span>-A-C;
-&#125;<span class="hljs-comment">// A , C</span>
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSA_</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(!a) a=<span class="hljs-built_in">sqrt</span>(b*b-c*c);
-	<span class="hljs-keyword">if</span>(!c) c=<span class="hljs-built_in">sqrt</span>(b*b-a*a);
-	<span class="hljs-keyword">if</span>(!b) b=<span class="hljs-built_in">sqrt</span>(a*a+c*c);
-	A=<span class="hljs-built_in">asin</span>(a/b)/Pi*<span class="hljs-number">180.0</span>;C=<span class="hljs-built_in">asin</span>(c/b)/Pi*<span class="hljs-number">180.0</span>;
-&#125;<span class="hljs-comment">// B = Pi/2</span>
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SSA</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;a,<span class="hljs-keyword">double</span> &amp;b,<span class="hljs-keyword">double</span> &amp;c,<span class="hljs-keyword">double</span> &amp;A,<span class="hljs-keyword">double</span> &amp;B,<span class="hljs-keyword">double</span> &amp;C)</span> </span>&#123;
-	C=<span class="hljs-built_in">asin</span>(c*<span class="hljs-built_in">sin</span>(A/<span class="hljs-number">180.0</span>*Pi)/a)/Pi*<span class="hljs-number">180.0</span>;
-	B=<span class="hljs-number">180.0</span>-A-C;
-	b=a/<span class="hljs-built_in">sin</span>(a)*<span class="hljs-built_in">sin</span>(b);
-&#125;<span class="hljs-comment">// A , a , c</span>
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> &amp;y)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(<span class="hljs-built_in">fabs</span>(x-y)&lt;<span class="hljs-number">1e-2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Solve</span><span class="hljs-params">()</span> </span>&#123;
-	char flag1(0x00),flag2(0x00);
-	<span class="hljs-keyword">if</span>(x==<span class="hljs-number">3</span>) &#123;
-		<span class="hljs-keyword">int</span> s;
-		s=cmp(A,<span class="hljs-number">0</span>)+cmp(B,<span class="hljs-number">0</span>)+cmp(C,<span class="hljs-number">0</span>);
-		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">3</span>) SSS(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
-		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
-			flag1=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">0</span>)) AA(B,A,C);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">0</span>)) AA(A,B,C);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">0</span>)) AA(A,C,B);
-		&#125;
-		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">2</span>) &#123;
-			<span class="hljs-keyword">if</span>(!cmp(A,<span class="hljs-number">0</span>)) &#123;
-				<span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)&amp;&amp;!cmp(c,<span class="hljs-number">0</span>)) &#123;
-					SAS(b,a,c,B,A,C);flag1=<span class="hljs-number">0xff</span>;
-				&#125;
-				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">90.0</span>)) SSA_(b,a,c,B,A,C),flag1=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">else</span> &#123;
-					<span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)) SSA(a,c,b,A,C,B),flag1=<span class="hljs-number">0xff</span>;
-					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(c,<span class="hljs-number">0</span>)) SSA(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
-				&#125;
-			&#125;
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(B,<span class="hljs-number">0</span>)) &#123;
-				<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)&amp;&amp;!cmp(c,<span class="hljs-number">0</span>)) &#123;
-					SAS(a,b,c,A,B,C);flag1=<span class="hljs-number">0xff</span>;
-				&#125;
-				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">90.0</span>)) SSA_(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">else</span> &#123;
-					<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)) SSA(b,c,a,B,C,A),flag1=<span class="hljs-number">0xff</span>;
-					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(c,<span class="hljs-number">0</span>)) SSA(b,a,c,B,A,C),flag1=<span class="hljs-number">0xff</span>;
-				&#125;
-			&#125;
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(C,<span class="hljs-number">0</span>)) &#123;
-				<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)&amp;&amp;!cmp(b,<span class="hljs-number">0</span>)) &#123;
-					SAS(a,c,b,A,C,B);flag1=<span class="hljs-number">0xff</span>;
-				&#125;
-				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">90.0</span>)) SSA_(a,c,b,A,C,B),flag1=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">else</span> &#123;
-					<span class="hljs-keyword">if</span>(!cmp(a,<span class="hljs-number">0</span>)) SSA(c,b,a,C,B,A),flag1=<span class="hljs-number">0xff</span>;
-					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(b,<span class="hljs-number">0</span>)) SSA(c,a,b,C,A,B),flag1=<span class="hljs-number">0xff</span>;
-				&#125;
-			&#125;
-		&#125;
-		<span class="hljs-keyword">else</span> SSS(a,b,c,A,B,C),flag1=<span class="hljs-number">0xff</span>;
-	&#125;
-	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(x==<span class="hljs-number">2</span>) &#123;
-		<span class="hljs-keyword">int</span> s;
-		s=cmp(A,<span class="hljs-number">0</span>)+cmp(B,<span class="hljs-number">0</span>)+cmp(C,<span class="hljs-number">0</span>);
-		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
-			flag1=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">if</span>(cmp(A,<span class="hljs-number">0</span>)) AA(B,A,C);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(B,<span class="hljs-number">0</span>)) AA(A,B,C);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(C,<span class="hljs-number">0</span>)) AA(A,C,B);
-		&#125;
-	&#125;
-	<span class="hljs-keyword">if</span>(y==<span class="hljs-number">3</span>) &#123;
-		<span class="hljs-keyword">int</span> s;
-		s=cmp(D,<span class="hljs-number">0</span>)+cmp(E,<span class="hljs-number">0</span>)+cmp(F,<span class="hljs-number">0</span>);
-		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">3</span>) SSS(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
-		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
-			flag2=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">0</span>)) AA(E,D,F);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">0</span>)) AA(D,E,F);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">0</span>)) AA(D,F,E);
-		&#125;
-		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s==<span class="hljs-number">2</span>) &#123;
-			<span class="hljs-keyword">if</span>(!cmp(D,<span class="hljs-number">0</span>)) &#123;
-				<span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)&amp;&amp;!cmp(f,<span class="hljs-number">0</span>)) &#123;
-					SAS(e,d,f,E,D,F);flag2=<span class="hljs-number">0xff</span>;
-				&#125;
-				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">90.0</span>)) SSA_(e,d,f,E,D,F),flag2=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">else</span> &#123;
-					<span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)) SSA(d,f,e,D,F,E),flag2=<span class="hljs-number">0xff</span>;
-					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(f,<span class="hljs-number">0</span>)) SSA(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
-				&#125;
-			&#125;
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(E,<span class="hljs-number">0</span>)) &#123;
-				<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)&amp;&amp;!cmp(f,<span class="hljs-number">0</span>)) &#123;
-					SAS(d,e,f,D,E,F);flag2=<span class="hljs-number">0xff</span>;
-				&#125;
-				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">90.0</span>)) SSA_(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">else</span> &#123;
-					<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)) SSA(e,f,d,E,F,D),flag2=<span class="hljs-number">0xff</span>;
-					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(f,<span class="hljs-number">0</span>)) SSA(e,d,f,E,D,F),flag2=<span class="hljs-number">0xff</span>;
-				&#125;
-			&#125;
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(F,<span class="hljs-number">0</span>)) &#123;
-				<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)&amp;&amp;!cmp(e,<span class="hljs-number">0</span>)) &#123;
-					SAS(d,f,e,D,F,E);flag2=<span class="hljs-number">0xff</span>;
-				&#125;
-				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">90.0</span>)) SSA_(d,f,e,D,F,E),flag2=<span class="hljs-number">0xff</span>;
-				<span class="hljs-keyword">else</span> &#123;
-					<span class="hljs-keyword">if</span>(!cmp(d,<span class="hljs-number">0</span>)) SSA(f,e,d,F,E,D),flag2=<span class="hljs-number">0xff</span>;
-					<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!cmp(e,<span class="hljs-number">0</span>)) SSA(f,d,e,F,D,E),flag2=<span class="hljs-number">0xff</span>;
-				&#125;
-			&#125;
-		&#125;
-		<span class="hljs-keyword">else</span> SSS(d,e,f,D,E,F),flag2=<span class="hljs-number">0xff</span>;
-	&#125;
-	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(y==<span class="hljs-number">2</span>) &#123;
-		<span class="hljs-keyword">int</span> s;
-		s=cmp(D,<span class="hljs-number">0</span>)+cmp(E,<span class="hljs-number">0</span>)+cmp(F,<span class="hljs-number">0</span>);
-		<span class="hljs-keyword">if</span>(s==<span class="hljs-number">1</span>) &#123;
-			flag2=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">if</span>(cmp(D,<span class="hljs-number">0</span>)) AA(E,D,F);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(E,<span class="hljs-number">0</span>)) AA(D,E,F);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cmp(F,<span class="hljs-number">0</span>)) AA(D,F,E);
-		&#125;
-	&#125;
-	<span class="hljs-keyword">if</span>(!~flag1&amp;&amp;!~flag2&amp;&amp;cmp(A,D)&amp;&amp;cmp(B,E)&amp;&amp;cmp(C,F)) <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;YES\n&quot;</span>;
-	<span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;((!cmp(A,<span class="hljs-number">0</span>)&amp;&amp;!cmp(D,<span class="hljs-number">0</span>)&amp;&amp;cmp(A,D))
-		+(!cmp(B,<span class="hljs-number">0</span>)&amp;&amp;!cmp(E,<span class="hljs-number">0</span>)&amp;&amp;cmp(B,E))
-		+(!cmp(C,<span class="hljs-number">0</span>)&amp;&amp;!cmp(F,<span class="hljs-number">0</span>)&amp;&amp;cmp(C,F)))&lt;&lt;<span class="hljs-built_in">endl</span>;
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
-	freopen(<span class="hljs-string">&quot;similarity.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-	<span class="hljs-built_in">cin</span>&gt;&gt;T;
-	<span class="hljs-keyword">while</span>(T--) &#123;
-		a=b=c=A=B=C=d=e=f=D=E=F=<span class="hljs-number">0.0</span>;
-		<span class="hljs-built_in">cin</span>&gt;&gt;x&gt;&gt;y;
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=x+y;i++) &#123;
-			<span class="hljs-keyword">char</span> ch;<span class="hljs-keyword">double</span> xx;
-			<span class="hljs-built_in">cin</span>&gt;&gt;ch&gt;&gt;xx;
-			<span class="hljs-keyword">switch</span>(ch) &#123;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;a&#x27;</span>: a=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;b&#x27;</span>: b=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;c&#x27;</span>: c=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>: A=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>: B=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;C&#x27;</span>: C=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;d&#x27;</span>: d=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;e&#x27;</span>: e=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;f&#x27;</span>: f=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;D&#x27;</span>: D=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;E&#x27;</span>: E=xx;<span class="hljs-keyword">break</span>;
-				<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;F&#x27;</span>: F=xx;<span class="hljs-keyword">break</span>;
-			&#125;
-		&#125;
-		Solve();
-	&#125;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-]]></content>
-      <tags>
-        <tag>考试</tag>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020-10-13考试总结</title>
-    <url>/2020/10/13/Test-2020-10-13/</url>
-    <content><![CDATA[<h1 id="t1-破冰派对"><a class="markdownIt-Anchor" href="#t1-破冰派对"></a> T1 破冰派对</h1>
-<p>考试时一看就觉得要求出最大团，于是花了一个多小时抠这个。于是最终也没有抠出来，输出大样例跑路了。考完了才知道最大团问题是NP完全的。</p>
-<p>其实正解就是暴搜。因为状态数不多，所以搜的出来。</p>
-<p>教训：一段时间内想不出正解考虑打暴力跑路。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1000</span>+<span class="hljs-number">10</span>)</span></span>;
-<span class="hljs-keyword">int</span> n,m;
-<span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
-
-<span class="hljs-keyword">int</span> work[maxn],won,part[maxn],pan;
-<span class="hljs-keyword">int</span> ans;
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dfs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(u==n+<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">void</span>(ans+=(won&amp;&amp;pan));
-	<span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">flag</span><span class="hljs-params">(<span class="hljs-number">0x00</span>)</span></span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=won;i++)
-		<span class="hljs-keyword">if</span>(~<span class="hljs-built_in">map</span>[u][work[i]]) &#123;
-			flag=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">break</span>;
-		&#125;
-	<span class="hljs-keyword">if</span>(~flag) &#123;
-		work[++won]=u;
-		Dfs(u+<span class="hljs-number">1</span>);
-		won--;
-	&#125;
-	flag=<span class="hljs-number">0x00</span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=pan;i++)
-		<span class="hljs-keyword">if</span>(!~<span class="hljs-built_in">map</span>[u][part[i]]) &#123;
-			flag=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">break</span>;
-		&#125;
-	<span class="hljs-keyword">if</span>(~flag) &#123;
-		part[++pan]=u;
-		Dfs(u+<span class="hljs-number">1</span>);
-		pan--;
-	&#125;
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
-	freopen(<span class="hljs-string">&quot;party.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-	<span class="hljs-keyword">int</span> T;<span class="hljs-built_in">cin</span>&gt;&gt;T;
-	<span class="hljs-keyword">while</span>(T--) &#123;
-		ans=<span class="hljs-number">0</span>;
-		<span class="hljs-built_in">memset</span>(<span class="hljs-built_in">map</span>,<span class="hljs-number">0x00</span>,<span class="hljs-keyword">sizeof</span> <span class="hljs-built_in">map</span>);
-		<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
-			<span class="hljs-keyword">int</span> u,v;<span class="hljs-built_in">cin</span>&gt;&gt;u&gt;&gt;v;
-			<span class="hljs-built_in">map</span>[u][v]=<span class="hljs-built_in">map</span>[v][u]=<span class="hljs-number">0xff</span>;
-		&#125;
-		Dfs(<span class="hljs-number">1</span>);
-		<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
-	&#125;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-<h1 id="t2-无聊游戏"><a class="markdownIt-Anchor" href="#t2-无聊游戏"></a> T2 无聊游戏</h1>
-<p>这题还是考试时想出来了。考虑改变前缀使得后缀最大和最小。</p>
-<pre><code class="hljs cpp"><span class="hljs-comment">// 小A想让数列和尽量小，则他要选择最大后缀变负</span>
-<span class="hljs-comment">// 小N要让最大后缀最小，同时修改的前缀和为负且大</span>
-<span class="hljs-comment">// 从左向右扫，维护左端点到当前点的最大后缀，这个区间要乘上-A。</span>
-<span class="hljs-comment">// 预处理出后缀和和最大后缀</span>
-<span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
-<span class="hljs-keyword">int</span> n;
+    <title>2020-10-20考试总结</title>
+    <url>/2020/10/20/Test-2020-10-20/</url>
+    <content><![CDATA[<p>2020-10-20考试总结。</p>
+<a id="more"></a>
+<h1 id="t1-开方"><a class="markdownIt-Anchor" href="#t1-开方"></a> T1 开方</h1>
+<p>垃圾题，直接二分出边界（其实就是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><msup><mn>2</mn><mn>5</mn></msup></msup><mo>=</mo><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{2^5}=2^{32}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9869199999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9869199999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>），然后判断。但题面很鬼，没有定义<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>的情况。<s>希望出题人没事</s></p>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">100</span>+<span class="hljs-number">10</span>)</span></span>;
 <span class="hljs-keyword">using</span> ll = <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
-ll A,B,q[maxn];
-ll sumpre[maxn];
-ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
 
-<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Calc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(i&lt;j) <span class="hljs-keyword">return</span> sumpre[i]*-A+sumsuf[j]*-B+sumpre[j<span class="hljs-number">-1</span>]-sumpre[i];
-	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> sumpre[j<span class="hljs-number">-1</span>]*-A+sumsuf[i+<span class="hljs-number">1</span>]*-B+(sumpre[i]-sumpre[j<span class="hljs-number">-1</span>])*A*B;
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Times</span><span class="hljs-params">(ll x)</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">cnt</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(;x&amp;&amp;x!=<span class="hljs-number">1L</span>L;x=<span class="hljs-built_in">sqrt</span>(x)) cnt++;
+	<span class="hljs-keyword">return</span> cnt;
+&#125;
 
+<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Solve</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;len)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(len&gt;<span class="hljs-number">10</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">6</span>;
+	<span class="hljs-function">ll <span class="hljs-title">x</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=len;i++) x=(x&lt;&lt;<span class="hljs-number">1L</span>L)+(x&lt;&lt;<span class="hljs-number">3L</span>L)+ll(s[i]^<span class="hljs-number">48</span>);
+	<span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">4294967295L</span>L||!x) <span class="hljs-keyword">return</span> <span class="hljs-number">6</span>;
+	<span class="hljs-keyword">if</span>(x==<span class="hljs-number">1L</span>L) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">return</span> Times(x);
 &#125;
 
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
-	freopen(<span class="hljs-string">&quot;game.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
-<span class="hljs-comment">//	freopen(&quot;game.out&quot;,&quot;w&quot;,stdout);</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;A&gt;&gt;B;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;q[i],sumpre[i]=sumpre[i<span class="hljs-number">-1</span>]+q[i];
-	possuf[n+<span class="hljs-number">1</span>]=n+<span class="hljs-number">1</span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(n);i;i--) &#123;
-		sumsuf[i]=q[i]+sumsuf[i+<span class="hljs-number">1</span>];
-		<span class="hljs-keyword">if</span>(sumsuf[i]&gt;lensuf[i+<span class="hljs-number">1</span>]) &#123;
-			lensuf[i]=sumsuf[i];
-			possuf[i]=i;
-		&#125;
-		<span class="hljs-keyword">else</span> &#123;
-			lensuf[i]=lensuf[i+<span class="hljs-number">1</span>];
-			possuf[i]=possuf[i+<span class="hljs-number">1</span>];
-		&#125;
+	<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> s[maxn];
+	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">cin</span>&gt;&gt;(s+<span class="hljs-number">1</span>)) &#123;
+		<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ans</span><span class="hljs-params">(Solve(s,<span class="hljs-built_in">strlen</span>(s+<span class="hljs-number">1</span>)))</span></span>;
+		<span class="hljs-keyword">if</span>(ans==<span class="hljs-number">6</span>) <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;TAT&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
 	&#125;
-	ll ans(Calc(0,possuf[1])),sum(0);
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>),t(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;<span class="hljs-comment">// t为前缀的最大后缀位置</span>
-		<span class="hljs-keyword">if</span>(sum+q[i]*(-A)&lt;<span class="hljs-number">0</span>) sum=<span class="hljs-number">0</span>,t=i+<span class="hljs-number">1</span>;
-		<span class="hljs-keyword">else</span> sum+=q[i]*(-A);
-		<span class="hljs-keyword">int</span> nowpos;
-		<span class="hljs-keyword">if</span>(lensuf[i+<span class="hljs-number">1</span>]&gt;sum+sumsuf[i+<span class="hljs-number">1</span>]) nowpos=possuf[i+<span class="hljs-number">1</span>];
-		<span class="hljs-keyword">else</span> nowpos=t;
-		ans=max(ans,Calc(i,nowpos));
-	&#125;
-	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;
-</code></pre>
-<h1 id="t3-建设国家"><a class="markdownIt-Anchor" href="#t3-建设国家"></a> T3 建设国家</h1>
-<p>又是最生成树。考试时根本没有思路，因为快没有时间了就乱打了个贪心。其实也不难想出来。</p>
-<p>考虑第一轮计划对每一条边的贡献就是题目中给出的那个式子。第二轮计划拆成一条边上两点加人对对方的影响。推式子后发现优先加<code>F</code>大的，权值转化到边权上做最小生成树即可。</p>
-<pre><code class="hljs cpp">const int maxn(55),maxm(maxn*maxn);
-<span class="hljs-keyword">using</span> ll=<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
-<span class="hljs-keyword">int</span> n,m;ll T[maxn],F[maxn],U[maxn],C;
-<span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
-<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
-	<span class="hljs-keyword">int</span> u,v;ll w;
-	Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> ll &amp;w) :u(u),v(v),w(w) &#123;&#125;
-	Edge() &#123;&#125;
-&#125;e[maxm];
-<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Calc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(F[i]&lt;F[j]) <span class="hljs-keyword">return</span> Calc(j,i);
-	<span class="hljs-keyword">return</span> <span class="hljs-number">1l</span>l*F[i]*(U[i]-T[i])*T[j]+<span class="hljs-number">1l</span>l*F[j]*(U[j]-T[j])*U[i];
-&#125;
+&#125;</code></pre>
+<h1 id="t2-染色"><a class="markdownIt-Anchor" href="#t2-染色"></a> T2 染色</h1>
+<p>考试时想了先给边排序，然后枚举选多边形的解法，开始以为复杂度是假的，就迟迟没打。后来想到实际上只会有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>条边有用，所以一般跑不到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>上界，于是就直接上了。</p>
+<p>交上去T了4个点<s>说好的跑不到上界呢</s>， 于是只能优化。先裸跑一次最小生成树，发现其实只有裸跑时的边有用，所以只遍历原最小生成树的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>条边。优化了一维时间，这样就过了。</p>
+<p>但为什么题解<code>prim</code>复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">n^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>还能过啊。</p>
+<pre><code class="hljs cpp">const int maxn(2000+10),maxm(13);
+<span class="hljs-keyword">int</span> n,m;
+<span class="hljs-keyword">using</span> ll = <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
+<span class="hljs-function"><span class="hljs-keyword">const</span> ll <span class="hljs-title">Inf</span><span class="hljs-params">(<span class="hljs-number">0x3f3f3f3f3f3f3f3f</span>)</span></span>;
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionAndFindSet</span> &#123;</span>
 <span class="hljs-keyword">private</span>:
@@ -1933,45 +2033,108 @@ ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
 	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
 		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) fa[i]=i,rank[i]=<span class="hljs-number">1</span>;
 	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
+	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
 		int u(Find(x)),v(Find(y));
-		<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span>;
+		<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 		<span class="hljs-keyword">if</span>(rank[u]&lt;rank[v]) swap(u,v);
 		fa[v]=u;rank[u]=max(rank[u],rank[v]+<span class="hljs-number">1</span>);
+		<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Same</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
-		<span class="hljs-keyword">return</span> Find(x)==Find(y);
+&#125;U;
+
+ll x[maxn],y[maxn];
+<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Cost</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
+	<span class="hljs-keyword">return</span> (x[i]-x[j])*(x[i]-x[j])+(y[i]-y[j])*(y[i]-y[j]);
+&#125;
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
+	<span class="hljs-keyword">int</span> u,v;ll w;
+	Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> ll &amp;w) :u(u),v(v),w(w) &#123;&#125;
+	Edge() &#123;&#125;
+&#125;e[maxn*maxn],g[maxn];
+<span class="hljs-keyword">int</span> Cnt_Edge1,Cnt_Edge2;
+ll c[maxm];
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; v[maxm];
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Kruscal0</span><span class="hljs-params">()</span> </span>&#123;
+	U.Init();
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=Cnt_Edge1&amp;&amp;Cnt_Edge2&lt;n;i++)
+		<span class="hljs-keyword">if</span>(U.Merge(e[i].u,e[i].v))
+			g[++Cnt_Edge2]=e[i];
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Kruscal</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;s)</span> </span>&#123;
+	U.Init();
+	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">cnt</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++)
+		<span class="hljs-keyword">if</span>(s&amp;(<span class="hljs-number">1</span>&lt;&lt;(i<span class="hljs-number">-1</span>))) &#123;
+			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;p: v[i])
+				cnt+=U.Merge(p,v[i][<span class="hljs-number">0</span>]);
+			ans+=c[i];
+		&#125;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=Cnt_Edge2&amp;&amp;cnt&lt;n;i++) &#123;
+		<span class="hljs-keyword">if</span>(!U.Merge(g[i].u,g[i].v)) <span class="hljs-keyword">continue</span>;
+		ans+=g[i].w;
+		cnt++;
 	&#125;
-&#125;S;
+	<span class="hljs-keyword">return</span> ans;
+&#125;
 
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> ONLINE_JUDGE</span>
-	freopen(<span class="hljs-string">&quot;res.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-	<span class="hljs-built_in">cin</span>&gt;&gt;n;
-	S.Init();<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;T[i];
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;U[i];
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;F[i],ans+=(T[i]+U[i]<span class="hljs-number">-1</span>)*(U[i]-T[i])/<span class="hljs-number">2</span>*F[i];
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;&amp;<span class="hljs-built_in">map</span>[i][<span class="hljs-number">1</span>];
-	<span class="hljs-built_in">cin</span>&gt;&gt;C;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;i;j++) &#123;
-			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j]==<span class="hljs-string">&#x27;Y&#x27;</span>) &#123;
-				ans+=Calc(i,j);
-				S.Merge(i,j);
-			&#125;
-			<span class="hljs-keyword">else</span> e[++m]=Edge(i,j,Calc(i,j)+(T[i]+T[j])*C);
+	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;x[i]&gt;&gt;y[i];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+		<span class="hljs-keyword">int</span> k;<span class="hljs-built_in">cin</span>&gt;&gt;k&gt;&gt;c[i];
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=k;j++) &#123;
+			<span class="hljs-keyword">int</span> x;<span class="hljs-built_in">cin</span>&gt;&gt;x;
+			v[i].push_back(x);
 		&#125;
-	<span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+m,[](<span class="hljs-keyword">const</span> Edge &amp;p,<span class="hljs-keyword">const</span> Edge &amp;q) &#123;
+	&#125;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
+		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(i+<span class="hljs-number">1</span>);j&lt;=n;j++)
+			e[++Cnt_Edge1]=Edge(i,j,Cost(i,j));
+	<span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+Cnt_Edge1,[](<span class="hljs-keyword">const</span> Edge &amp;p,<span class="hljs-keyword">const</span> Edge &amp;q) &#123;
 		<span class="hljs-keyword">return</span> p.w&lt;q.w;
 	&#125;);
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
-		<span class="hljs-keyword">if</span>(S.Same(e[i].u,e[i].v)) <span class="hljs-keyword">continue</span>;
-		S.Merge(e[i].u,e[i].v);
-		ans+=e[i].w;
-	&#125;
+	Kruscal0();
+	<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(Inf)</span></span>;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">0</span>);i&lt;(<span class="hljs-number">1</span>&lt;&lt;m);i++)
+		ans=min(ans,Kruscal(i));
 	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+<h1 id="t3-心情"><a class="markdownIt-Anchor" href="#t3-心情"></a> T3 心情</h1>
+<p>考试时先想到可能是区间<code>DP</code>，但算了三位数组的空间卡的很满就转向想贪心了，结果只得了<code>40pts</code>。其实就是区间<code>DP</code>。</p>
+<pre><code class="hljs cpp">const int maxn(300+10),nef(0xc1c1c1c1);
+<span class="hljs-keyword">int</span> n,a[maxn];
+<span class="hljs-keyword">int</span> col[maxn],len[maxn],last[maxn],m;<span class="hljs-comment">// last[i] 表示与i颜色段相同颜色的前一个颜色段</span>
+<span class="hljs-keyword">int</span> f[maxn][maxn][maxn];
+<span class="hljs-comment">// f[i][j][k] 表示从i段到j段，后面接上长度为k的与j颜色相同段的最大花费</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Dfs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;k)</span> </span>&#123;
+	<span class="hljs-keyword">if</span>(i&gt;j) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">if</span>(~f[i][j][k]) <span class="hljs-keyword">return</span> f[i][j][k];
+	f[i][j][k]=nef;
+	f[i][j][k]=max(f[i][j][k],Dfs(i,j<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>)+(len[j]+k)*(len[j]+k));
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> p(last[j]);p&gt;=i;p=last[p])
+		f[i][j][k]=max(f[i][j][k],Dfs(i,p,len[j]+k)+Dfs(p+<span class="hljs-number">1</span>,j<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>));
+	<span class="hljs-keyword">return</span> f[i][j][k];
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
+	<span class="hljs-built_in">cin</span>&gt;&gt;n;
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;
+		<span class="hljs-built_in">cin</span>&gt;&gt;a[i];
+		<span class="hljs-keyword">if</span>(a[i]==col[m]) len[m]++;
+		<span class="hljs-keyword">else</span> m++,col[m]=a[i],len[m]=<span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> tax[maxn];
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
+		last[i]=tax[col[i]];
+		tax[col[i]]=i;
+	&#125;
+	<span class="hljs-built_in">memset</span>(f,<span class="hljs-number">0xff</span>,<span class="hljs-keyword">sizeof</span> f);
+	<span class="hljs-built_in">cout</span>&lt;&lt;Dfs(<span class="hljs-number">1</span>,n,<span class="hljs-number">0</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;</code></pre>
 ]]></content>
@@ -2193,169 +2356,6 @@ ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
       </tags>
   </entry>
   <entry>
-    <title>2020-10-20考试总结</title>
-    <url>/2020/10/20/Test-2020-10-20/</url>
-    <content><![CDATA[<p>2020-10-20考试总结。</p>
-<a id="more"></a>
-<h1 id="t1-开方"><a class="markdownIt-Anchor" href="#t1-开方"></a> T1 开方</h1>
-<p>垃圾题，直接二分出边界（其实就是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><msup><mn>2</mn><mn>5</mn></msup></msup><mo>=</mo><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{2^5}=2^{32}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9869199999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9869199999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>），然后判断。但题面很鬼，没有定义<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>的情况。<s>希望出题人没事</s></p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">100</span>+<span class="hljs-number">10</span>)</span></span>;
-<span class="hljs-keyword">using</span> ll = <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Times</span><span class="hljs-params">(ll x)</span> </span>&#123;
-	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">cnt</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
-	<span class="hljs-keyword">for</span>(;x&amp;&amp;x!=<span class="hljs-number">1L</span>L;x=<span class="hljs-built_in">sqrt</span>(x)) cnt++;
-	<span class="hljs-keyword">return</span> cnt;
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Solve</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;len)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(len&gt;<span class="hljs-number">10</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">6</span>;
-	<span class="hljs-function">ll <span class="hljs-title">x</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=len;i++) x=(x&lt;&lt;<span class="hljs-number">1L</span>L)+(x&lt;&lt;<span class="hljs-number">3L</span>L)+ll(s[i]^<span class="hljs-number">48</span>);
-	<span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">4294967295L</span>L||!x) <span class="hljs-keyword">return</span> <span class="hljs-number">6</span>;
-	<span class="hljs-keyword">if</span>(x==<span class="hljs-number">1L</span>L) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-	<span class="hljs-keyword">return</span> Times(x);
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-	<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> s[maxn];
-	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">cin</span>&gt;&gt;(s+<span class="hljs-number">1</span>)) &#123;
-		<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ans</span><span class="hljs-params">(Solve(s,<span class="hljs-built_in">strlen</span>(s+<span class="hljs-number">1</span>)))</span></span>;
-		<span class="hljs-keyword">if</span>(ans==<span class="hljs-number">6</span>) <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;TAT&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
-		<span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
-	&#125;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-<h1 id="t2-染色"><a class="markdownIt-Anchor" href="#t2-染色"></a> T2 染色</h1>
-<p>考试时想了先给边排序，然后枚举选多边形的解法，开始以为复杂度是假的，就迟迟没打。后来想到实际上只会有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>条边有用，所以一般跑不到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>上界，于是就直接上了。</p>
-<p>交上去T了4个点<s>说好的跑不到上界呢</s>， 于是只能优化。先裸跑一次最小生成树，发现其实只有裸跑时的边有用，所以只遍历原最小生成树的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>条边。优化了一维时间，这样就过了。</p>
-<p>但为什么题解<code>prim</code>复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">n^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>还能过啊。</p>
-<pre><code class="hljs cpp">const int maxn(2000+10),maxm(13);
-<span class="hljs-keyword">int</span> n,m;
-<span class="hljs-keyword">using</span> ll = <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
-<span class="hljs-function"><span class="hljs-keyword">const</span> ll <span class="hljs-title">Inf</span><span class="hljs-params">(<span class="hljs-number">0x3f3f3f3f3f3f3f3f</span>)</span></span>;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionAndFindSet</span> &#123;</span>
-<span class="hljs-keyword">private</span>:
-	<span class="hljs-keyword">int</span> fa[maxn],rank[maxn];
-	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
-		<span class="hljs-keyword">return</span> x == fa[x] ? x : fa[x] = Find(fa[x]);
-	&#125;
-<span class="hljs-keyword">public</span>:
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Init</span><span class="hljs-params">()</span> </span>&#123;
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) fa[i]=i,rank[i]=<span class="hljs-number">1</span>;
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Merge</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y)</span> </span>&#123;
-		int u(Find(x)),v(Find(y));
-		<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-		<span class="hljs-keyword">if</span>(rank[u]&lt;rank[v]) swap(u,v);
-		fa[v]=u;rank[u]=max(rank[u],rank[v]+<span class="hljs-number">1</span>);
-		<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-	&#125;
-&#125;U;
-
-ll x[maxn],y[maxn];
-<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Cost</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j)</span> </span>&#123;
-	<span class="hljs-keyword">return</span> (x[i]-x[j])*(x[i]-x[j])+(y[i]-y[j])*(y[i]-y[j]);
-&#125;
-
-<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
-	<span class="hljs-keyword">int</span> u,v;ll w;
-	Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> ll &amp;w) :u(u),v(v),w(w) &#123;&#125;
-	Edge() &#123;&#125;
-&#125;e[maxn*maxn],g[maxn];
-<span class="hljs-keyword">int</span> Cnt_Edge1,Cnt_Edge2;
-ll c[maxm];
-<span class="hljs-built_in">std</span>::<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; v[maxm];
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Kruscal0</span><span class="hljs-params">()</span> </span>&#123;
-	U.Init();
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=Cnt_Edge1&amp;&amp;Cnt_Edge2&lt;n;i++)
-		<span class="hljs-keyword">if</span>(U.Merge(e[i].u,e[i].v))
-			g[++Cnt_Edge2]=e[i];
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">Kruscal</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;s)</span> </span>&#123;
-	U.Init();
-	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">cnt</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++)
-		<span class="hljs-keyword">if</span>(s&amp;(<span class="hljs-number">1</span>&lt;&lt;(i<span class="hljs-number">-1</span>))) &#123;
-			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;p: v[i])
-				cnt+=U.Merge(p,v[i][<span class="hljs-number">0</span>]);
-			ans+=c[i];
-		&#125;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=Cnt_Edge2&amp;&amp;cnt&lt;n;i++) &#123;
-		<span class="hljs-keyword">if</span>(!U.Merge(g[i].u,g[i].v)) <span class="hljs-keyword">continue</span>;
-		ans+=g[i].w;
-		cnt++;
-	&#125;
-	<span class="hljs-keyword">return</span> ans;
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-	<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;x[i]&gt;&gt;y[i];
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
-		<span class="hljs-keyword">int</span> k;<span class="hljs-built_in">cin</span>&gt;&gt;k&gt;&gt;c[i];
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(<span class="hljs-number">1</span>);j&lt;=k;j++) &#123;
-			<span class="hljs-keyword">int</span> x;<span class="hljs-built_in">cin</span>&gt;&gt;x;
-			v[i].push_back(x);
-		&#125;
-	&#125;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++)
-		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j(i+<span class="hljs-number">1</span>);j&lt;=n;j++)
-			e[++Cnt_Edge1]=Edge(i,j,Cost(i,j));
-	<span class="hljs-built_in">std</span>::sort(e+<span class="hljs-number">1</span>,e+<span class="hljs-number">1</span>+Cnt_Edge1,[](<span class="hljs-keyword">const</span> Edge &amp;p,<span class="hljs-keyword">const</span> Edge &amp;q) &#123;
-		<span class="hljs-keyword">return</span> p.w&lt;q.w;
-	&#125;);
-	Kruscal0();
-	<span class="hljs-function">ll <span class="hljs-title">ans</span><span class="hljs-params">(Inf)</span></span>;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">0</span>);i&lt;(<span class="hljs-number">1</span>&lt;&lt;m);i++)
-		ans=min(ans,Kruscal(i));
-	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-<h1 id="t3-心情"><a class="markdownIt-Anchor" href="#t3-心情"></a> T3 心情</h1>
-<p>考试时先想到可能是区间<code>DP</code>，但算了三位数组的空间卡的很满就转向想贪心了，结果只得了<code>40pts</code>。其实就是区间<code>DP</code>。</p>
-<pre><code class="hljs cpp">const int maxn(300+10),nef(0xc1c1c1c1);
-<span class="hljs-keyword">int</span> n,a[maxn];
-<span class="hljs-keyword">int</span> col[maxn],len[maxn],last[maxn],m;<span class="hljs-comment">// last[i] 表示与i颜色段相同颜色的前一个颜色段</span>
-<span class="hljs-keyword">int</span> f[maxn][maxn][maxn];
-<span class="hljs-comment">// f[i][j][k] 表示从i段到j段，后面接上长度为k的与j颜色相同段的最大花费</span>
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Dfs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;i,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;j,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;k)</span> </span>&#123;
-	<span class="hljs-keyword">if</span>(i&gt;j) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-	<span class="hljs-keyword">if</span>(~f[i][j][k]) <span class="hljs-keyword">return</span> f[i][j][k];
-	f[i][j][k]=nef;
-	f[i][j][k]=max(f[i][j][k],Dfs(i,j<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>)+(len[j]+k)*(len[j]+k));
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> p(last[j]);p&gt;=i;p=last[p])
-		f[i][j][k]=max(f[i][j][k],Dfs(i,p,len[j]+k)+Dfs(p+<span class="hljs-number">1</span>,j<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>));
-	<span class="hljs-keyword">return</span> f[i][j][k];
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;
-	<span class="hljs-built_in">cin</span>&gt;&gt;n;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=n;i++) &#123;
-		<span class="hljs-built_in">cin</span>&gt;&gt;a[i];
-		<span class="hljs-keyword">if</span>(a[i]==col[m]) len[m]++;
-		<span class="hljs-keyword">else</span> m++,col[m]=a[i],len[m]=<span class="hljs-number">1</span>;
-	&#125;
-	<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> tax[maxn];
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i(<span class="hljs-number">1</span>);i&lt;=m;i++) &#123;
-		last[i]=tax[col[i]];
-		tax[col[i]]=i;
-	&#125;
-	<span class="hljs-built_in">memset</span>(f,<span class="hljs-number">0xff</span>,<span class="hljs-keyword">sizeof</span> f);
-	<span class="hljs-built_in">cout</span>&lt;&lt;Dfs(<span class="hljs-number">1</span>,n,<span class="hljs-number">0</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-]]></content>
-      <tags>
-        <tag>考试</tag>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2020-10-26考试总结</title>
     <url>/2020/10/26/Test-2020-10-26/</url>
     <content><![CDATA[<p>这考的是毛啊，为什么三道数学题啊QAQ</p>
@@ -2371,6 +2371,21 @@ ll c[maxm];
 <h1 id="t3-生命的轨迹"><a class="markdownIt-Anchor" href="#t3-生命的轨迹"></a> T3 <a href="http://61.139.95.227:82/problem/302">生命的轨迹</a></h1>
 <p>考试时打了链表暴搜。没调出来。</p>
 <p>其实是一个DP。考虑<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x,y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>的值不相等时不会影响结果，于是设<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mi>y</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x=0,y=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。将结合考虑为一颗<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>叉树，那么转化为两个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>进制小数相加的形式。设<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mn>0</mn><mi mathvariant="normal">/</mi><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">f[i][0/1][j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord">0</span><span class="mord">/</span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span>表示考虑前<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>为，结尾有/无0，小数位和为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span>的方案数。</p>
+]]></content>
+      <tags>
+        <tag>考试</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020-10-27 考试总结</title>
+    <url>/2020/10/27/Test-2020-10-27/</url>
+    <content><![CDATA[<p>27日考试总结。</p>
+<a id="more"></a>
+<h1 id="t1-签到"><a class="markdownIt-Anchor" href="#t1-签到"></a> T1 <a href="http://61.139.95.227:82/problem/303">签到</a></h1>
+<p>签到题，直接二分就过了。</p>
+<h1 id="t2-染色"><a class="markdownIt-Anchor" href="#t2-染色"></a> T2 <a href="http://61.139.95.227:82/problem/304">染色</a></h1>
+<p>考试时想到使用Bfs染色，复杂度正确。本以为可以A掉，没想到其实这种解法是错的。</p>
 ]]></content>
       <tags>
         <tag>考试</tag>
@@ -2504,21 +2519,6 @@ f(n \times p ^ k) = f(p^k) \times f(n) \ , \ n \perp p
       <tags>
         <tag>题解</tag>
         <tag>做题记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020-10-27 考试总结</title>
-    <url>/2020/10/27/Test-2020-10-27/</url>
-    <content><![CDATA[<p>27日考试总结。</p>
-<a id="more"></a>
-<h1 id="t1-签到"><a class="markdownIt-Anchor" href="#t1-签到"></a> T1 <a href="http://61.139.95.227:82/problem/303">签到</a></h1>
-<p>签到题，直接二分就过了。</p>
-<h1 id="t2-染色"><a class="markdownIt-Anchor" href="#t2-染色"></a> T2 <a href="http://61.139.95.227:82/problem/304">染色</a></h1>
-<p>考试时想到使用Bfs染色，复杂度正确。本以为可以A掉，没想到其实这种解法是错的。</p>
-]]></content>
-      <tags>
-        <tag>考试</tag>
-        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
