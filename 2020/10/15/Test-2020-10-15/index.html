@@ -226,7 +226,7 @@
               <h1 id="t1-运货"><a class="markdownIt-Anchor" href="#t1-运货"></a> T1 运货</h1>
 <p>考试时想了半个小时想出了正解。但是由于鬼畜的数据范围就当作暴力了没优化空间，于是成功没过。</p>
 <p>按照出现时间减去到达时间排序，一个一个选就行了。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1e6</span>+<span class="hljs-number">10</span>)</span></span>;
 <span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;
 <span class="hljs-keyword">int</span> n,m;
 <span class="hljs-keyword">int</span> a[maxn];
@@ -257,11 +257,11 @@ ll s[maxn*<span class="hljs-number">10</span>],tot;
 	&#125;
 	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h1 id="t2-维护"><a class="markdownIt-Anchor" href="#t2-维护"></a> T2 维护</h1>
 <p>考试时觉得可能是LCT，但LCT不熟并且耗时，所以选择了打指针暴力。可惜出锅了。</p>
 <p>正解是LCT，每个点没被删除权值就为1，否则为0。每次在一个链的Splay上二分查找就行了。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">2e5</span>+<span class="hljs-number">10</span>)</span></span>;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">2e5</span>+<span class="hljs-number">10</span>)</span></span>;
 <span class="hljs-keyword">int</span> q,online;
 
 <span class="hljs-keyword">namespace</span> LCT &#123;
@@ -384,10 +384,10 @@ ll s[maxn*<span class="hljs-number">10</span>],tot;
 		&#125;
 	&#125;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h1 id="t3-相似"><a class="markdownIt-Anchor" href="#t3-相似"></a> T3 相似</h1>
 <p>考试时打出来了，但是有一种情况没考虑，就是<code>AAS</code>且有唯一解的情况。通过边和角的<code>sin</code>值判断，可惜数据里根本没有没有唯一解的情况。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Pi</span><span class="hljs-params">(<span class="hljs-built_in">acos</span>(<span class="hljs-number">-1.0</span>))</span></span>;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Pi</span><span class="hljs-params">(<span class="hljs-built_in">acos</span>(<span class="hljs-number">-1.0</span>))</span></span>;
 <span class="hljs-keyword">int</span> T,x,y;
 <span class="hljs-keyword">double</span> a,b,c,A,B,C,d,e,f,D,E,F;
 
@@ -570,7 +570,7 @@ ll s[maxn*<span class="hljs-number">10</span>],tot;
 		Solve();
 	&#125;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 
             </div>
             <hr>

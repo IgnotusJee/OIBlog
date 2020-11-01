@@ -227,7 +227,7 @@
 <p>考试时一看就觉得要求出最大团，于是花了一个多小时抠这个。于是最终也没有抠出来，输出大样例跑路了。考完了才知道最大团问题是NP完全的。</p>
 <p>其实正解就是暴搜。因为状态数不多，所以搜的出来。</p>
 <p>教训：一段时间内想不出正解考虑打暴力跑路。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1000</span>+<span class="hljs-number">10</span>)</span></span>;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxn</span><span class="hljs-params">(<span class="hljs-number">1000</span>+<span class="hljs-number">10</span>)</span></span>;
 <span class="hljs-keyword">int</span> n,m;
 <span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
 
@@ -276,10 +276,10 @@
 		<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
 	&#125;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h1 id="t2-无聊游戏"><a class="markdownIt-Anchor" href="#t2-无聊游戏"></a> T2 无聊游戏</h1>
 <p>这题还是考试时想出来了。考虑改变前缀使得后缀最大和最小。</p>
-<pre><code class="hljs cpp"><span class="hljs-comment">// 小A想让数列和尽量小，则他要选择最大后缀变负</span>
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-comment">// 小A想让数列和尽量小，则他要选择最大后缀变负</span>
 <span class="hljs-comment">// 小N要让最大后缀最小，同时修改的前缀和为负且大</span>
 <span class="hljs-comment">// 从左向右扫，维护左端点到当前点的最大后缀，这个区间要乘上-A。</span>
 <span class="hljs-comment">// 预处理出后缀和和最大后缀</span>
@@ -327,11 +327,11 @@ ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
 	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;
-</code></pre>
+</code></pre></div>
 <h1 id="t3-建设国家"><a class="markdownIt-Anchor" href="#t3-建设国家"></a> T3 建设国家</h1>
 <p>又是最生成树。考试时根本没有思路，因为快没有时间了就乱打了个贪心。其实也不难想出来。</p>
 <p>考虑第一轮计划对每一条边的贡献就是题目中给出的那个式子。第二轮计划拆成一条边上两点加人对对方的影响。推式子后发现优先加<code>F</code>大的，权值转化到边权上做最小生成树即可。</p>
-<pre><code class="hljs cpp">const int maxn(55),maxm(maxn*maxn);
+<div class="hljs"><pre><code class="hljs cpp">const int maxn(55),maxm(maxn*maxn);
 <span class="hljs-keyword">using</span> ll=<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>;
 <span class="hljs-keyword">int</span> n,m;ll T[maxn],F[maxn],U[maxn],C;
 <span class="hljs-keyword">char</span> <span class="hljs-built_in">map</span>[maxn][maxn];
@@ -395,7 +395,7 @@ ll sumsuf[maxn],lensuf[maxn],possuf[maxn];
 	&#125;
 	<span class="hljs-built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="hljs-built_in">endl</span>;
 	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 
             </div>
             <hr>

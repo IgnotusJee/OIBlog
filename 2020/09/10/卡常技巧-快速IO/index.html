@@ -227,43 +227,43 @@
 <h1 id="一-快速读入"><a class="markdownIt-Anchor" href="#一-快速读入"></a> 一、快速读入</h1>
 <h2 id="1-带符号整形"><a class="markdownIt-Anchor" href="#1-带符号整形"></a> 1、带符号整形</h2>
 <p>最简单基础的快读。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
 	x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
 	<span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
 	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);c=getc();&#125;
 	x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>或换个写法</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;x)</span> </span>&#123;
     x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
     <span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
     <span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);&#125;
     x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>其中<code>getc</code>为读入一个字符的函数，函数返回值为是否读到数。在对<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>的位运算处，不排除有更优秀的写法。</p>
 <h2 id="2-单个字符"><a class="markdownIt-Anchor" href="#2-单个字符"></a> 2、单个字符</h2>
 <p>如果只是要求读入字符，可以直接</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
     <span class="hljs-keyword">return</span> (c=getc())!=EOF;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>如果对读入的字符有要求，如必须是字母或数字等，可以使用<code>cctype</code>库中函数来判断读入。以读入非空字符为例：</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
     <span class="hljs-keyword">while</span>(c=getc(),<span class="hljs-built_in">isspace</span>(c));
     <span class="hljs-keyword">return</span> c!=EOF;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>注意<code>EOF</code>标识符在<code>isspace</code>中返回真。</p>
 <h2 id="3-字符串"><a class="markdownIt-Anchor" href="#3-字符串"></a> 3、字符串</h2>
 <p>采用和<code>scanf</code>一样的读入方式，即在读入空字符时停止。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
 	*s=getc();
 	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isspace</span>(*s)) &#123;*s=getc();<span class="hljs-keyword">if</span>(*s==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
 	<span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;
 	*s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h2 id="4-浮点数"><a class="markdownIt-Anchor" href="#4-浮点数"></a> 4、浮点数</h2>
 <p>因为浮点数精度问题，它的手动读入并不好写，并且出错率或误差率远远大于用<code>scanf</code>或<code>std::cin</code>读入。</p>
 <p>这里给出我的一个浮点数读入实现，仅供参考。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;x)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">double</span> &amp;x)</span> </span>&#123;
 	x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">double</span> d=<span class="hljs-number">1</span>;<span class="hljs-keyword">char</span> c=getc();
 	<span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
 	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=x*<span class="hljs-number">10</span>+(c^<span class="hljs-number">48</span>);c=getc();&#125;
@@ -271,35 +271,35 @@
 	c=getc();
 	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;d/=<span class="hljs-number">10.0</span>;x+=d*(c^<span class="hljs-number">48</span>);c=getc();&#125;
 	x*=(k?<span class="hljs-number">-1.0</span>:<span class="hljs-number">1.0</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>在读入小数部分时<code>d</code>临时保存当前位。</p>
 <h1 id="二-快速输出"><a class="markdownIt-Anchor" href="#二-快速输出"></a> 二、快速输出</h1>
 <h2 id="1-带符号整形-2"><a class="markdownIt-Anchor" href="#1-带符号整形-2"></a> 1、带符号整形</h2>
 <p>一般有递归和非递归两种写法。这里采用非递归写法，因为时间效率较高。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;
 	<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">30</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
 	<span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;putc(<span class="hljs-string">&#x27;-&#x27;</span>);x=-x;&#125;
 	<span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
 	<span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(;x;x/=<span class="hljs-number">10</span>) buf[++p]=x%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
 	<span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p><code>putc</code>为输出单个字符函数，<code>buf</code>为缓存区，一般开到<code>20</code>即可。</p>
 <h2 id="2-单个字符-2"><a class="markdownIt-Anchor" href="#2-单个字符-2"></a> 2、单个字符</h2>
 <p>没什么说的，就直接输出。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;</code></pre>
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;</code></pre></div>
 <h2 id="3-字符串-2"><a class="markdownIt-Anchor" href="#3-字符串-2"></a> 3、字符串</h2>
 <p>因为传参的最佳匹配原因，字符串要分两种重载方式。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
 	<span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
-&#125;</code></pre>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span> </span>&#123;
+&#125;</code></pre></div>
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span> </span>&#123;
 	<span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>当传入<code>char *s</code>时，最佳匹配是<code>template&lt;tyename Type&gt; write(Type x)</code>，而不是<code>write(const char *s)</code>。更佳的匹配是<code>write(char *s)</code>。所以要写两个重载。</p>
 <h2 id="4-浮点数-2"><a class="markdownIt-Anchor" href="#4-浮点数-2"></a> 4、浮点数</h2>
 <p>浮点数的快输由于精度以及四舍五入的问题，比快读更加难写并且容易出锅。</p>
 <p>这里给出一种实现。</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">pre</span><span class="hljs-params">(<span class="hljs-number">6</span>)</span></span>;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">pre</span><span class="hljs-params">(<span class="hljs-number">6</span>)</span></span>;
 <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>&#123;
 	<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">35</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
 	<span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0.0</span>) putc(<span class="hljs-string">&#x27;-&#x27;</span>),x*=<span class="hljs-number">-1.0</span>;
@@ -315,21 +315,21 @@
 		putc(<span class="hljs-string">&#x27;.&#x27;</span>);
 	&#125;
 	<span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p><code>pre</code>为保留小数点后几位，<code>round</code>为<code>cmath</code>库里的四舍五入到整数的函数。</p>
 <h1 id="三-块读写优化"><a class="markdownIt-Anchor" href="#三-块读写优化"></a> 三、块读写优化</h1>
 <p>有了上述对具体数据类型的处理优化之后，速度瓶颈变为了输入输出字符的<code>getc()</code>，<code>putc()</code>函数。调用<code>cstdio</code>库中的<code>getchar()</code>和<code>putchar()</code>函数过于慢，解决方法有使用<code>streambuf</code>或<code>fread</code>和<code>fwrite</code>。这里采用的后者。因为其提速原理为整块的输入输出操作，所以称为块读写。</p>
 <h2 id="1-fread"><a class="markdownIt-Anchor" href="#1-fread"></a> １、ｆｒｅａｄ</h2>
 <p>直接给出<code>getc()</code>函数</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
     <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1=buf,*p2=buf;
     <span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>,<span class="hljs-built_in">stdin</span>),p1==p2)?EOF:*p1++;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p><code>static</code>修饰符保证了缓存数组在函数每次返回后不变，以及外部函数无法访问。</p>
 <p>此处三元运算符应用逻辑运算符的短路原理等，简介而精炼。建议仔细品读以理解其意思。</p>
 <h2 id="2-fwrite"><a class="markdownIt-Anchor" href="#2-fwrite"></a> ２、ｆｗｒｉｔｅ</h2>
 <p><code>putc()</code>函数为了在适当时期调用稍微繁琐一些。</p>
-<pre><code class="hljs cpp"><span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1=<span class="hljs-number">-1</span>;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>)<span class="hljs-number">-1</span>;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1=<span class="hljs-number">-1</span>;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>)<span class="hljs-number">-1</span>;
 <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;
     fwrite(buf,<span class="hljs-number">1</span>,p1+<span class="hljs-number">1</span>,<span class="hljs-built_in">stdout</span>);
     p1=<span class="hljs-number">-1</span>;
@@ -337,12 +337,12 @@
 <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
     <span class="hljs-keyword">if</span>(p1==p2) flush();
     buf[++p1]=c;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>在主函数末尾调用<code>flush()</code>以输出。在缓存区满时也会自动调用。</p>
 <h1 id="四-总结"><a class="markdownIt-Anchor" href="#四-总结"></a> 四、总结</h1>
 <p>我写出了快速读写的函数版本和类版本，可以适当时候选用用起来爽的版本。此处附带了库函数的部分替代函数。</p>
 <p>函数版本：</p>
-<pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> quick &#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> quick &#123;
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> tp template<span class="hljs-meta-string">&lt;typename Type&gt;</span></span>
     <span class="hljs-keyword">namespace</span> in &#123;
         <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
@@ -412,10 +412,10 @@
         <span class="hljs-keyword">return</span> a&gt;=<span class="hljs-number">0</span>?a:-a;
     &#125;
 <span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> tp</span>
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>因为是不定参，调用时可以使用像<code>read(a,b,c,d)</code>这样的写法。</p>
 <p>类版本：</p>
-<pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Quick &#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Quick &#123;
 
 	<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InStream</span> &#123;</span>
 	<span class="hljs-keyword">private</span>:
@@ -498,7 +498,7 @@
 <span class="hljs-class">		return a&gt;=0?a:-a;</span>
 <span class="hljs-class">	&#125;</span>
 <span class="hljs-class"></span>
-<span class="hljs-class">&#125;</span></code></pre>
+<span class="hljs-class">&#125;</span></code></pre></div>
 <p>类版本可以使用和<code>std::cin</code>和<code>std::cout</code>相同的方法调用。比如，可以<code>while(Quick::cin&gt;&gt;a)</code>。</p>
 <p>注意类版本主函数末尾不需要调用<code>flush()</code>，因为在销毁内存时自动调用了。另外，为了使函数版本也实现这种功能，也可以封装到类里，并不定参重载<code>()</code>运算符。</p>
 

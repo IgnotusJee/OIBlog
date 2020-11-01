@@ -251,7 +251,7 @@
 </li>
 </ul>
 <p>代码：</p>
-<pre><code class="hljs cpp"><span class="hljs-comment">//第一部分：预处理出每个点的最大矩形</span>
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-comment">//第一部分：预处理出每个点的最大矩形</span>
 <span class="hljs-keyword">namespace</span> DealMatrix &#123;
 	<span class="hljs-keyword">int</span> sum[maxn][maxn];<span class="hljs-comment">//前缀和，障碍为1</span>
 	<span class="hljs-keyword">int</span> maxsize[maxn][maxn];
@@ -281,7 +281,7 @@
 				<span class="hljs-keyword">else</span> maxsize[i][j]=<span class="hljs-number">-1</span>;
 			&#125;
 	&#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h2 id="part2-缩点并连边"><a class="markdownIt-Anchor" href="#part2-缩点并连边"></a> part2 缩点并连边</h2>
 <ul>
 <li>将MaxSize相同的点缩在一起，可以使用bfs或者并查集。我这里使用的是bfs。</li>
@@ -289,7 +289,7 @@
 <li>复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，将<code>unordered_map</code>的每次操作当成常数级别。</li>
 </ul>
 <p>代码：</p>
-<pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> BuildGraph &#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> BuildGraph &#123;
 	<span class="hljs-keyword">int</span> belong[maxn][maxn],cnt;<span class="hljs-comment">//联通块编号</span>
 	<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> dx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;;
 	<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> dy[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>&#125;;
@@ -337,11 +337,11 @@
 		N=cnt;
 		Graph_1::Kruscal();
 	&#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h2 id="part3-求出最大生成树"><a class="markdownIt-Anchor" href="#part3-求出最大生成树"></a> part3 求出最大生成树</h2>
 <p>这个没什么说的。并查集我使用的是路径压缩+按秩合并版本，复杂度最优。复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mi>α</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m\alpha(n^2))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>为边数。</p>
 <p>代码：</p>
-<pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Graph_1 &#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Graph_1 &#123;
 	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
 		<span class="hljs-keyword">int</span> u,v,w;
 		Edge(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;u,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;v,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;w)
@@ -384,7 +384,7 @@
 			InTree[i]=<span class="hljs-number">0xff</span>;
 		&#125;
 	&#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h2 id="part4-树上快速查询"><a class="markdownIt-Anchor" href="#part4-树上快速查询"></a> part4 树上快速查询</h2>
 <ul>
 <li>这里方法很多，可以倍增，树剖<s>还有LCT</s>。这里采用的是树剖+ST表。复杂度预处理<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">n^2logn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span></span></span></span>，每次查询<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">logn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span></span></span></span>。</li>
@@ -392,7 +392,7 @@
 <li>另外，因为前面把点权转化为边权，这里又把边权转化为点权处理，所以树剖询问时不能加上lca的贡献。</li>
 </ul>
 <p>代码：</p>
-<pre><code class="hljs cpp"><span class="hljs-comment">// 第三部分树剖最小值，在最小生成树上查询瓶颈路。注意，可能是一个森林</span>
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-comment">// 第三部分树剖最小值，在最小生成树上查询瓶颈路。注意，可能是一个森林</span>
 <span class="hljs-keyword">namespace</span> Tree &#123;
 	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Edge</span> &#123;</span>
 		<span class="hljs-keyword">int</span> v,next,w;
@@ -478,11 +478,11 @@
 			&#125;
 		STTable::Init();
 	&#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <h2 id="part5-处理询问"><a class="markdownIt-Anchor" href="#part5-处理询问"></a> part5 处理询问</h2>
 <p>注意亿点细节。例如，不在一棵树上以及所询问的点就是障碍时，返回无解。</p>
 <p>代码：</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Query</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x1,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y1,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x2,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y2)</span> </span>&#123;
+<div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Query</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x1,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y1,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;x2,<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> &amp;y2)</span> </span>&#123;
 	<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[x1][y1]==<span class="hljs-string">&#x27;#&#x27;</span>||<span class="hljs-built_in">map</span>[x2][y2]==<span class="hljs-string">&#x27;#&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 	<span class="hljs-keyword">int</span> u=BuildGraph::belong[x1][y1],v=BuildGraph::belong[x2][y2];
 	<span class="hljs-keyword">if</span>(u==v) <span class="hljs-keyword">return</span> DealMatrix::maxsize[x1][y1];
@@ -490,7 +490,7 @@
 	<span class="hljs-keyword">int</span> ans=Tree::GetMin(u,v);
 	<span class="hljs-keyword">if</span>(ans==inf) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 	<span class="hljs-keyword">return</span> ans;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>总复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo stretchy="false">)</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>+</mo><mi>m</mi><mi>α</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O((n^2+q)logn+m\alpha(n^2))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>。可以将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>看作是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>级别，但实际远远要小。</p>
 <p>至此，此题终于做完了。我的代码共354行，算得上是我打过的最长的代码了。<s>还不是因为加了个七十多行的快速读写</s></p>
 

@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-28T13:20:57.837Z</updated>
+  <updated>2020-11-01T14:03:18.388Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>牛客比赛提高组第六场 题解</title>
+    <link href="http://yoursite.com/2020/11/01/NewCoderTest-6/"/>
+    <id>http://yoursite.com/2020/11/01/NewCoderTest-6/</id>
+    <published>2020-11-01T13:05:37.000Z</published>
+    <updated>2020-11-01T14:03:18.388Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;牛客的第六场。打得比较舒服的一场比赛。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+    <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
+    
+    <category term="牛客" scheme="http://yoursite.com/tags/%E7%89%9B%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>动态规划基础题型总结</title>
@@ -80,7 +101,7 @@
     <link href="http://yoursite.com/2020/10/23/NewCoderTest-3/"/>
     <id>http://yoursite.com/2020/10/23/NewCoderTest-3/</id>
     <published>2020-10-23T13:26:54.000Z</published>
-    <updated>2020-10-24T00:40:13.337Z</updated>
+    <updated>2020-11-01T13:06:08.881Z</updated>
     
     
     <summary type="html">&lt;p&gt;屑人比赛被吊锤，特此写一篇题解来自裁（悲&lt;/p&gt;</summary>
@@ -91,6 +112,8 @@
     <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
     
     <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
+    
+    <category term="牛客" scheme="http://yoursite.com/tags/%E7%89%9B%E5%AE%A2/"/>
     
   </entry>
   
@@ -206,7 +229,7 @@
     <link href="http://yoursite.com/2020/10/12/Works-2020-Oct/"/>
     <id>http://yoursite.com/2020/10/12/Works-2020-Oct/</id>
     <published>2020-10-12T13:02:49.000Z</published>
-    <updated>2020-10-22T08:22:41.310Z</updated>
+    <updated>2020-11-01T11:42:54.824Z</updated>
     
     
       
@@ -441,33 +464,6 @@
     
     
     <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QT题单数学练习</title>
-    <link href="http://yoursite.com/2020/09/08/MathPractice/"/>
-    <id>http://yoursite.com/2020/09/08/MathPractice/</id>
-    <published>2020-09-08T07:43:22.000Z</published>
-    <updated>2020-10-16T12:43:30.141Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;gcd等于xor-gcd-xor&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#gcd等于xor-gcd-xor&quot;&gt;&lt;/a&gt; &lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-    <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="练习" scheme="http://yoursite.com/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
