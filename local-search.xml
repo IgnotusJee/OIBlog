@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>Summary-GH</title>
+    <title>图论模板总结</title>
     <link href="/2020/11/03/Summary-GH/"/>
     <url>/2020/11/03/Summary-GH/</url>
     
@@ -27,7 +27,7 @@
   
   
   <entry>
-    <title>Summary-CS</title>
+    <title>字符串模板总结</title>
     <link href="/2020/11/03/Summary-CS/"/>
     <url>/2020/11/03/Summary-CS/</url>
     
@@ -50,7 +50,7 @@
   
   
   <entry>
-    <title>Summary-Math</title>
+    <title>数学基础知识总结</title>
     <link href="/2020/11/03/Summary-Math/"/>
     <url>/2020/11/03/Summary-Math/</url>
     
@@ -73,7 +73,7 @@
   
   
   <entry>
-    <title>Summary-DS</title>
+    <title>数据结构模板总结</title>
     <link href="/2020/11/03/Summary-DS/"/>
     <url>/2020/11/03/Summary-DS/</url>
     
@@ -364,9 +364,9 @@
     
     <tags>
       
-      <tag>DP</tag>
-      
       <tag>题解</tag>
+      
+      <tag>DP</tag>
       
     </tags>
     
