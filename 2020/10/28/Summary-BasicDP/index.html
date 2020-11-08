@@ -311,17 +311,17 @@
 <h2 id="分组背包"><a class="markdownIt-Anchor" href="#分组背包"></a> 分组背包</h2>
 <p><strong>题意</strong>：每个物品归属于一个组，每个组内的物品相互冲突。</p>
 <div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">int</span> n,m,dp[<span class="hljs-number">10000</span>],w[<span class="hljs-number">10000</span>],c[<span class="hljs-number">10000</span>],id[<span class="hljs-number">500</span>][<span class="hljs-number">500</span>],cnt[<span class="hljs-number">10000</span>];
-<span class="hljs-keyword">int</span> cnt=-inf;
+<span class="hljs-keyword">int</span> maxn=-inf;
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
 	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;m,&amp;n);
 	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) &#123;
 		<span class="hljs-keyword">int</span> x;
 		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d&quot;</span>,&amp;w[i],&amp;c[i],&amp;x);
-		cnt=max(cnt,x);
+		maxn=max(maxn,x);
 		cnt[x]++;
 		id[x][cnt[x]]=i;
 	&#125;
-	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=cnt;i++)
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=maxn;i++)
 		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=m;j&gt;=<span class="hljs-number">0</span>;j--)
 			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k=<span class="hljs-number">1</span>;k&lt;=cnt[i];k++)
 				<span class="hljs-keyword">if</span>(j&gt;=w[id[i][k]])
@@ -350,7 +350,7 @@
     <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=head[u];i;i=e[i].next) &#123;
         <span class="hljs-keyword">int</span> v=e[i].v;
         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;=m-W[v];j++) f[v][j]=f[u][j];
-        dfs(u,m-W[v]);
+        dfs(v,m-W[v]);
         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=W[v];j&lt;=m;j++)
             f[u][j]=max(f[u][j],f[v][j-W[v]]+V[v]);
     &#125;
@@ -359,7 +359,7 @@
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
     <span class="hljs-comment">/* Read in */</span>
     dfs(s,m-W[s]);
-    pritf(<span class="hljs-string">&quot;%d\n&quot;</span>,f[s][m-W[s]]);
+    pritf(<span class="hljs-string">&quot;%d\n&quot;</span>,f[s][m-W[s]]+V[s]);
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;</code></pre></div>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><mi>u</mi><mo separator="true">,</mo><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{u,i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">u</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>可以理解为在预留及<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>其到根节点的路径上的点的空间后，还剩下的空间<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>的最大价值。</p>

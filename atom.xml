@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-11-04T12:31:52.103Z</updated>
+  <updated>2020-11-08T12:59:17.497Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSP2020-R2</title>
+    <link href="http://yoursite.com/2020/11/08/CSP2020-R2/"/>
+    <id>http://yoursite.com/2020/11/08/CSP2020-R2/</id>
+    <published>2020-11-08T12:40:52.000Z</published>
+    <updated>2020-11-08T12:59:17.497Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CSP2020爆零记。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="CSP" scheme="http://yoursite.com/tags/CSP/"/>
+    
+    <category term="游记" scheme="http://yoursite.com/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2020-10-19考试总结</title>
     <link href="http://yoursite.com/2020/11/04/Test-2020-11-4/"/>
     <id>http://yoursite.com/2020/11/04/Test-2020-11-4/</id>
     <published>2020-11-04T12:15:36.000Z</published>
-    <updated>2020-11-04T12:31:52.103Z</updated>
+    <updated>2020-11-04T12:38:08.540Z</updated>
     
     
     <summary type="html">&lt;p&gt;考试总结。&lt;/p&gt;</summary>
@@ -48,9 +67,9 @@
     
     
     
-    <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
-    
     <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="图论" scheme="http://yoursite.com/tags/%E5%9B%BE%E8%AE%BA/"/>
     
     <category term="模版" scheme="http://yoursite.com/tags/%E6%A8%A1%E7%89%88/"/>
     
@@ -71,9 +90,9 @@
     
     <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
     
-    <category term="字符串" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
     <category term="模版" scheme="http://yoursite.com/tags/%E6%A8%A1%E7%89%88/"/>
+    
+    <category term="字符串" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -111,11 +130,11 @@
     
     
     
-    <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
     <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="模版" scheme="http://yoursite.com/tags/%E6%A8%A1%E7%89%88/"/>
+    
+    <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -145,7 +164,7 @@
     <link href="http://yoursite.com/2020/10/28/Summary-BasicDP/"/>
     <id>http://yoursite.com/2020/10/28/Summary-BasicDP/</id>
     <published>2020-10-28T13:15:52.000Z</published>
-    <updated>2020-10-28T13:20:57.837Z</updated>
+    <updated>2020-11-04T13:57:40.787Z</updated>
     
     
     <summary type="html">&lt;p&gt;提高组可能会考到的部分DP题型的总结。后面是曾老师做的。&lt;/p&gt;</summary>
@@ -398,9 +417,9 @@
     
     
     
-    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
-    
     <category term="DP" scheme="http://yoursite.com/tags/DP/"/>
+    
+    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
@@ -426,30 +445,6 @@
     <category term="CSP" scheme="http://yoursite.com/tags/CSP/"/>
     
     <category term="游记" scheme="http://yoursite.com/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初赛学习笔记</title>
-    <link href="http://yoursite.com/2020/10/10/%E5%88%9D%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2020/10/10/%E5%88%9D%E8%B5%9B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-10-09T23:45:20.000Z</published>
-    <updated>2020-10-11T08:39:37.261Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;主定理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#主定理&quot;&gt;&lt;/a&gt; 主定理：&lt;/h1&gt;
-&lt;p&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="初赛" scheme="http://yoursite.com/tags/%E5%88%9D%E8%B5%9B/"/>
     
   </entry>
   
