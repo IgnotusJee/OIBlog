@@ -4,7 +4,28 @@
   
   
   <entry>
-    <title>CSP2020-R2</title>
+    <title>CSP2020复赛总结</title>
+    <link href="/2020/11/09/Summary-CSP2020/"/>
+    <url>/2020/11/09/Summary-CSP2020/</url>
+    
+    <content type="html"><![CDATA[<p>CSP2020复赛总结。</p><a id="more"></a><p>这次CSP考得并不理想，出锅的地方有点多。</p><h1 id="t1"><a class="markdownIt-Anchor" href="#t1"></a> T1</h1><p>T1大模拟。做了大概一个多一点小时没调完，放弃开始做T2。后来全部打完后又回来改了一下，只过了两个小样例。</p><p>这题花的时间有点多，有些影响做后面的题。以后应该合理分配时间。遇到这种题应该一定时间没写出来直接跳或放到后面再写，先把有把握拿的分拿了。</p><h1 id="t2"><a class="markdownIt-Anchor" href="#t2"></a> T2</h1><p>开始做这题是脑子有点晕。虽然打出来了，但有一个细节写错导致复杂度不对，95-&gt;65。</p><p>有一部分T1的影响，但主要还是自己不仔细。在检查时也应该检查一下复杂度。</p><h1 id="t3"><a class="markdownIt-Anchor" href="#t3"></a> T3</h1><p>花了大概二十分钟想正解，没想出来后就先打T4再打暴力了。其实如果再深入想想大概可以想出做法。</p><p>最大的失误是这个题没取模，本来拿了大概50的部分分可能全没了。所以以后检查的时候也必须要注意。</p><h1 id="t4"><a class="markdownIt-Anchor" href="#t4"></a> T4</h1><p>T4做得还算正常，打了暴力就放下了。</p><p>总的来说最大的失误还是时间把握上以及仔细程度上的问题。对于时间，要总结一些技巧，不能把时间给四个题平均分配，如这次CSP就导致了T1耗时过多后面做得很慌，还丢了很多分。对于检查，要注意常失误的细节，不要再重蹈覆辙。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>CSP</tag>
+      
+      <tag>总结</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CSP2020复赛游记</title>
     <link href="/2020/11/08/CSP2020-R2/"/>
     <url>/2020/11/08/CSP2020-R2/</url>
     
@@ -56,9 +77,9 @@
     
     <tags>
       
-      <tag>总结</tag>
-      
       <tag>图论</tag>
+      
+      <tag>总结</tag>
       
       <tag>模版</tag>
       
@@ -81,9 +102,9 @@
       
       <tag>总结</tag>
       
-      <tag>模版</tag>
-      
       <tag>字符串</tag>
+      
+      <tag>模版</tag>
       
     </tags>
     
@@ -125,11 +146,11 @@
     
     <tags>
       
+      <tag>数据结构</tag>
+      
       <tag>总结</tag>
       
       <tag>模版</tag>
-      
-      <tag>数据结构</tag>
       
     </tags>
     
@@ -406,9 +427,9 @@
     
     <tags>
       
-      <tag>DP</tag>
-      
       <tag>题解</tag>
+      
+      <tag>DP</tag>
       
     </tags>
     

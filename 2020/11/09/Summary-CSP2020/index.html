@@ -17,7 +17,7 @@
   <meta name="description" content="算法混子的学习笔记">
   <meta name="author" content="柳苏明">
   <meta name="keywords" content="算法,代码">
-  <title>CSP2020复赛游记 - 柳苏明的博客</title>
+  <title>CSP2020复赛总结 - 柳苏明的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -153,7 +153,7 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/22.jpg') no-repeat center center;
+         style="background: url('/img/20.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -168,8 +168,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-08 20:40" pubdate>
-        2020年11月8日 晚上
+      <time datetime="2020-11-09 20:00" pubdate>
+        2020年11月9日 晚上
       </time>
     </span>
   
@@ -180,7 +180,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      434 字
+      396 字
     </span>
   
 
@@ -220,25 +220,24 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">CSP2020复赛游记</h1>
+            <h1 style="display: none">CSP2020复赛总结</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>CSP2020爆零记。</p>
+              <p>CSP2020复赛总结。</p>
 <a id="more"></a>
-<h1 id="day-0"><a class="markdownIt-Anchor" href="#day-0"></a> Day 0</h1>
-<p>下午坐大巴车前往成都<s>走时还获得了焦哥的毒奶</s>。在热死和晕车的边缘徘徊。走了两个多小时终于到了。</p>
-<p>宾馆小但装修还不错<s>但一看就是平时情侣才会来开房的地方吧</s>。吃了饭到宾馆里上自习，和葛队和严队吹了一晚上水（因为没有电脑啊）。</p>
-<h1 id="day-1"><a class="markdownIt-Anchor" href="#day-1"></a> Day 1</h1>
-<p>宾馆被子不透气，床睡不习惯，昨晚一两点才睡着。</p>
-<p>早上又自习看都看了三遍了的纸质模板，然后为了排队用QT的电脑和QT吹水，于是就吃饭了。。。</p>
-<p>下午走路去电子科大。气温比起前几天飙升，太阳嘲讽地照着我们，脑子一点一点地失去了清醒。进去电子神技大学又在外面站了大概二十分钟。</p>
-<p>进机房发现电子科大的电脑果然辣鸡。找到位置开始发呆。</p>
-<p>T1一打开傻眼了，你考NM的大模拟呢，还是考算数？花了一个小时打了一堆不知所云的东西，然后放弃去肛后面了。</p>
-<p>开T2时脑子已经有点昏了，光读懂题就花了二十分钟。。。花了半个小时打完过了大样例就跑了，但没注意到犯了一个低级错误导致复杂度是假的。。</p>
-<p>T3T4暴力打完之后就回去调T1，过了两个小样例后大样例输出-1……没救了</p>
-<p>出考场就发现T3没取膜，还被lyc吊打。。自闭了。。。</p>
-<p>最后洛谷上测的得分0+65+0+55=120。要是NOIP我就直接退役了吧。</p>
-<p>希望NOIP不要出这么多锅了。</p>
+<p>这次CSP考得并不理想，出锅的地方有点多。</p>
+<h1 id="t1"><a class="markdownIt-Anchor" href="#t1"></a> T1</h1>
+<p>T1大模拟。做了大概一个多一点小时没调完，放弃开始做T2。后来全部打完后又回来改了一下，只过了两个小样例。</p>
+<p>这题花的时间有点多，有些影响做后面的题。以后应该合理分配时间。遇到这种题应该一定时间没写出来直接跳或放到后面再写，先把有把握拿的分拿了。</p>
+<h1 id="t2"><a class="markdownIt-Anchor" href="#t2"></a> T2</h1>
+<p>开始做这题是脑子有点晕。虽然打出来了，但有一个细节写错导致复杂度不对，95-&gt;65。</p>
+<p>有一部分T1的影响，但主要还是自己不仔细。在检查时也应该检查一下复杂度。</p>
+<h1 id="t3"><a class="markdownIt-Anchor" href="#t3"></a> T3</h1>
+<p>花了大概二十分钟想正解，没想出来后就先打T4再打暴力了。其实如果再深入想想大概可以想出做法。</p>
+<p>最大的失误是这个题没取模，本来拿了大概50的部分分可能全没了。所以以后检查的时候也必须要注意。</p>
+<h1 id="t4"><a class="markdownIt-Anchor" href="#t4"></a> T4</h1>
+<p>T4做得还算正常，打了暴力就放下了。</p>
+<p>总的来说最大的失误还是时间把握上以及仔细程度上的问题。对于时间，要总结一些技巧，不能把时间给四个题平均分配，如这次CSP就导致了T1耗时过多后面做得很慌，还丢了很多分。对于检查，要注意常失误的细节，不要再重蹈覆辙。</p>
 
             </div>
             <hr>
@@ -251,7 +250,7 @@
                     
                       <a class="hover-with-bg" href="/tags/CSP/">CSP</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%B8%B8%E8%AE%B0/">游记</a>
+                      <a class="hover-with-bg" href="/tags/%E6%80%BB%E7%BB%93/">总结</a>
                     
                   </div>
                 
@@ -264,18 +263,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/09/Summary-CSP2020/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CSP2020复赛总结</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/04/Test-2020-11-4/">
-                        <span class="hidden-mobile">2020-10-19考试总结</span>
+                      <a href="/2020/11/08/CSP2020-R2/">
+                        <span class="hidden-mobile">CSP2020复赛游记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -450,7 +443,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "CSP2020复赛游记&nbsp;",
+        "CSP2020复赛总结&nbsp;",
       ],
       cursorChar: "|",
       typeSpeed: 100,
