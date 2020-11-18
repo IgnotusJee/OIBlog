@@ -17,7 +17,7 @@
   <meta name="description" content="算法混子的学习笔记">
   <meta name="author" content="柳苏明">
   <meta name="keywords" content="算法,代码">
-  <title>标签 - 总结 - 柳苏明的博客</title>
+  <title>柳苏明的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -44,7 +44,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -151,6 +151,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -160,55 +164,113 @@
     
       <div class="container nopadding-md">
         <div class="py-5" id="board"
-          >
+          style=margin-top:0>
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 15 篇文章</p>
-  <hr>
-  
+
+  <div class="row mx-auto index-card">
     
-      
-      <p class="h5">2020</p>
     
-    <a href="/2020/10/26/Test-2020-10-26/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">2020-10-26考试总结</span>
-      <time style="float: right;">10-26</time>
-    </a>
-  
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2020/09/08/2-SAT/">2-SAT</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/08/2-SAT/">
+          
+          
+            
+          
+          洛谷4782
+题意：给定m个约束条件，形式为xi,xjx_i,x_jxi​,xj​，表示xix_ixi​为真/假或xjx_jxj​为真/假，给每个变量赋值使得所有条件得到满足。
+ 方法：
+将问题转化为图论问题。设xxx表示变量xxx取false，¬xxx表示变量xxx取true。建立2×n2 \times n2×n个点，设xix_ixi​对应点iii，¬xix_ixi​对应点i+ni+ni+n，则
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-08 10:50" pubdate>
+              2020-09-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
-    <a href="/2020/10/20/Test-2020-10-20/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">2020-10-20考试总结</span>
-      <time style="float: right;">10-20</time>
-    </a>
-  
     
-    <a href="/2020/10/19/Test-2020-10-19/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">2020-10-19考试总结</span>
-      <time style="float: right;">10-19</time>
-    </a>
-  
-    
-    <a href="/2020/10/15/Test-2020-10-15/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">2020-10-15考试总结</span>
-      <time style="float: right;">10-15</time>
-    </a>
-  
-    
-    <a href="/2020/10/13/Test-2020-10-13/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">2020-10-13考试总结</span>
-      <time style="float: right;">10-13</time>
-    </a>
-  
-</div>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2020/08/21/cyclebuity/">洛谷1587 循环之美 题解</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/21/cyclebuity/">
+          
+          
+            
+          
+          题面
+ 题意：
+给定n,m,kn,m,kn,m,k,求对于1≤x≤n,1≤y≤m1\le x \le n,1\le y\le m1≤x≤n,1≤y≤m，xy\frac{x}{y}yx​满足数值上互不相等且在kkk进制下为纯循环小数的个数。
+从小数部分第一位开始的循环小数，称为纯循环小数。特别地，整数为纯循环小数。
+ 解法：
+要满足数值上互不相等，只需统计最简分数，即x⊥yx\perp yx⊥y即可
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-21 16:45" pubdate>
+              2020-08-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+            
+              <a href="/tags/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94/">莫比乌斯反演</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/tags/%E6%80%BB%E7%BB%93/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/tags/%E6%80%BB%E7%BB%93/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </span>
   </nav>
   
@@ -313,7 +375,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签 - 总结&nbsp;",
+        "此后如竟没有炬火，我便是唯一的光。&nbsp;",
       ],
       cursorChar: "|",
       typeSpeed: 100,
