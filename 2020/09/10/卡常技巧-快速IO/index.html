@@ -180,7 +180,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.3k 字
+      2.6k 字
     </span>
   
 
@@ -190,7 +190,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      37
+      43
        分钟
     </span>
   
@@ -269,10 +269,10 @@
 	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=x*<span class="hljs-number">10</span>+(c^<span class="hljs-number">48</span>);c=getc();&#125;
 	<span class="hljs-keyword">if</span>(c!=<span class="hljs-string">&#x27;.&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
 	c=getc();
-	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;d/=<span class="hljs-number">10.0</span>;x+=d*(c^<span class="hljs-number">48</span>);c=getc();&#125;
+	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;d/=<span class="hljs-number">10.0</span>;x+=d*<span class="hljs-keyword">double</span>(c^<span class="hljs-number">48</span>);c=getc();&#125;
 	x*=(k?<span class="hljs-number">-1.0</span>:<span class="hljs-number">1.0</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
 &#125;</code></pre></div>
-<p>在读入小数部分时<code>d</code>临时保存当前位。</p>
+<p>在读入小数部分时<code>d</code>临时保存当前位。这个实现方法导致精度极为糟糕。</p>
 <h1 id="二-快速输出"><a class="markdownIt-Anchor" href="#二-快速输出"></a> 二、快速输出</h1>
 <h2 id="1-带符号整形-2"><a class="markdownIt-Anchor" href="#1-带符号整形-2"></a> 1、带符号整形</h2>
 <p>一般有递归和非递归两种写法。这里采用非递归写法，因为时间效率较高。</p>
@@ -316,9 +316,9 @@
 	&#125;
 	<span class="hljs-keyword">for</span>(;p!=<span class="hljs-number">-1</span>;p--) putc(buf[p]);
 &#125;</code></pre></div>
-<p><code>pre</code>为保留小数点后几位，<code>round</code>为<code>cmath</code>库里的四舍五入到整数的函数。</p>
+<p><code>pre</code>为保留小数点后几位，<code>round</code>为<code>&lt;cmath&gt;</code>库里的四舍五入到整数的函数。</p>
 <h1 id="三-块读写优化"><a class="markdownIt-Anchor" href="#三-块读写优化"></a> 三、块读写优化</h1>
-<p>有了上述对具体数据类型的处理优化之后，速度瓶颈变为了输入输出字符的<code>getc()</code>，<code>putc()</code>函数。调用<code>cstdio</code>库中的<code>getchar()</code>和<code>putchar()</code>函数过于慢，解决方法有使用<code>streambuf</code>或<code>fread</code>和<code>fwrite</code>。这里采用的后者。因为其提速原理为整块的输入输出操作，所以称为块读写。</p>
+<p>有了上述对具体数据类型的处理优化之后，速度瓶颈变为了输入输出字符的<code>getc()</code>，<code>putc()</code>函数。调用<code>cstdio</code>库中的<code>getchar()</code>和<code>putchar()</code>函数过于慢，解决方法有使用<code>streambuf</code>或<code>fread</code>和<code>fwrite</code>。这里采用的后者。因为其提速原理为每次分块读写缓存区大小的数据，所以称为块读写。</p>
 <h2 id="1-fread"><a class="markdownIt-Anchor" href="#1-fread"></a> １、ｆｒｅａｄ</h2>
 <p>直接给出<code>getc()</code>函数</p>
 <div class="hljs"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
@@ -343,7 +343,6 @@
 <p>我写出了快速读写的函数版本和类版本，可以适当时候选用用起来爽的版本。此处附带了库函数的部分替代函数。</p>
 <p>函数版本：</p>
 <div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> quick &#123;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> tp template<span class="hljs-meta-string">&lt;typename Type&gt;</span></span>
     <span class="hljs-keyword">namespace</span> in &#123;
         <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
             <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1=buf,*p2=buf;
@@ -355,17 +354,15 @@
             <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF) &#123;s++;*s=getc();&#125;
             *s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
         &#125;
-        <span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;x)</span> </span>&#123;
+        <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">inline</span> <span class="hljs-title">int</span> <span class="hljs-title">read</span>(<span class="hljs-title">Type</span> &amp;<span class="hljs-title">x</span>) &#123;</span>
             x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
             <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
             <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);c=getc();&#125;
             x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
         &#125;
         <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Type,<span class="hljs-keyword">typename</span>... Args&gt;
-        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;t,Args &amp;...args)</span> </span>&#123;
-            <span class="hljs-keyword">int</span> res=<span class="hljs-number">0</span>;
-            res+=read(t);res+=read(args...);
-            <span class="hljs-keyword">return</span> res;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;&amp;t,Args &amp;&amp;...args)</span> </span>&#123;
+            read(t)+read(args...);
         &#125;
     &#125;
     <span class="hljs-keyword">using</span> in::read;
@@ -382,7 +379,7 @@
         <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
             <span class="hljs-keyword">while</span>(*s!=<span class="hljs-string">&#x27;\0&#x27;</span>) putc(*s),s++;
         &#125;
-        <span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type x)</span> </span>&#123;
+        <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">inline</span> <span class="hljs-title">void</span> <span class="hljs-title">write</span>(<span class="hljs-title">Type</span> <span class="hljs-title">x</span>) &#123;</span>
             <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">30</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
             <span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;putc(<span class="hljs-string">&#x27;-&#x27;</span>);x=-x;&#125;
             <span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
@@ -397,110 +394,63 @@
     &#125;
     <span class="hljs-keyword">using</span> out::write;
     <span class="hljs-keyword">using</span> out::flush;
-    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type a,<span class="hljs-keyword">const</span> Type b)</span> </span>&#123;
+    <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">inline</span> <span class="hljs-title">Type</span> <span class="hljs-title">max</span>(<span class="hljs-title">const</span> <span class="hljs-title">Type</span> <span class="hljs-title">a</span>,<span class="hljs-title">const</span> <span class="hljs-title">Type</span> <span class="hljs-title">b</span>) &#123;</span>
         <span class="hljs-keyword">if</span>(a&lt;b) <span class="hljs-keyword">return</span> b;
         <span class="hljs-keyword">return</span> a;
     &#125;
-    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">min</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type a,<span class="hljs-keyword">const</span> Type b)</span> </span>&#123;
+    <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">inline</span> <span class="hljs-title">Type</span> <span class="hljs-title">min</span>(<span class="hljs-title">const</span> <span class="hljs-title">Type</span> <span class="hljs-title">a</span>,<span class="hljs-title">const</span> <span class="hljs-title">Type</span> <span class="hljs-title">b</span>) &#123;</span>
         <span class="hljs-keyword">if</span>(a&lt;b) <span class="hljs-keyword">return</span> a;
         <span class="hljs-keyword">return</span> b;
     &#125;
-    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(Type &amp;a,Type &amp;b)</span> </span>&#123;
+    <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">inline</span> <span class="hljs-title">void</span> <span class="hljs-title">swap</span>(<span class="hljs-title">Type</span> &amp;<span class="hljs-title">a</span>,<span class="hljs-title">Type</span> &amp;<span class="hljs-title">b</span>) &#123;</span>
         a^=b^=a^=b;
     &#125;
-    <span class="hljs-function">tp <span class="hljs-keyword">inline</span> Type <span class="hljs-title">abs</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Type a)</span> </span>&#123;
+    <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">inline</span> <span class="hljs-title">Type</span> <span class="hljs-title">abs</span>(<span class="hljs-title">const</span> <span class="hljs-title">Type</span> <span class="hljs-title">a</span>) &#123;</span>
         <span class="hljs-keyword">return</span> a&gt;=<span class="hljs-number">0</span>?a:-a;
     &#125;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> tp</span>
 &#125;</code></pre></div>
 <p>因为是不定参，调用时可以使用像<code>read(a,b,c,d)</code>这样的写法。</p>
 <p>类版本：</p>
 <div class="hljs"><pre><code class="hljs cpp"><span class="hljs-keyword">namespace</span> Quick &#123;
-
-	<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InStream</span> &#123;</span>
-	<span class="hljs-keyword">private</span>:
-		<span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>],*p1,*p2,failed;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;
-			<span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>,<span class="hljs-built_in">stdin</span>),p1==p2)?EOF:*p1++;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;class Type&gt; <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(Type &amp;x)</span> </span>&#123;
-			<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">char</span> c=getc();
-			<span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);<span class="hljs-keyword">if</span>(c==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;
-			x=<span class="hljs-number">0</span>;<span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isdigit</span>(c);c=getc()) x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);
-			<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
-			*s=getc();
-			<span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isspace</span>(*s)||*s==EOF;*s=getc()) <span class="hljs-keyword">if</span>(*s==EOF) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-			<span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF;*s=getc()) s++;
-			*s=<span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-		&#125;
-	<span class="hljs-keyword">public</span>:
-		<span class="hljs-function"><span class="hljs-keyword">operator</span> <span class="hljs-title">int</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>&#123;
-			<span class="hljs-keyword">return</span> ~failed;
-		&#125;
-		InStream() &#123;p1=p2=buf;failed=<span class="hljs-number">0x00</span>;&#125;
-		~InStream() &#123;&#125;
-		<span class="hljs-keyword">template</span>&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">InStream</span>&amp; <span class="hljs-title">operator</span> &gt;&gt; (<span class="hljs-title">Type</span> &amp;&amp;<span class="hljs-title">x</span>) &#123;</span>
-			<span class="hljs-keyword">if</span>(read(x)) failed=<span class="hljs-number">0x00</span>;
-			<span class="hljs-keyword">else</span> failed=<span class="hljs-number">0xff</span>;
-			<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;
-		&#125;
-	&#125;<span class="hljs-built_in">cin</span>;
-
-	<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OutStream</span> &#123;</span>
-	<span class="hljs-keyword">private</span>:
-		<span class="hljs-keyword">char</span> buf[<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>];<span class="hljs-keyword">int</span> p1;<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> p2=<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;
-			fwrite(buf,<span class="hljs-number">1</span>,p1,<span class="hljs-built_in">stdout</span>);
-			p1=<span class="hljs-number">0</span>;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;
-			<span class="hljs-keyword">if</span>(p1==p2) flush();
-			buf[p1++]=c;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;class Type&gt; <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(Type x)</span> </span>&#123;
-			<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">25</span>];<span class="hljs-keyword">int</span> p=<span class="hljs-number">-1</span>;
-			<span class="hljs-keyword">if</span>(x&lt;<span class="hljs-number">0</span>) &#123;x*=<span class="hljs-number">-1</span>;putc(<span class="hljs-string">&#x27;-&#x27;</span>);&#125;
-			<span class="hljs-keyword">if</span>(x==<span class="hljs-number">0</span>) putc(<span class="hljs-string">&#x27;0&#x27;</span>);
-			<span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span>(;x;x/=<span class="hljs-number">10</span>) buf[++p]=x%<span class="hljs-number">10</span>+<span class="hljs-number">48</span>;
-			<span class="hljs-keyword">while</span>(~p) putc(buf[p--]);
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *s)</span> </span>&#123;
-			<span class="hljs-keyword">for</span>(;*s;s++) putc(*s);
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s)</span> </span>&#123;
-			<span class="hljs-keyword">for</span>(;*s;s++) putc(*s);
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;putc(c);&#125;
-	<span class="hljs-keyword">public</span>:
-		OutStream() &#123;p1=<span class="hljs-number">0</span>;&#125;
-		~OutStream() &#123;flush();&#125;
-		<span class="hljs-keyword">template</span>&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">OutStream</span>&amp; <span class="hljs-title">operator</span> &lt;&lt; (const Type &amp;x) &#123;</span>
-<span class="hljs-class">			write(x);return *this;</span>
-<span class="hljs-class">		&#125;</span>
-<span class="hljs-class">	&#125;cout;</span>
-<span class="hljs-class">	const char endl(&#x27;\n&#x27;);</span>
-<span class="hljs-class"></span>
-<span class="hljs-class">	template&lt;class Type&gt; inline Type max(const Type &amp;a,const Type &amp;b) &#123;</span>
-<span class="hljs-class">		if(a&lt;b) return b;</span>
-<span class="hljs-class">		return a;</span>
-<span class="hljs-class">	&#125;</span>
-<span class="hljs-class">	template&lt;class Type&gt; inline Type min(const Type &amp;a,const Type &amp;b) &#123;</span>
-<span class="hljs-class">		if(a&lt;b) return a;</span>
-<span class="hljs-class">		return b;</span>
-<span class="hljs-class">	&#125;</span>
-<span class="hljs-class">	template&lt;class Type&gt; inline void swap(Type &amp;a,Type &amp;b) &#123;</span>
-<span class="hljs-class">		static Type tmp;</span>
-<span class="hljs-class">		tmp=a;a=b;b=tmp;</span>
-<span class="hljs-class">	&#125;</span>
-<span class="hljs-class">	template&lt;class Type&gt; inline Type abs(const Type &amp;a) &#123;</span>
-<span class="hljs-class">		return a&gt;=0?a:-a;</span>
-<span class="hljs-class">	&#125;</span>
-<span class="hljs-class"></span>
-<span class="hljs-class">&#125;</span></code></pre></div>
+    <span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Max_Size</span><span class="hljs-params">(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">21</span>)</span></span>;
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IStream</span> &#123;</span>
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">char</span> buf[Max_Size],*p1,*p2,fail;FILE *file;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span> <span class="hljs-title">getc</span><span class="hljs-params">()</span> </span>&#123;<span class="hljs-keyword">return</span> p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,<span class="hljs-number">1</span>,Max_Size,file),p1==p2)?EOF:*p1++;&#125;
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-keyword">template</span>&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">IStream</span>&amp; <span class="hljs-title">operator</span> &gt;&gt; (<span class="hljs-title">Type</span> &amp;<span class="hljs-title">x</span>) &#123;</span><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">k</span><span class="hljs-params">(<span class="hljs-literal">false</span>)</span></span>;<span class="hljs-keyword">int</span> c=getc();<span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isdigit</span>(c);c=getc()) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);<span class="hljs-keyword">if</span>(c==EOF) &#123;fail=<span class="hljs-number">0xff</span>;<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;&#125;x=<span class="hljs-number">0</span>;<span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isdigit</span>(c);c=getc()) x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>);x*=(k?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>); fail=<span class="hljs-number">0x00</span>; <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;
+        IStream&amp; <span class="hljs-keyword">operator</span> &gt;&gt; (<span class="hljs-keyword">double</span> &amp;x) &#123;x=<span class="hljs-number">0</span>;<span class="hljs-keyword">bool</span> k=<span class="hljs-literal">false</span>;<span class="hljs-keyword">double</span> d=<span class="hljs-number">1</span>;<span class="hljs-keyword">char</span> c=getc();<span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(c)) &#123;k|=(c==<span class="hljs-string">&#x27;-&#x27;</span>);c=getc();<span class="hljs-keyword">if</span>(c==EOF) &#123;fail=<span class="hljs-number">0xff</span>; <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;&#125;<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;x=x*<span class="hljs-number">10</span>+(c^<span class="hljs-number">48</span>);c=getc();&#125;<span class="hljs-keyword">if</span>(c!=<span class="hljs-string">&#x27;.&#x27;</span>) &#123;fail=<span class="hljs-number">0x00</span>; <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;c=getc();<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(c)) &#123;d/=<span class="hljs-number">10.0</span>;x+=d*<span class="hljs-keyword">double</span>(c^<span class="hljs-number">48</span>);c=getc();&#125;x*=(k?<span class="hljs-number">-1.0</span>:<span class="hljs-number">1.0</span>); fail=<span class="hljs-number">0x00</span>; <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;
+        IStream&amp; <span class="hljs-keyword">operator</span> &gt;&gt; (<span class="hljs-keyword">char</span> *s) &#123;*s=getc();<span class="hljs-keyword">for</span>(;<span class="hljs-built_in">isspace</span>(*s)||*s==EOF;*s=getc()) <span class="hljs-keyword">if</span>(*s==EOF) &#123;fail=<span class="hljs-number">0xff</span>;<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;<span class="hljs-keyword">for</span>(;!<span class="hljs-built_in">isspace</span>(*s)&amp;&amp;*s!=EOF;*s=getc()) s++;*s=<span class="hljs-string">&#x27;\0&#x27;</span>; fail=<span class="hljs-number">0x00</span>; <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;
+        IStream&amp; <span class="hljs-keyword">operator</span> &gt;&gt; (<span class="hljs-keyword">char</span> &amp;c) &#123;<span class="hljs-keyword">while</span>(<span class="hljs-built_in">isspace</span>(c=getc())) <span class="hljs-keyword">if</span>(c==EOF) &#123;fail=<span class="hljs-number">0xff</span>;<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125; fail=<span class="hljs-number">0x00</span>;<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;&#125;
+        <span class="hljs-function"><span class="hljs-keyword">operator</span> <span class="hljs-title">int</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>&#123;<span class="hljs-keyword">return</span> ~fail;&#125;
+        IStream(FILE *s) :file(s) &#123;p1=p2=buf;fail=<span class="hljs-number">0x00</span>;&#125;
+        ~IStream() &#123;fclose(file);&#125;
+    &#125;<span class="hljs-built_in">cin</span>(fopen(<span class="hljs-string">&quot;filename.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>));
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OStream</span> &#123;</span>
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">char</span> buf[Max_Size];<span class="hljs-keyword">int</span> p,pre;FILE *file;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">flush</span><span class="hljs-params">()</span> </span>&#123;fwrite(buf,<span class="hljs-number">1</span>,p,file);p=<span class="hljs-number">0</span>;&#125;
+        <span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">putc</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> &amp;c)</span> </span>&#123;<span class="hljs-keyword">if</span>(p==Max_Size) flush();buf[p++]=c;&#125;
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Type</span>&gt; <span class="hljs-title">OStream</span>&amp; <span class="hljs-title">operator</span> &lt;&lt; (Type x) &#123;static int buf[25];int p(-1);if(x&lt;0) x=-x,putc(&#x27;-&#x27;);else if(x==0) putc(&#x27;0&#x27;);for(;x;x/=10) buf[++p]=x%10+48;while(~p) putc(buf[p--]);return *this;&#125;</span>
+<span class="hljs-class">        OStream&amp; operator &lt;&lt; (double x) &#123;static char buf[35];int p=-1;if(x&lt;0.0) putc(&#x27;-&#x27;),x*=-1.0;for(int i(1);i&lt;=pre;i++) x*=10.0;unsigned long long y(round(x));for(;y;y/=10) buf[++p]=y%10+48;if(p&lt;pre) &#123;putc(&#x27;0&#x27;);putc(&#x27;.&#x27;);for(int i(1);i&lt;=pre-p-1;i++) putc(&#x27;0&#x27;);&#125;else &#123;while(p+1&gt;pre) putc(buf[p--]);putc(&#x27;.&#x27;);&#125;for(;p!=-1;p--) putc(buf[p]);return *this;&#125;</span>
+<span class="hljs-class">        OStream&amp; operator &lt;&lt; (char *s) &#123;for(;*s;s++) putc(*s);return *this;&#125;</span>
+<span class="hljs-class">        OStream&amp; operator &lt;&lt; (const char *s) &#123;for(;*s;s++) putc(*s);return *this;&#125;</span>
+<span class="hljs-class">        OStream&amp; operator &lt;&lt; (const char &amp;c) &#123;putc(c);return *this;&#125;</span>
+<span class="hljs-class">        inline void SetPrecision(const int &amp;x) &#123;pre=x;&#125;</span>
+<span class="hljs-class">        OStream(FILE *s) :file(s) &#123;p=0;pre=6;&#125;</span>
+<span class="hljs-class">        ~OStream() &#123;flush();fclose(file);&#125;</span>
+<span class="hljs-class">    &#125;cout(fopen(&quot;filename.out&quot;,&quot;w&quot;)),cerr(stderr);</span>
+<span class="hljs-class">    const char endl(&#x27;\n&#x27;);</span>
+<span class="hljs-class">    template &lt;class Type&gt; inline Type max(const Type &amp;x,const Type &amp;y) &#123;if(x&lt;y) return y;return x;&#125;</span>
+<span class="hljs-class">    template &lt;class Type&gt; inline Type min(const Type &amp;x,const Type &amp;y) &#123;if(x&lt;y) return x;return y;&#125;</span>
+<span class="hljs-class">    template &lt;class Type&gt; inline void swap(Type &amp;a,Type &amp;b) &#123;static Type tmp;tmp=a;a=b;b=tmp;&#125;</span>
+<span class="hljs-class">    template &lt;class Type&gt; inline Type abs(const Type &amp;a) &#123;return a&lt;Type(0)?-a:a;&#125;</span>
+<span class="hljs-class">&#125;</span>
+<span class="hljs-class">using namespace Quick;</span></code></pre></div>
 <p>类版本可以使用和<code>std::cin</code>和<code>std::cout</code>相同的方法调用。比如，可以<code>while(Quick::cin&gt;&gt;a)</code>。</p>
 <p>注意类版本主函数末尾不需要调用<code>flush()</code>，因为在销毁内存时自动调用了。另外，为了使函数版本也实现这种功能，也可以封装到类里，并不定参重载<code>()</code>运算符。</p>
+<p>构造时的<code>fopen</code>既可以使用文件读写，也可以替换成<code>stdin</code>和<code>stdout</code>。<code>cerr</code>调试时用，可以去掉。</p>
 
             </div>
             <hr>
