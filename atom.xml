@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-27T04:21:29.840Z</updated>
+  <updated>2021-04-17T15:07:45.858Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Diary2</title>
+    <link href="http://yoursite.com/2021/04/17/Diary2/"/>
+    <id>http://yoursite.com/2021/04/17/Diary2/</id>
+    <published>2021-04-17T14:59:50.000Z</published>
+    <updated>2021-04-17T15:07:45.858Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    
+    <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>无病呻吟</title>
     <link href="http://yoursite.com/2021/02/26/NewDiary/"/>
     <id>http://yoursite.com/2021/02/26/NewDiary/</id>
     <published>2021-02-26T14:11:22.000Z</published>
-    <updated>2021-02-27T04:21:29.840Z</updated>
+    <updated>2021-04-17T14:58:24.710Z</updated>
     
     
     <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
@@ -384,25 +401,6 @@
     <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
     
     <category term="总结" scheme="http://yoursite.com/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[CSOI2020]王教练的试炼</title>
-    <link href="http://yoursite.com/2020/10/16/CSOI2020-TestOfCoachWang/"/>
-    <id>http://yoursite.com/2020/10/16/CSOI2020-TestOfCoachWang/</id>
-    <published>2020-10-16T12:34:01.000Z</published>
-    <updated>2020-10-17T09:22:29.583Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;仓鼠保护协会：王教练的试炼 题解&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="题解" scheme="http://yoursite.com/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-    <category term="考试" scheme="http://yoursite.com/tags/%E8%80%83%E8%AF%95/"/>
     
   </entry>
   
